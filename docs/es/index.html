@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Firmware Karina para Quansheng UV-K5 V3 y UV-K1</title>
+<meta name="description" content="Firmware Karina (autumn rain) para Quansheng UV-K5 V3, UV-K1 y UV-K1(8): analizador de espectro, radio FM, listas de escaneo. Descarga gratuita.">
+<link rel="canonical" href="https://autumn1rain.github.io/karina-v3-k1/es/">
+<link rel="alternate" hreflang="en" href="https://autumn1rain.github.io/karina-v3-k1/"><link rel="alternate" hreflang="ru" href="https://autumn1rain.github.io/karina-v3-k1/ru/"><link rel="alternate" hreflang="es" href="https://autumn1rain.github.io/karina-v3-k1/es/"><link rel="alternate" hreflang="de" href="https://autumn1rain.github.io/karina-v3-k1/de/"><link rel="alternate" hreflang="zh" href="https://autumn1rain.github.io/karina-v3-k1/zh/"><link rel="alternate" hreflang="x-default" href="https://autumn1rain.github.io/karina-v3-k1/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Firmware Karina para Quansheng UV-K5 V3 y UV-K1">
+<meta property="og:description" content="Firmware Karina (autumn rain) para Quansheng UV-K5 V3, UV-K1 y UV-K1(8): analizador de espectro, radio FM, listas de escaneo. Descarga gratuita.">
+<meta property="og:url" content="https://autumn1rain.github.io/karina-v3-k1/es/">
+<meta property="og:image" content="https://autumn1rain.github.io/karina-v3-k1/assets/radio-k1.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4b63d8">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Puedo flashear esto en una UV-K5 V1?", "acceptedAnswer": {"@type": "Answer", "text": "No. La V1 tiene un procesador y un bootloader distintos; el firmware equivocado inutiliza la radio. Quien tenga una V1 necesita la compilación karina-v1."}}, {"@type": "Question", "name": "¿De verdad necesito la copia de la calibración?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. La calibración guarda los datos de potencia de transmisión y de batería propios de tu radio. No está en ninguna versión publicada y nadie puede restaurártela."}}, {"@type": "Question", "name": "¿Puedo conservar mis ajustes de otro firmware?", "acceptedAnswer": {"@type": "Answer", "text": "No. Solo se puede volver a escribir una configuración guardada desde una versión anterior de Karina. Los canales se pueden trasladar con CHIRP."}}, {"@type": "Question", "name": "La radio me pide un código después de escribir los ajustes desde CHIRP.", "acceptedAnswer": {"@type": "Answer", "text": "Eso ocurre cuando una tecla lateral queda en NONE. Rellena las cuatro asignaciones de las teclas laterales (pulsación corta y larga de ambas teclas) antes de escribir."}}, {"@type": "Question", "name": "¿Dónde puedo pedir ayuda?", "acceptedAnswer": {"@type": "Answer", "text": "En el chat de Telegram, en los comentarios. Indica, por favor, qué radio y qué versión del firmware tienes."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Karina firmware", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Quansheng UV-K5 V3, UV-K1", "url": "https://autumn1rain.github.io/karina-v3-k1/", "downloadUrl": "https://github.com/autumn1rain/karina-v3-k1/releases/latest", "license": "https://www.apache.org/licenses/LICENSE-2.0", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="brand">Karina <span>— autumn rain</span></div>
+  <nav>
+    <a href="#radios">¿Qué radio tengo?</a>
+    <a href="#install">Instalación</a>
+    <a href="#docs">Documentación</a>
+    <a href="https://github.com/autumn1rain/karina-v3-k1">GitHub</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-text">
+    <h1>Firmware comunitario para Quansheng UV-K5 (V3), UV-K1 y UV-K1(8)</h1>
+    <p class="tagline">Karina añade un analizador de espectro, radio FM comercial, escaneo flexible y un menú rediseñado a la radio que ya tienes. Gratis, licencia abierta, sin cuentas.</p>
+    <div class="cta">
+      <a class="btn" href="https://github.com/autumn1rain/karina-v3-k1/releases/latest">Descargar</a>
+      <a class="btn ghost" href="https://github.com/autumn1rain/karina-v3-k1">Código fuente</a>
+      <a class="btn ghost" href="https://t.me/k5fwmod">Chat de Telegram</a>
+    </div>
+    <p class="sub">Última versión publicada en GitHub</p>
+    <p class="sub">Traducido del inglés. La página en inglés es la versión autorizada.</p>
+  </div>
+  <img src="../assets/radio-k1.png" alt="Quansheng UV-K1">
+</div>
+
+<div class="warn">
+  <b>Antes de flashear nada</b>
+  <p>Un firmware compilado para una versión de hardware inutiliza la otra. Comprueba qué radio tienes y haz primero una copia de seguridad de tu calibración: es única de tu radio y nadie puede devolvértela.</p>
+</div>
+
+<section id="radios">
+  <h2>¿Qué radio tengo?<a class="anchor" href="#radios" aria-label="Enlace a esta sección">#</a></h2>
+  <p class="lede">Apaga la radio, mantén pulsado PTT y enciéndela: la pantalla muestra la versión del bootloader. Su primer dígito indica la versión de hardware.</p>
+  <table><thead><tr><th>El bootloader empieza por</th><th>Radio</th><th>Compilación de Karina</th></tr></thead><tbody><tr><td>2, 3, 4, 5</td><td>UV-K5 V1</td><td>karina-v1 (repositorio aparte)</td></tr><tr><td>1</td><td>UV-K5 V2</td><td>no compatible</td></tr><tr><td>7</td><td>UV-K5 V3, UV-K1, UV-K1(8)</td><td>este repositorio</td></tr></tbody></table>
+  <p class="sub">Las radios V1 no llevan ninguna marca; las V2 y V3 suelen tenerla en la pegatina que hay debajo de la batería.</p>
+  <p class="hint">¿Tienes la antigua UV-K5 V1? Tiene su propia versión, en un repositorio aparte: <a href="https://github.com/autumn1rain/karina-v1">autumn1rain/karina-v1</a></p>
+</section>
+
+<section id="features">
+  <h2>Qué añade Karina<a class="anchor" href="#features" aria-label="Enlace a esta sección">#</a></h2>
+  <div class="cards"><div class="card"><h3>Analizador de espectro</h3><p>Preajustes de banda, un modo de entrada libre, captura en directo de la frecuencia activa, una lista negra para canales ruidosos y controles de atenuador, AGC y squelch.</p></div><div class="card"><h3>Escaneo que se porta bien</h3><p>Listas de escaneo, canales prioritarios comprobados durante el escaneo y cualquier canal omitido sobre la marcha con solo activar su atenuador.</p></div><div class="card"><h3>Escaneo de subtonos</h3><p>Escanea los subtonos CTCSS/DCS de la frecuencia actual y guarda el que se haya encontrado como subtono de transmisión.</p></div><div class="card"><h3>Radio FM comercial</h3><p>Búsqueda de emisoras con memorias, que se reanuda automáticamente cinco segundos después de que desaparezca la señal del canal de trabajo.</p></div><div class="card"><h3>Atenuador en tres pasos</h3><p>ATT1, ATT2 y ATT3 por frecuencia o por canal: útil cerca de un transmisor potente y para saltarse canales durante el escaneo.</p></div><div class="card"><h3>Potencia, batería y extras</h3><p>Potencia de transmisión HIGH / MID / LOW, ahorro de batería rediseñado, volumen dinámico, aleatorizador de frecuencia y potencia, NOAA, AM y modulación USB.</p></div></div>
+  <div class="shots"><img src="../assets/spectrum.png" alt="Spectrum analyser screen"></div>
+</section>
+
+<section id="install">
+  <h2>Instalación<a class="anchor" href="#install" aria-label="Enlace a esta sección">#</a></h2>
+  <p class="lede">La versión corta. El procedimiento completo con capturas de pantalla está en la guía de instalación que encontrarás más abajo.</p>
+  <ol class="steps"><li>Haz una copia de seguridad de tu calibración y de tu configuración mientras la radio todavía ejecuta su firmware actual.</li><li>Apaga la radio, mantén pulsado <b>PTT</b> y enciéndela: ese es el modo de flasheo.</li><li>Flashea el archivo correspondiente a tu radio con cualquiera de las herramientas de abajo.</li><li>Borra la memoria: apaga la radio y vuelve a encenderla manteniendo pulsado <b>PTT + EXIT</b> durante unos dos segundos.</li><li>Vuelve a escribir tu calibración y, después, escribe la calibración de Karina incluida en la versión publicada.</li><li>Reinicia la radio: <b>MENU → RESET → VFO</b>.</li></ol>
+  <h3>Herramientas de flasheo</h3>
+  <table><thead><tr><th>Herramienta</th><th>Plataforma</th><th>Archivo</th></tr></thead><tbody><tr><td><a href="https://armel.github.io/uvstudio/#flash">UV Studio</a></td><td>web (Chrome, Edge, Opera, Brave)</td><td>consulta la herramienta</td></tr><tr><td><a href="https://en.qsfj.com/support/downloads/8483">Actualizador oficial de Quansheng</a></td><td>Windows</td><td>*.packed.bin</td></tr><tr><td><a href="https://github.com/sq5bpf/k5prog">k5prog</a></td><td>Linux, macOS</td><td>*.bin</td></tr><tr><td><a href="https://egzumer.github.io/uvtools">uvtools</a></td><td>web (Chrome, Edge)</td><td>consulta la herramienta</td></tr><tr><td><a href="https://github.com/ERuban/k5k1prog-mac">K5K1 Prog</a></td><td>macOS</td><td>*.bin o *.packed.bin</td></tr></tbody></table>
+  <p class="sub">Comprueba que tu herramienta sea compatible con tu radio antes de empezar. Lo haces bajo tu propia responsabilidad.</p>
+</section>
+
+<section id="docs">
+  <h2>Documentación<a class="anchor" href="#docs" aria-label="Enlace a esta sección">#</a></h2>
+  <p class="lede">La guía de instalación cubre el flasheo y CHIRP; el manual describe cada opción del menú y cada tecla.</p>
+  <table><thead><tr><th>&nbsp;</th><th>Ruso (original)</th><th>Inglés</th></tr></thead>
+  <tbody>
+  <tr><td>Guía de instalación y CHIRP</td>
+      <td><a href="https://github.com/autumn1rain/karina-v3-k1/blob/main/karina-v3-k1-install.pdf">PDF</a></td>
+      <td><a href="https://github.com/autumn1rain/karina-v3-k1/blob/main/karina-v3-k1-install-en.pdf">PDF</a></td></tr>
+  <tr><td>Manual del firmware</td>
+      <td><a href="https://github.com/autumn1rain/karina-v3-k1/blob/main/karina-v3-k1-manual.pdf">PDF</a></td>
+      <td><a href="https://github.com/autumn1rain/karina-v3-k1/blob/main/karina-v3-k1-manual-en.pdf">PDF</a></td></tr>
+  </tbody></table>
+</section>
+
+<section id="faq">
+  <h2>Preguntas<a class="anchor" href="#faq" aria-label="Enlace a esta sección">#</a></h2>
+  <div class="qa"><div><h3>¿Puedo flashear esto en una UV-K5 V1?</h3><p>No. La V1 tiene un procesador y un bootloader distintos; el firmware equivocado inutiliza la radio. Quien tenga una V1 necesita la compilación karina-v1.</p></div><div><h3>¿De verdad necesito la copia de la calibración?</h3><p>Sí. La calibración guarda los datos de potencia de transmisión y de batería propios de tu radio. No está en ninguna versión publicada y nadie puede restaurártela.</p></div><div><h3>¿Puedo conservar mis ajustes de otro firmware?</h3><p>No. Solo se puede volver a escribir una configuración guardada desde una versión anterior de Karina. Los canales se pueden trasladar con CHIRP.</p></div><div><h3>La radio me pide un código después de escribir los ajustes desde CHIRP.</h3><p>Eso ocurre cuando una tecla lateral queda en NONE. Rellena las cuatro asignaciones de las teclas laterales (pulsación corta y larga de ambas teclas) antes de escribir.</p></div><div><h3>¿Dónde puedo pedir ayuda?</h3><p>En el chat de Telegram, en los comentarios. Indica, por favor, qué radio y qué versión del firmware tienes.</p></div></div>
+</section>
+
+<footer>
+  <p>Karina se basa en el mod UV-K5 de fagci (v1.2.1) y en el trabajo de firmware abierto de Dual Tachyon, OneOfEleven, muzkr, armel y otros. <a href="https://github.com/fagci/uv-k5-firmware-fagci-mod">fagci/uv-k5-firmware-fagci-mod</a></p>
+  <p>Distribuido bajo la licencia Apache License 2.0. © 2026 autumn1rain.</p>
+  <p class="langs">Idioma: <a href="https://autumn1rain.github.io/karina-v3-k1/">English</a><a href="https://autumn1rain.github.io/karina-v3-k1/ru/">Русский</a><a href="https://autumn1rain.github.io/karina-v3-k1/de/">Deutsch</a><a href="https://autumn1rain.github.io/karina-v3-k1/zh/">中文</a></p>
+</footer>
+</div>
+</body>
+</html>

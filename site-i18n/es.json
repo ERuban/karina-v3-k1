@@ -1,0 +1,143 @@
+{
+ "title": "Firmware Karina para Quansheng UV-K5 V3 y UV-K1",
+ "description": "Firmware Karina (autumn rain) para Quansheng UV-K5 V3, UV-K1 y UV-K1(8): analizador de espectro, radio FM, listas de escaneo. Descarga gratuita.",
+ "tagline": "Firmware comunitario para Quansheng UV-K5 (V3), UV-K1 y UV-K1(8)",
+ "lede": "Karina añade un analizador de espectro, radio FM comercial, escaneo flexible y un menú rediseñado a la radio que ya tienes. Gratis, licencia abierta, sin cuentas.",
+ "download": "Descargar",
+ "version_note": "Última versión publicada en GitHub",
+ "source": "Código fuente",
+ "chat": "Chat de Telegram",
+ "warning_h": "Antes de flashear nada",
+ "warning": "Un firmware compilado para una versión de hardware inutiliza la otra. Comprueba qué radio tienes y haz primero una copia de seguridad de tu calibración: es única de tu radio y nadie puede devolvértela.",
+ "radios_h": "¿Qué radio tengo?",
+ "radios_lede": "Apaga la radio, mantén pulsado PTT y enciéndela: la pantalla muestra la versión del bootloader. Su primer dígito indica la versión de hardware.",
+ "radios_cols": [
+  "El bootloader empieza por",
+  "Radio",
+  "Compilación de Karina"
+ ],
+ "radios_rows": [
+  [
+   "2, 3, 4, 5",
+   "UV-K5 V1",
+   "karina-v1 (repositorio aparte)"
+  ],
+  [
+   "1",
+   "UV-K5 V2",
+   "no compatible"
+  ],
+  [
+   "7",
+   "UV-K5 V3, UV-K1, UV-K1(8)",
+   "este repositorio"
+  ]
+ ],
+ "radios_note": "Las radios V1 no llevan ninguna marca; las V2 y V3 suelen tenerla en la pegatina que hay debajo de la batería.",
+ "features_h": "Qué añade Karina",
+ "features": [
+  [
+   "Analizador de espectro",
+   "Preajustes de banda, un modo de entrada libre, captura en directo de la frecuencia activa, una lista negra para canales ruidosos y controles de atenuador, AGC y squelch."
+  ],
+  [
+   "Escaneo que se porta bien",
+   "Listas de escaneo, canales prioritarios comprobados durante el escaneo y cualquier canal omitido sobre la marcha con solo activar su atenuador."
+  ],
+  [
+   "Escaneo de subtonos",
+   "Escanea los subtonos CTCSS/DCS de la frecuencia actual y guarda el que se haya encontrado como subtono de transmisión."
+  ],
+  [
+   "Radio FM comercial",
+   "Búsqueda de emisoras con memorias, que se reanuda automáticamente cinco segundos después de que desaparezca la señal del canal de trabajo."
+  ],
+  [
+   "Atenuador en tres pasos",
+   "ATT1, ATT2 y ATT3 por frecuencia o por canal: útil cerca de un transmisor potente y para saltarse canales durante el escaneo."
+  ],
+  [
+   "Potencia, batería y extras",
+   "Potencia de transmisión HIGH / MID / LOW, ahorro de batería rediseñado, volumen dinámico, aleatorizador de frecuencia y potencia, NOAA, AM y modulación USB."
+  ]
+ ],
+ "install_h": "Instalación",
+ "install_lede": "La versión corta. El procedimiento completo con capturas de pantalla está en la guía de instalación que encontrarás más abajo.",
+ "install": [
+  "Haz una copia de seguridad de tu calibración y de tu configuración mientras la radio todavía ejecuta su firmware actual.",
+  "Apaga la radio, mantén pulsado <b>PTT</b> y enciéndela: ese es el modo de flasheo.",
+  "Flashea el archivo correspondiente a tu radio con cualquiera de las herramientas de abajo.",
+  "Borra la memoria: apaga la radio y vuelve a encenderla manteniendo pulsado <b>PTT + EXIT</b> durante unos dos segundos.",
+  "Vuelve a escribir tu calibración y, después, escribe la calibración de Karina incluida en la versión publicada.",
+  "Reinicia la radio: <b>MENU → RESET → VFO</b>."
+ ],
+ "tools_h": "Herramientas de flasheo",
+ "tools_cols": [
+  "Herramienta",
+  "Plataforma",
+  "Archivo"
+ ],
+ "tools_rows": [
+  [
+   "UV Studio",
+   "web (Chrome, Edge, Opera, Brave)",
+   "consulta la herramienta"
+  ],
+  [
+   "Actualizador oficial de Quansheng",
+   "Windows",
+   "*.packed.bin"
+  ],
+  [
+   "k5prog",
+   "Linux, macOS",
+   "*.bin"
+  ],
+  [
+   "uvtools",
+   "web (Chrome, Edge)",
+   "consulta la herramienta"
+  ],
+  [
+   "K5K1 Prog",
+   "macOS",
+   "*.bin o *.packed.bin"
+  ]
+ ],
+ "tools_note": "Comprueba que tu herramienta sea compatible con tu radio antes de empezar. Lo haces bajo tu propia responsabilidad.",
+ "docs_h": "Documentación",
+ "docs_lede": "La guía de instalación cubre el flasheo y CHIRP; el manual describe cada opción del menú y cada tecla.",
+ "docs_install": "Guía de instalación y CHIRP",
+ "docs_manual": "Manual del firmware",
+ "docs_ru": "Ruso (original)",
+ "docs_en": "Inglés",
+ "faq_h": "Preguntas",
+ "faq": [
+  [
+   "¿Puedo flashear esto en una UV-K5 V1?",
+   "No. La V1 tiene un procesador y un bootloader distintos; el firmware equivocado inutiliza la radio. Quien tenga una V1 necesita la compilación karina-v1."
+  ],
+  [
+   "¿De verdad necesito la copia de la calibración?",
+   "Sí. La calibración guarda los datos de potencia de transmisión y de batería propios de tu radio. No está en ninguna versión publicada y nadie puede restaurártela."
+  ],
+  [
+   "¿Puedo conservar mis ajustes de otro firmware?",
+   "No. Solo se puede volver a escribir una configuración guardada desde una versión anterior de Karina. Los canales se pueden trasladar con CHIRP."
+  ],
+  [
+   "La radio me pide un código después de escribir los ajustes desde CHIRP.",
+   "Eso ocurre cuando una tecla lateral queda en NONE. Rellena las cuatro asignaciones de las teclas laterales (pulsación corta y larga de ambas teclas) antes de escribir."
+  ],
+  [
+   "¿Dónde puedo pedir ayuda?",
+   "En el chat de Telegram, en los comentarios. Indica, por favor, qué radio y qué versión del firmware tienes."
+  ]
+ ],
+ "footer_base": "Karina se basa en el mod UV-K5 de fagci (v1.2.1) y en el trabajo de firmware abierto de Dual Tachyon, OneOfEleven, muzkr, armel y otros.",
+ "footer_license": "Distribuido bajo la licencia Apache License 2.0.",
+ "footer_lang": "Idioma",
+ "translation_note": "Traducido del inglés. La página en inglés es la versión autorizada.",
+ "anchor": "Enlace a esta sección",
+ "v1_note": "¿Tienes la antigua UV-K5 V1? Tiene su propia versión, en un repositorio aparte:"
+}

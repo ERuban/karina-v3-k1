@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Karina firmware for Quansheng UV-K5 V3 and UV-K1</title>
+<meta name="description" content="Karina (autumn rain) firmware for the Quansheng UV-K5 V3, UV-K1 and UV-K1(8): spectrum analyser, FM radio, scan lists. Free download.">
+<link rel="canonical" href="https://autumn1rain.github.io/karina-v3-k1/">
+<link rel="alternate" hreflang="en" href="https://autumn1rain.github.io/karina-v3-k1/"><link rel="alternate" hreflang="ru" href="https://autumn1rain.github.io/karina-v3-k1/ru/"><link rel="alternate" hreflang="es" href="https://autumn1rain.github.io/karina-v3-k1/es/"><link rel="alternate" hreflang="de" href="https://autumn1rain.github.io/karina-v3-k1/de/"><link rel="alternate" hreflang="zh" href="https://autumn1rain.github.io/karina-v3-k1/zh/"><link rel="alternate" hreflang="x-default" href="https://autumn1rain.github.io/karina-v3-k1/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Karina firmware for Quansheng UV-K5 V3 and UV-K1">
+<meta property="og:description" content="Karina (autumn rain) firmware for the Quansheng UV-K5 V3, UV-K1 and UV-K1(8): spectrum analyser, FM radio, scan lists. Free download.">
+<meta property="og:url" content="https://autumn1rain.github.io/karina-v3-k1/">
+<meta property="og:image" content="https://autumn1rain.github.io/karina-v3-k1/assets/radio-k1.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4b63d8">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I flash this into a UV-K5 V1?", "acceptedAnswer": {"@type": "Answer", "text": "No. V1 has a different processor and a different bootloader; the wrong firmware bricks the radio. V1 owners need the karina-v1 build."}}, {"@type": "Question", "name": "Do I really need the calibration backup?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Calibration holds your own radio's TX power and battery data. It is not in any release and nobody can restore it for you."}}, {"@type": "Question", "name": "Can I keep my settings from another firmware?", "acceptedAnswer": {"@type": "Answer", "text": "No. Only a configuration saved from an earlier Karina version can be written back. Channels can be moved with CHIRP."}}, {"@type": "Question", "name": "The radio asks for a code after I wrote settings from CHIRP.", "acceptedAnswer": {"@type": "Answer", "text": "That happens when a side key is left as NONE. Fill in all four side-key assignments (short and long press for both keys) before writing."}}, {"@type": "Question", "name": "Where do I ask for help?", "acceptedAnswer": {"@type": "Answer", "text": "In the Telegram chat, in the comments. Please say which radio and which firmware version you have."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Karina firmware", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Quansheng UV-K5 V3, UV-K1", "url": "https://autumn1rain.github.io/karina-v3-k1/", "downloadUrl": "https://github.com/autumn1rain/karina-v3-k1/releases/latest", "license": "https://www.apache.org/licenses/LICENSE-2.0", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="brand">Karina <span>— autumn rain</span></div>
+  <nav>
+    <a href="#radios">Which radio do I have?</a>
+    <a href="#install">Install</a>
+    <a href="#docs">Documentation</a>
+    <a href="https://github.com/autumn1rain/karina-v3-k1">GitHub</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-text">
+    <h1>Community firmware for the Quansheng UV-K5 (V3), UV-K1 and UV-K1(8)</h1>
+    <p class="tagline">Karina adds a spectrum analyser, FM broadcast radio, flexible scanning and a reworked menu to the radio you already own. Free, open licence, no accounts.</p>
+    <div class="cta">
+      <a class="btn" href="https://github.com/autumn1rain/karina-v3-k1/releases/latest">Download</a>
+      <a class="btn ghost" href="https://github.com/autumn1rain/karina-v3-k1">Source code</a>
+      <a class="btn ghost" href="https://t.me/k5fwmod">Telegram chat</a>
+    </div>
+    <p class="sub">Latest release on GitHub</p>
+    
+  </div>
+  <img src="assets/radio-k1.png" alt="Quansheng UV-K1">
+</div>
+
+<div class="warn">
+  <b>Before you flash anything</b>
+  <p>Firmware built for one hardware version bricks another one. Check which radio you have, and back up your calibration first — it is unique to your radio and nobody can give it back to you.</p>
+</div>
+
+<section id="radios">
+  <h2>Which radio do I have?<a class="anchor" href="#radios" aria-label="Link to this section">#</a></h2>
+  <p class="lede">Switch the radio off, hold PTT and switch it on: the display shows the bootloader version. Its first digit tells you the hardware version.</p>
+  <table><thead><tr><th>Bootloader starts with</th><th>Radio</th><th>Karina build</th></tr></thead><tbody><tr><td>2, 3, 4, 5</td><td>UV-K5 V1</td><td>karina-v1 (separate repository)</td></tr><tr><td>1</td><td>UV-K5 V2</td><td>not supported</td></tr><tr><td>7</td><td>UV-K5 V3, UV-K1, UV-K1(8)</td><td>this repository</td></tr></tbody></table>
+  <p class="sub">V1 radios carry no marking; V2 and V3 usually have one on the sticker under the battery.</p>
+  <p class="hint">Got the older UV-K5 V1? It has a build of its own, in a separate repository: <a href="https://github.com/autumn1rain/karina-v1">autumn1rain/karina-v1</a></p>
+</section>
+
+<section id="features">
+  <h2>What Karina adds<a class="anchor" href="#features" aria-label="Link to this section">#</a></h2>
+  <div class="cards"><div class="card"><h3>Spectrum analyser</h3><p>Band presets, a free-entry mode, live capture of the active frequency, a blacklist for noisy channels, and controls for attenuator, AGC and squelch.</p></div><div class="card"><h3>Scanning that behaves</h3><p>Scan lists, priority channels checked during the scan, and any channel skipped on the fly by switching its attenuator on.</p></div><div class="card"><h3>Subtone scan</h3><p>Scan CTCSS/DCS tones on the current frequency and store the one that was found as the transmit subtone.</p></div><div class="card"><h3>FM broadcast radio</h3><p>Station search with memories, resumed automatically five seconds after a signal on the working channel disappears.</p></div><div class="card"><h3>Attenuator in three steps</h3><p>ATT1, ATT2 and ATT3 per frequency or channel — useful next to a strong transmitter and for skipping channels while scanning.</p></div><div class="card"><h3>Power, battery and extras</h3><p>HIGH / MID / LOW TX power, a reworked battery saver, dynamic volume, a frequency and power randomizer, NOAA, AM and USB modulation.</p></div></div>
+  <div class="shots"><img src="assets/spectrum.png" alt="Spectrum analyser screen"></div>
+</section>
+
+<section id="install">
+  <h2>Install<a class="anchor" href="#install" aria-label="Link to this section">#</a></h2>
+  <p class="lede">The short version. The full procedure with screenshots is in the installation guide below.</p>
+  <ol class="steps"><li>Back up your calibration and configuration while the radio still runs its current firmware.</li><li>Switch the radio off, hold <b>PTT</b> and switch it on — that is flash mode.</li><li>Flash the file for your radio with any of the tools below.</li><li>Clear the memory: switch off, then switch on holding <b>PTT + EXIT</b> for about two seconds.</li><li>Write your calibration back, then write the Karina calibration from the release.</li><li>Reset the radio: <b>MENU → RESET → VFO</b>.</li></ol>
+  <h3>Flashing tools</h3>
+  <table><thead><tr><th>Tool</th><th>Platform</th><th>File</th></tr></thead><tbody><tr><td><a href="https://armel.github.io/uvstudio/#flash">UV Studio</a></td><td>web (Chrome, Edge, Opera, Brave)</td><td>see the tool</td></tr><tr><td><a href="https://en.qsfj.com/support/downloads/8483">Official Quansheng updater</a></td><td>Windows</td><td>*.packed.bin</td></tr><tr><td><a href="https://github.com/sq5bpf/k5prog">k5prog</a></td><td>Linux, macOS</td><td>*.bin</td></tr><tr><td><a href="https://egzumer.github.io/uvtools">uvtools</a></td><td>web (Chrome, Edge)</td><td>see the tool</td></tr><tr><td><a href="https://github.com/ERuban/k5k1prog-mac">K5K1 Prog</a></td><td>macOS</td><td>*.bin or *.packed.bin</td></tr></tbody></table>
+  <p class="sub">Check that your tool supports your radio before you start. You do this at your own risk.</p>
+</section>
+
+<section id="docs">
+  <h2>Documentation<a class="anchor" href="#docs" aria-label="Link to this section">#</a></h2>
+  <p class="lede">The installation guide covers flashing and CHIRP; the manual describes every menu item and key.</p>
+  <table><thead><tr><th>&nbsp;</th><th>Russian (original)</th><th>English</th></tr></thead>
+  <tbody>
+  <tr><td>Installation guide and CHIRP</td>
+      <td><a href="https://github.com/autumn1rain/karina-v3-k1/blob/main/karina-v3-k1-install.pdf">PDF</a></td>
+      <td><a href="https://github.com/autumn1rain/karina-v3-k1/blob/main/karina-v3-k1-install-en.pdf">PDF</a></td></tr>
+  <tr><td>Firmware manual</td>
+      <td><a href="https://github.com/autumn1rain/karina-v3-k1/blob/main/karina-v3-k1-manual.pdf">PDF</a></td>
+      <td><a href="https://github.com/autumn1rain/karina-v3-k1/blob/main/karina-v3-k1-manual-en.pdf">PDF</a></td></tr>
+  </tbody></table>
+</section>
+
+<section id="faq">
+  <h2>Questions<a class="anchor" href="#faq" aria-label="Link to this section">#</a></h2>
+  <div class="qa"><div><h3>Can I flash this into a UV-K5 V1?</h3><p>No. V1 has a different processor and a different bootloader; the wrong firmware bricks the radio. V1 owners need the karina-v1 build.</p></div><div><h3>Do I really need the calibration backup?</h3><p>Yes. Calibration holds your own radio&#x27;s TX power and battery data. It is not in any release and nobody can restore it for you.</p></div><div><h3>Can I keep my settings from another firmware?</h3><p>No. Only a configuration saved from an earlier Karina version can be written back. Channels can be moved with CHIRP.</p></div><div><h3>The radio asks for a code after I wrote settings from CHIRP.</h3><p>That happens when a side key is left as NONE. Fill in all four side-key assignments (short and long press for both keys) before writing.</p></div><div><h3>Where do I ask for help?</h3><p>In the Telegram chat, in the comments. Please say which radio and which firmware version you have.</p></div></div>
+</section>
+
+<footer>
+  <p>Karina is based on fagci&#x27;s UV-K5 mod (v1.2.1) and the open firmware work of Dual Tachyon, OneOfEleven, muzkr, armel and others. <a href="https://github.com/fagci/uv-k5-firmware-fagci-mod">fagci/uv-k5-firmware-fagci-mod</a></p>
+  <p>Licensed under the Apache License 2.0. © 2026 autumn1rain.</p>
+  <p class="langs">Language: <a href="https://autumn1rain.github.io/karina-v3-k1/ru/">Русский</a><a href="https://autumn1rain.github.io/karina-v3-k1/es/">Español</a><a href="https://autumn1rain.github.io/karina-v3-k1/de/">Deutsch</a><a href="https://autumn1rain.github.io/karina-v3-k1/zh/">中文</a></p>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Прошивка Karina для Quansheng UV-K5 V3 и UV-K1</title>
+<meta name="description" content="Прошивка Karina (autumn rain) для Quansheng UV-K5 V3, UV-K1 и UV-K1(8): анализатор спектра, FM-радио, сканлисты. Бесплатно.">
+<link rel="canonical" href="https://autumn1rain.github.io/karina-v3-k1/ru/">
+<link rel="alternate" hreflang="en" href="https://autumn1rain.github.io/karina-v3-k1/"><link rel="alternate" hreflang="ru" href="https://autumn1rain.github.io/karina-v3-k1/ru/"><link rel="alternate" hreflang="es" href="https://autumn1rain.github.io/karina-v3-k1/es/"><link rel="alternate" hreflang="de" href="https://autumn1rain.github.io/karina-v3-k1/de/"><link rel="alternate" hreflang="zh" href="https://autumn1rain.github.io/karina-v3-k1/zh/"><link rel="alternate" hreflang="x-default" href="https://autumn1rain.github.io/karina-v3-k1/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Прошивка Karina для Quansheng UV-K5 V3 и UV-K1">
+<meta property="og:description" content="Прошивка Karina (autumn rain) для Quansheng UV-K5 V3, UV-K1 и UV-K1(8): анализатор спектра, FM-радио, сканлисты. Бесплатно.">
+<meta property="og:url" content="https://autumn1rain.github.io/karina-v3-k1/ru/">
+<meta property="og:image" content="https://autumn1rain.github.io/karina-v3-k1/assets/radio-k1.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4b63d8">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Можно ли прошить это в UV-K5 V1?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. У V1 другой процессор и другой загрузчик; неподходящая прошивка превращает рацию в кирпич. Владельцам V1 нужна сборка karina-v1."}}, {"@type": "Question", "name": "Мне правда нужна резервная копия калибровки?", "acceptedAnswer": {"@type": "Answer", "text": "Да. В калибровке хранятся данные о мощности передачи и батарее именно вашей рации. Её нет ни в одном релизе, и никто не восстановит её за вас."}}, {"@type": "Question", "name": "Можно ли сохранить настройки от другой прошивки?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Записать обратно можно только конфигурацию, сохранённую из более ранней версии Karina. Каналы можно перенести через CHIRP."}}, {"@type": "Question", "name": "Рация просит код после того, как я записал настройки из CHIRP.", "acceptedAnswer": {"@type": "Answer", "text": "Так бывает, когда боковая клавиша осталась в значении NONE. Перед записью заполните все четыре назначения боковых клавиш (короткое и длинное нажатие для обеих)."}}, {"@type": "Question", "name": "Где спросить помощи?", "acceptedAnswer": {"@type": "Answer", "text": "В чате Telegram, в комментариях. Пожалуйста, укажите, какая у вас рация и какая версия прошивки."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Karina firmware", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Quansheng UV-K5 V3, UV-K1", "url": "https://autumn1rain.github.io/karina-v3-k1/", "downloadUrl": "https://github.com/autumn1rain/karina-v3-k1/releases/latest", "license": "https://www.apache.org/licenses/LICENSE-2.0", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="brand">Karina <span>— autumn rain</span></div>
+  <nav>
+    <a href="#radios">Какая у меня рация?</a>
+    <a href="#install">Установка</a>
+    <a href="#docs">Документация</a>
+    <a href="https://github.com/autumn1rain/karina-v3-k1">GitHub</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-text">
+    <h1>Прошивка от сообщества для Quansheng UV-K5 (V3), UV-K1 и UV-K1(8)</h1>
+    <p class="tagline">Karina добавляет анализатор спектра, приём FM-радиовещания, гибкое сканирование и переработанное меню в рацию, которая у вас уже есть. Бесплатно, открытая лицензия, без аккаунтов.</p>
+    <div class="cta">
+      <a class="btn" href="https://github.com/autumn1rain/karina-v3-k1/releases/latest">Скачать</a>
+      <a class="btn ghost" href="https://github.com/autumn1rain/karina-v3-k1">Исходный код</a>
+      <a class="btn ghost" href="https://t.me/k5fwmod">Чат в Telegram</a>
+    </div>
+    <p class="sub">Последний релиз на GitHub</p>
+    <p class="sub">Переведено с английского. Английская версия страницы — основная и имеет приоритет.</p>
+  </div>
+  <img src="../assets/radio-k1.png" alt="Quansheng UV-K1">
+</div>
+
+<div class="warn">
+  <b>Прежде чем что-то прошивать</b>
+  <p>Прошивка, собранная под одну аппаратную версию, превращает другую в кирпич. Проверьте, какая у вас рация, и сначала сохраните резервную копию калибровки — она уникальна для вашей рации, и никто не вернёт её вам.</p>
+</div>
+
+<section id="radios">
+  <h2>Какая у меня рация?<a class="anchor" href="#radios" aria-label="Ссылка на этот раздел">#</a></h2>
+  <p class="lede">Выключите рацию, зажмите PTT и включите её: на экране появится версия загрузчика. Её первая цифра указывает аппаратную версию.</p>
+  <table><thead><tr><th>Загрузчик начинается с</th><th>Рация</th><th>Сборка Karina</th></tr></thead><tbody><tr><td>2, 3, 4, 5</td><td>UV-K5 V1</td><td>karina-v1 (отдельный репозиторий)</td></tr><tr><td>1</td><td>UV-K5 V2</td><td>не поддерживается</td></tr><tr><td>7</td><td>UV-K5 V3, UV-K1, UV-K1(8)</td><td>этот репозиторий</td></tr></tbody></table>
+  <p class="sub">На рациях V1 маркировки нет; у V2 и V3 она обычно есть на наклейке под аккумулятором.</p>
+  <p class="hint">Если у вас старая UV-K5 V1 — для неё есть своя сборка, в отдельном репозитории: <a href="https://github.com/autumn1rain/karina-v1">autumn1rain/karina-v1</a></p>
+</section>
+
+<section id="features">
+  <h2>Что добавляет Karina<a class="anchor" href="#features" aria-label="Ссылка на этот раздел">#</a></h2>
+  <div class="cards"><div class="card"><h3>Анализатор спектра</h3><p>Пресеты диапазонов, режим свободного ввода, живой захват активной частоты, чёрный список для шумных каналов и управление аттенюатором, АРУ и шумоподавителем.</p></div><div class="card"><h3>Сканирование, которое работает как надо</h3><p>Сканлисты, приоритетные каналы, проверяемые во время сканирования, и пропуск любого канала на лету — простым включением его аттенюатора.</p></div><div class="card"><h3>Сканирование субтонов</h3><p>Сканирование тонов CTCSS/DCS на текущей частоте с сохранением найденного тона как субтона передачи.</p></div><div class="card"><h3>FM-радиовещание</h3><p>Поиск станций с памятью, который автоматически возобновляется через пять секунд после пропадания сигнала на рабочем канале.</p></div><div class="card"><h3>Аттенюатор в три ступени</h3><p>ATT1, ATT2 и ATT3 для каждой частоты или канала — полезно рядом с мощным передатчиком и для пропуска каналов при сканировании.</p></div><div class="card"><h3>Мощность, батарея и дополнения</h3><p>Мощность передачи HIGH / MID / LOW, переработанный экономайзер батареи, динамическая громкость, рандомизатор частоты и мощности, NOAA, модуляции AM и USB.</p></div></div>
+  <div class="shots"><img src="../assets/spectrum.png" alt="Spectrum analyser screen"></div>
+</section>
+
+<section id="install">
+  <h2>Установка<a class="anchor" href="#install" aria-label="Ссылка на этот раздел">#</a></h2>
+  <p class="lede">Коротко. Полная процедура со скриншотами — в руководстве по установке ниже.</p>
+  <ol class="steps"><li>Сохраните резервную копию калибровки и конфигурации, пока рация ещё работает на текущей прошивке.</li><li>Выключите рацию, зажмите <b>PTT</b> и включите её — это режим прошивки.</li><li>Прошейте файл для вашей рации любым из инструментов ниже.</li><li>Очистите память: выключите рацию, затем включите её, удерживая <b>PTT + EXIT</b> около двух секунд.</li><li>Запишите обратно свою калибровку, а затем калибровку Karina из релиза.</li><li>Сбросьте рацию: <b>MENU → RESET → VFO</b>.</li></ol>
+  <h3>Инструменты для прошивки</h3>
+  <table><thead><tr><th>Инструмент</th><th>Платформа</th><th>Файл</th></tr></thead><tbody><tr><td><a href="https://armel.github.io/uvstudio/#flash">UV Studio</a></td><td>web (Chrome, Edge, Opera, Brave)</td><td>см. в инструменте</td></tr><tr><td><a href="https://en.qsfj.com/support/downloads/8483">Официальный апдейтер Quansheng</a></td><td>Windows</td><td>*.packed.bin</td></tr><tr><td><a href="https://github.com/sq5bpf/k5prog">k5prog</a></td><td>Linux, macOS</td><td>*.bin</td></tr><tr><td><a href="https://egzumer.github.io/uvtools">uvtools</a></td><td>web (Chrome, Edge)</td><td>см. в инструменте</td></tr><tr><td><a href="https://github.com/ERuban/k5k1prog-mac">K5K1 Prog</a></td><td>macOS</td><td>*.bin или *.packed.bin</td></tr></tbody></table>
+  <p class="sub">Перед началом убедитесь, что выбранный инструмент поддерживает вашу рацию. Вы делаете это на свой страх и риск.</p>
+</section>
+
+<section id="docs">
+  <h2>Документация<a class="anchor" href="#docs" aria-label="Ссылка на этот раздел">#</a></h2>
+  <p class="lede">Руководство по установке описывает прошивку и CHIRP; руководство по прошивке — каждый пункт меню и каждую клавишу.</p>
+  <table><thead><tr><th>&nbsp;</th><th>Русский (оригинал)</th><th>Английский</th></tr></thead>
+  <tbody>
+  <tr><td>Руководство по установке и CHIRP</td>
+      <td><a href="https://github.com/autumn1rain/karina-v3-k1/blob/main/karina-v3-k1-install.pdf">PDF</a></td>
+      <td><a href="https://github.com/autumn1rain/karina-v3-k1/blob/main/karina-v3-k1-install-en.pdf">PDF</a></td></tr>
+  <tr><td>Руководство по прошивке</td>
+      <td><a href="https://github.com/autumn1rain/karina-v3-k1/blob/main/karina-v3-k1-manual.pdf">PDF</a></td>
+      <td><a href="https://github.com/autumn1rain/karina-v3-k1/blob/main/karina-v3-k1-manual-en.pdf">PDF</a></td></tr>
+  </tbody></table>
+</section>
+
+<section id="faq">
+  <h2>Вопросы<a class="anchor" href="#faq" aria-label="Ссылка на этот раздел">#</a></h2>
+  <div class="qa"><div><h3>Можно ли прошить это в UV-K5 V1?</h3><p>Нет. У V1 другой процессор и другой загрузчик; неподходящая прошивка превращает рацию в кирпич. Владельцам V1 нужна сборка karina-v1.</p></div><div><h3>Мне правда нужна резервная копия калибровки?</h3><p>Да. В калибровке хранятся данные о мощности передачи и батарее именно вашей рации. Её нет ни в одном релизе, и никто не восстановит её за вас.</p></div><div><h3>Можно ли сохранить настройки от другой прошивки?</h3><p>Нет. Записать обратно можно только конфигурацию, сохранённую из более ранней версии Karina. Каналы можно перенести через CHIRP.</p></div><div><h3>Рация просит код после того, как я записал настройки из CHIRP.</h3><p>Так бывает, когда боковая клавиша осталась в значении NONE. Перед записью заполните все четыре назначения боковых клавиш (короткое и длинное нажатие для обеих).</p></div><div><h3>Где спросить помощи?</h3><p>В чате Telegram, в комментариях. Пожалуйста, укажите, какая у вас рация и какая версия прошивки.</p></div></div>
+</section>
+
+<footer>
+  <p>Karina основана на моде UV-K5 от fagci (v1.2.1) и на работе над открытыми прошивками Dual Tachyon, OneOfEleven, muzkr, armel и других. <a href="https://github.com/fagci/uv-k5-firmware-fagci-mod">fagci/uv-k5-firmware-fagci-mod</a></p>
+  <p>Распространяется по лицензии Apache License 2.0. © 2026 autumn1rain.</p>
+  <p class="langs">Язык: <a href="https://autumn1rain.github.io/karina-v3-k1/">English</a><a href="https://autumn1rain.github.io/karina-v3-k1/es/">Español</a><a href="https://autumn1rain.github.io/karina-v3-k1/de/">Deutsch</a><a href="https://autumn1rain.github.io/karina-v3-k1/zh/">中文</a></p>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Karina Firmware für Quansheng UV-K5 V3 und UV-K1</title>
+<meta name="description" content="Karina (autumn rain) Firmware für Quansheng UV-K5 V3, UV-K1 und UV-K1(8): Spektrumanalysator, FM-Radio, Suchlisten. Gratis-Download.">
+<link rel="canonical" href="https://autumn1rain.github.io/karina-v3-k1/de/">
+<link rel="alternate" hreflang="en" href="https://autumn1rain.github.io/karina-v3-k1/"><link rel="alternate" hreflang="ru" href="https://autumn1rain.github.io/karina-v3-k1/ru/"><link rel="alternate" hreflang="es" href="https://autumn1rain.github.io/karina-v3-k1/es/"><link rel="alternate" hreflang="de" href="https://autumn1rain.github.io/karina-v3-k1/de/"><link rel="alternate" hreflang="zh" href="https://autumn1rain.github.io/karina-v3-k1/zh/"><link rel="alternate" hreflang="x-default" href="https://autumn1rain.github.io/karina-v3-k1/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Karina Firmware für Quansheng UV-K5 V3 und UV-K1">
+<meta property="og:description" content="Karina (autumn rain) Firmware für Quansheng UV-K5 V3, UV-K1 und UV-K1(8): Spektrumanalysator, FM-Radio, Suchlisten. Gratis-Download.">
+<meta property="og:url" content="https://autumn1rain.github.io/karina-v3-k1/de/">
+<meta property="og:image" content="https://autumn1rain.github.io/karina-v3-k1/assets/radio-k1.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4b63d8">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Kann ich das in ein UV-K5 V1 flashen?", "acceptedAnswer": {"@type": "Answer", "text": "Nein. Das V1 hat einen anderen Prozessor und einen anderen Bootloader; die falsche Firmware macht das Funkgerät unbrauchbar. Besitzer eines V1 brauchen den Build karina-v1."}}, {"@type": "Question", "name": "Brauche ich die Sicherung der Kalibrierung wirklich?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Die Kalibrierung enthält die Sendeleistungs- und Akkudaten Ihres eigenen Funkgeräts. Sie liegt keinem Release bei und niemand kann sie für Sie wiederherstellen."}}, {"@type": "Question", "name": "Kann ich meine Einstellungen aus einer anderen Firmware behalten?", "acceptedAnswer": {"@type": "Answer", "text": "Nein. Nur eine Konfiguration, die aus einer früheren Karina-Version gesichert wurde, lässt sich zurückschreiben. Kanäle können Sie mit CHIRP übernehmen."}}, {"@type": "Question", "name": "Das Funkgerät fragt nach einem Code, nachdem ich Einstellungen aus CHIRP geschrieben habe.", "acceptedAnswer": {"@type": "Answer", "text": "Das passiert, wenn eine Seitentaste auf NONE steht. Belegen Sie vor dem Schreiben alle vier Seitentasten-Funktionen (kurzer und langer Druck für beide Tasten)."}}, {"@type": "Question", "name": "Wo bekomme ich Hilfe?", "acceptedAnswer": {"@type": "Answer", "text": "Im Telegram-Chat, in den Kommentaren. Bitte nennen Sie dabei Ihr Funkgerät und Ihre Firmware-Version."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Karina firmware", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Quansheng UV-K5 V3, UV-K1", "url": "https://autumn1rain.github.io/karina-v3-k1/", "downloadUrl": "https://github.com/autumn1rain/karina-v3-k1/releases/latest", "license": "https://www.apache.org/licenses/LICENSE-2.0", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="brand">Karina <span>— autumn rain</span></div>
+  <nav>
+    <a href="#radios">Welches Funkgerät habe ich?</a>
+    <a href="#install">Installation</a>
+    <a href="#docs">Dokumentation</a>
+    <a href="https://github.com/autumn1rain/karina-v3-k1">GitHub</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-text">
+    <h1>Community-Firmware für Quansheng UV-K5 (V3), UV-K1 und UV-K1(8)</h1>
+    <p class="tagline">Karina ergänzt Ihr vorhandenes Funkgerät um einen Spektrumanalysator, FM-Rundfunkempfang, flexiblen Suchlauf und ein überarbeitetes Menü. Kostenlos, offene Lizenz, ohne Konten.</p>
+    <div class="cta">
+      <a class="btn" href="https://github.com/autumn1rain/karina-v3-k1/releases/latest">Herunterladen</a>
+      <a class="btn ghost" href="https://github.com/autumn1rain/karina-v3-k1">Quellcode</a>
+      <a class="btn ghost" href="https://t.me/k5fwmod">Telegram-Chat</a>
+    </div>
+    <p class="sub">Neueste Version auf GitHub</p>
+    <p class="sub">Aus dem Englischen übersetzt. Die englische Seite ist die maßgebliche Fassung.</p>
+  </div>
+  <img src="../assets/radio-k1.png" alt="Quansheng UV-K1">
+</div>
+
+<div class="warn">
+  <b>Bevor Sie etwas flashen</b>
+  <p>Firmware, die für eine Hardware-Version gebaut wurde, macht eine andere unbrauchbar. Prüfen Sie, welches Funkgerät Sie haben, und sichern Sie zuerst Ihre Kalibrierung — sie ist einmalig für Ihr Gerät und niemand kann sie Ihnen zurückgeben.</p>
+</div>
+
+<section id="radios">
+  <h2>Welches Funkgerät habe ich?<a class="anchor" href="#radios" aria-label="Link zu diesem Abschnitt">#</a></h2>
+  <p class="lede">Schalten Sie das Funkgerät aus, halten Sie PTT gedrückt und schalten Sie es ein: Das Display zeigt die Bootloader-Version. Deren erste Ziffer nennt Ihnen die Hardware-Version.</p>
+  <table><thead><tr><th>Bootloader beginnt mit</th><th>Funkgerät</th><th>Karina-Build</th></tr></thead><tbody><tr><td>2, 3, 4, 5</td><td>UV-K5 V1</td><td>karina-v1 (eigenes Repository)</td></tr><tr><td>1</td><td>UV-K5 V2</td><td>nicht unterstützt</td></tr><tr><td>7</td><td>UV-K5 V3, UV-K1, UV-K1(8)</td><td>dieses Repository</td></tr></tbody></table>
+  <p class="sub">V1-Geräte tragen keine Kennzeichnung; V2 und V3 haben meist eine auf dem Aufkleber unter dem Akku.</p>
+  <p class="hint">Sie haben noch ein UV-K5 V1? Dafür gibt es eine eigene Firmware in einem separaten Repository: <a href="https://github.com/autumn1rain/karina-v1">autumn1rain/karina-v1</a></p>
+</section>
+
+<section id="features">
+  <h2>Was Karina hinzufügt<a class="anchor" href="#features" aria-label="Link zu diesem Abschnitt">#</a></h2>
+  <div class="cards"><div class="card"><h3>Spektrumanalysator</h3><p>Bandvorgaben, freie Frequenzeingabe, Live-Mitschnitt der aktiven Frequenz, eine Sperrliste für verrauschte Kanäle sowie Einstellungen für Dämpfungsglied, AGC und Rauschsperre.</p></div><div class="card"><h3>Suchlauf, der sich benimmt</h3><p>Suchlisten, Prioritätskanäle, die während des Suchlaufs geprüft werden, und jeder Kanal lässt sich im laufenden Betrieb überspringen, indem Sie sein Dämpfungsglied einschalten.</p></div><div class="card"><h3>Subton-Suchlauf</h3><p>Suchen Sie CTCSS/DCS-Töne auf der aktuellen Frequenz und speichern Sie den gefundenen Ton als Sende-Subton.</p></div><div class="card"><h3>FM-Rundfunkempfang</h3><p>Sendersuche mit Speicherplätzen, die fünf Sekunden nach dem Verschwinden eines Signals auf dem Arbeitskanal automatisch fortgesetzt wird.</p></div><div class="card"><h3>Dämpfungsglied in drei Stufen</h3><p>ATT1, ATT2 und ATT3 je Frequenz oder Kanal — nützlich neben einem starken Sender und zum Überspringen von Kanälen während des Suchlaufs.</p></div><div class="card"><h3>Sendeleistung, Akku und Extras</h3><p>Sendeleistung HIGH / MID / LOW, ein überarbeiteter Akkusparmodus, dynamische Lautstärke, ein Frequenz- und Leistungs-Randomizer, NOAA sowie AM- und USB-Modulation.</p></div></div>
+  <div class="shots"><img src="../assets/spectrum.png" alt="Spectrum analyser screen"></div>
+</section>
+
+<section id="install">
+  <h2>Installation<a class="anchor" href="#install" aria-label="Link zu diesem Abschnitt">#</a></h2>
+  <p class="lede">Die Kurzfassung. Das vollständige Verfahren mit Screenshots steht in der Installationsanleitung weiter unten.</p>
+  <ol class="steps"><li>Sichern Sie Ihre Kalibrierung und Ihre Konfiguration, solange auf dem Funkgerät noch die aktuelle Firmware läuft.</li><li>Schalten Sie das Funkgerät aus, halten Sie <b>PTT</b> gedrückt und schalten Sie es ein — das ist der Flash-Modus.</li><li>Flashen Sie die Datei für Ihr Funkgerät mit einem der unten genannten Werkzeuge.</li><li>Löschen Sie den Speicher: ausschalten, dann mit gedrückter Taste <b>PTT + EXIT</b> etwa zwei Sekunden lang einschalten.</li><li>Schreiben Sie Ihre Kalibrierung zurück und danach die Karina-Kalibrierung aus dem Release.</li><li>Setzen Sie das Funkgerät zurück: <b>MENU → RESET → VFO</b>.</li></ol>
+  <h3>Flash-Werkzeuge</h3>
+  <table><thead><tr><th>Werkzeug</th><th>Plattform</th><th>Datei</th></tr></thead><tbody><tr><td><a href="https://armel.github.io/uvstudio/#flash">UV Studio</a></td><td>web (Chrome, Edge, Opera, Brave)</td><td>siehe Werkzeug</td></tr><tr><td><a href="https://en.qsfj.com/support/downloads/8483">Offizielles Quansheng-Update-Programm</a></td><td>Windows</td><td>*.packed.bin</td></tr><tr><td><a href="https://github.com/sq5bpf/k5prog">k5prog</a></td><td>Linux, macOS</td><td>*.bin</td></tr><tr><td><a href="https://egzumer.github.io/uvtools">uvtools</a></td><td>web (Chrome, Edge)</td><td>siehe Werkzeug</td></tr><tr><td><a href="https://github.com/ERuban/k5k1prog-mac">K5K1 Prog</a></td><td>macOS</td><td>*.bin oder *.packed.bin</td></tr></tbody></table>
+  <p class="sub">Prüfen Sie vor dem Start, ob Ihr Werkzeug Ihr Funkgerät unterstützt. Sie tun dies auf eigene Gefahr.</p>
+</section>
+
+<section id="docs">
+  <h2>Dokumentation<a class="anchor" href="#docs" aria-label="Link zu diesem Abschnitt">#</a></h2>
+  <p class="lede">Die Installationsanleitung behandelt das Flashen und CHIRP; das Handbuch beschreibt jeden Menüpunkt und jede Taste.</p>
+  <table><thead><tr><th>&nbsp;</th><th>Russisch (Original)</th><th>Englisch</th></tr></thead>
+  <tbody>
+  <tr><td>Installationsanleitung und CHIRP</td>
+      <td><a href="https://github.com/autumn1rain/karina-v3-k1/blob/main/karina-v3-k1-install.pdf">PDF</a></td>
+      <td><a href="https://github.com/autumn1rain/karina-v3-k1/blob/main/karina-v3-k1-install-en.pdf">PDF</a></td></tr>
+  <tr><td>Firmware-Handbuch</td>
+      <td><a href="https://github.com/autumn1rain/karina-v3-k1/blob/main/karina-v3-k1-manual.pdf">PDF</a></td>
+      <td><a href="https://github.com/autumn1rain/karina-v3-k1/blob/main/karina-v3-k1-manual-en.pdf">PDF</a></td></tr>
+  </tbody></table>
+</section>
+
+<section id="faq">
+  <h2>Fragen<a class="anchor" href="#faq" aria-label="Link zu diesem Abschnitt">#</a></h2>
+  <div class="qa"><div><h3>Kann ich das in ein UV-K5 V1 flashen?</h3><p>Nein. Das V1 hat einen anderen Prozessor und einen anderen Bootloader; die falsche Firmware macht das Funkgerät unbrauchbar. Besitzer eines V1 brauchen den Build karina-v1.</p></div><div><h3>Brauche ich die Sicherung der Kalibrierung wirklich?</h3><p>Ja. Die Kalibrierung enthält die Sendeleistungs- und Akkudaten Ihres eigenen Funkgeräts. Sie liegt keinem Release bei und niemand kann sie für Sie wiederherstellen.</p></div><div><h3>Kann ich meine Einstellungen aus einer anderen Firmware behalten?</h3><p>Nein. Nur eine Konfiguration, die aus einer früheren Karina-Version gesichert wurde, lässt sich zurückschreiben. Kanäle können Sie mit CHIRP übernehmen.</p></div><div><h3>Das Funkgerät fragt nach einem Code, nachdem ich Einstellungen aus CHIRP geschrieben habe.</h3><p>Das passiert, wenn eine Seitentaste auf NONE steht. Belegen Sie vor dem Schreiben alle vier Seitentasten-Funktionen (kurzer und langer Druck für beide Tasten).</p></div><div><h3>Wo bekomme ich Hilfe?</h3><p>Im Telegram-Chat, in den Kommentaren. Bitte nennen Sie dabei Ihr Funkgerät und Ihre Firmware-Version.</p></div></div>
+</section>
+
+<footer>
+  <p>Karina basiert auf dem UV-K5-Mod von fagci (v1.2.1) und der offenen Firmware-Arbeit von Dual Tachyon, OneOfEleven, muzkr, armel und anderen. <a href="https://github.com/fagci/uv-k5-firmware-fagci-mod">fagci/uv-k5-firmware-fagci-mod</a></p>
+  <p>Lizenziert unter der Apache-Lizenz 2.0. © 2026 autumn1rain.</p>
+  <p class="langs">Sprache: <a href="https://autumn1rain.github.io/karina-v3-k1/">English</a><a href="https://autumn1rain.github.io/karina-v3-k1/ru/">Русский</a><a href="https://autumn1rain.github.io/karina-v3-k1/es/">Español</a><a href="https://autumn1rain.github.io/karina-v3-k1/zh/">中文</a></p>
+</footer>
+</div>
+</body>
+</html>

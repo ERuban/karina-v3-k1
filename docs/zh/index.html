@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Karina 固件：Quansheng UV-K5 V3 和 UV-K1</title>
+<meta name="description" content="适用于 Quansheng UV-K5 V3、UV-K1 和 UV-K1(8) 的 Karina（autumn rain）固件：频谱分析仪、调频广播、扫描列表。免费下载。">
+<link rel="canonical" href="https://autumn1rain.github.io/karina-v3-k1/zh/">
+<link rel="alternate" hreflang="en" href="https://autumn1rain.github.io/karina-v3-k1/"><link rel="alternate" hreflang="ru" href="https://autumn1rain.github.io/karina-v3-k1/ru/"><link rel="alternate" hreflang="es" href="https://autumn1rain.github.io/karina-v3-k1/es/"><link rel="alternate" hreflang="de" href="https://autumn1rain.github.io/karina-v3-k1/de/"><link rel="alternate" hreflang="zh" href="https://autumn1rain.github.io/karina-v3-k1/zh/"><link rel="alternate" hreflang="x-default" href="https://autumn1rain.github.io/karina-v3-k1/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Karina 固件：Quansheng UV-K5 V3 和 UV-K1">
+<meta property="og:description" content="适用于 Quansheng UV-K5 V3、UV-K1 和 UV-K1(8) 的 Karina（autumn rain）固件：频谱分析仪、调频广播、扫描列表。免费下载。">
+<meta property="og:url" content="https://autumn1rain.github.io/karina-v3-k1/zh/">
+<meta property="og:image" content="https://autumn1rain.github.io/karina-v3-k1/assets/radio-k1.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4b63d8">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "可以把它刷进 UV-K5 V1 吗？", "acceptedAnswer": {"@type": "Answer", "text": "不可以。V1 使用不同的处理器和不同的 Bootloader（引导程序），刷错固件会把对讲机变成砖。V1 用户需要使用 karina-v1 版本。"}}, {"@type": "Question", "name": "我真的必须备份校准数据吗？", "acceptedAnswer": {"@type": "Answer", "text": "是的。校准数据保存着你这台对讲机自己的发射功率和电池参数。它不包含在任何发布包里，也没有人能替你恢复。"}}, {"@type": "Question", "name": "可以保留我在其他固件上的设置吗？", "acceptedAnswer": {"@type": "Answer", "text": "不可以。只有从早期 Karina 版本保存下来的配置才能写回。频道可以用 CHIRP 迁移。"}}, {"@type": "Question", "name": "用 CHIRP 写入设置后，对讲机要求输入密码。", "acceptedAnswer": {"@type": "Answer", "text": "这是因为某个侧键被留成了 NONE。写入前请把四个侧键功能全部填好（两个按键的短按和长按）。"}}, {"@type": "Question", "name": "我可以去哪里求助？", "acceptedAnswer": {"@type": "Answer", "text": "到 Telegram 聊天群的评论区提问。请说明你用的是哪款对讲机、哪个固件版本。"}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Karina firmware", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Quansheng UV-K5 V3, UV-K1", "url": "https://autumn1rain.github.io/karina-v3-k1/", "downloadUrl": "https://github.com/autumn1rain/karina-v3-k1/releases/latest", "license": "https://www.apache.org/licenses/LICENSE-2.0", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="brand">Karina <span>— autumn rain</span></div>
+  <nav>
+    <a href="#radios">我的对讲机是哪一款？</a>
+    <a href="#install">安装</a>
+    <a href="#docs">文档</a>
+    <a href="https://github.com/autumn1rain/karina-v3-k1">GitHub</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-text">
+    <h1>面向 Quansheng UV-K5（V3）、UV-K1 和 UV-K1(8) 的社区固件</h1>
+    <p class="tagline">Karina 为你手中的对讲机增加了频谱分析仪、调频广播、灵活的扫描功能和重新设计的菜单。免费、开放授权、无需注册账号。</p>
+    <div class="cta">
+      <a class="btn" href="https://github.com/autumn1rain/karina-v3-k1/releases/latest">下载</a>
+      <a class="btn ghost" href="https://github.com/autumn1rain/karina-v3-k1">源代码</a>
+      <a class="btn ghost" href="https://t.me/k5fwmod">Telegram 聊天群</a>
+    </div>
+    <p class="sub">GitHub 上的最新发布版本</p>
+    <p class="sub">本页译自英文版。英文页面为权威版本。</p>
+  </div>
+  <img src="../assets/radio-k1.png" alt="Quansheng UV-K1">
+</div>
+
+<div class="warn">
+  <b>刷写之前请注意</b>
+  <p>为某个硬件版本编译的固件会把另一个版本刷成砖。请先确认你手上是哪款对讲机，并先备份校准数据——它是你这台对讲机独有的，没有人能把它还给你。</p>
+</div>
+
+<section id="radios">
+  <h2>我的对讲机是哪一款？<a class="anchor" href="#radios" aria-label="链接到本节">#</a></h2>
+  <p class="lede">关闭对讲机，按住 PTT 再开机：屏幕会显示 Bootloader（引导程序）版本号。它的第一位数字就代表硬件版本。</p>
+  <table><thead><tr><th>Bootloader 开头数字</th><th>对讲机</th><th>Karina 版本</th></tr></thead><tbody><tr><td>2、3、4、5</td><td>UV-K5 V1</td><td>karina-v1（独立仓库）</td></tr><tr><td>1</td><td>UV-K5 V2</td><td>不支持</td></tr><tr><td>7</td><td>UV-K5 V3、UV-K1、UV-K1(8)</td><td>本仓库</td></tr></tbody></table>
+  <p class="sub">V1 机型没有任何标识；V2 和 V3 通常在电池下方的标签上有标注。</p>
+  <p class="hint">还在用较早的 UV-K5 V1？它有自己的固件，放在另一个仓库里： <a href="https://github.com/autumn1rain/karina-v1">autumn1rain/karina-v1</a></p>
+</section>
+
+<section id="features">
+  <h2>Karina 新增的功能<a class="anchor" href="#features" aria-label="链接到本节">#</a></h2>
+  <div class="cards"><div class="card"><h3>频谱分析仪</h3><p>内置波段预设和自由输入模式，可实时捕获当前有信号的频率，支持噪声频道黑名单，并可调节衰减器、AGC 和静噪。</p></div><div class="card"><h3>更听话的扫描</h3><p>支持扫描列表、扫描过程中检查优先频道，还可以打开某个频道的衰减器，在扫描中随时跳过它。</p></div><div class="card"><h3>亚音扫描</h3><p>在当前频率上扫描 CTCSS/DCS 亚音，并把扫到的亚音保存为发射亚音。</p></div><div class="card"><h3>调频广播</h3><p>支持电台搜索和记忆，工作频道上的信号消失五秒后自动恢复收听。</p></div><div class="card"><h3>三级衰减器</h3><p>可按频率或频道设置 ATT1、ATT2 和 ATT3——在大功率发射台旁边很有用，也可用于扫描时跳过频道。</p></div><div class="card"><h3>功率、电池及其他</h3><p>HIGH / MID / LOW 三挡发射功率、重新设计的省电模式、动态音量、频率与功率随机化、NOAA、AM 和 USB 调制。</p></div></div>
+  <div class="shots"><img src="../assets/spectrum.png" alt="Spectrum analyser screen"></div>
+</section>
+
+<section id="install">
+  <h2>安装<a class="anchor" href="#install" aria-label="链接到本节">#</a></h2>
+  <p class="lede">这里是简要步骤。带截图的完整流程见下方的安装指南。</p>
+  <ol class="steps"><li>趁对讲机还运行着当前固件，先备份你的校准数据和配置。</li><li>关闭对讲机，按住 <b>PTT</b> 再开机——这就是刷写模式。</li><li>用下面任意一个工具刷入适合你对讲机的文件。</li><li>清除内存：先关机，然后按住 <b>PTT + EXIT</b> 约两秒再开机。</li><li>先把你自己的校准数据写回去，然后写入发布包中的 Karina 校准数据。</li><li>复位对讲机：<b>MENU → RESET → VFO</b>。</li></ol>
+  <h3>刷写工具</h3>
+  <table><thead><tr><th>工具</th><th>平台</th><th>文件</th></tr></thead><tbody><tr><td><a href="https://armel.github.io/uvstudio/#flash">UV Studio</a></td><td>web（Chrome、Edge、Opera、Brave）</td><td>见工具内说明</td></tr><tr><td><a href="https://en.qsfj.com/support/downloads/8483">Quansheng 官方升级工具</a></td><td>Windows</td><td>*.packed.bin</td></tr><tr><td><a href="https://github.com/sq5bpf/k5prog">k5prog</a></td><td>Linux、macOS</td><td>*.bin</td></tr><tr><td><a href="https://egzumer.github.io/uvtools">uvtools</a></td><td>web（Chrome、Edge）</td><td>见工具内说明</td></tr><tr><td><a href="https://github.com/ERuban/k5k1prog-mac">K5K1 Prog</a></td><td>macOS</td><td>*.bin 或 *.packed.bin</td></tr></tbody></table>
+  <p class="sub">开始之前请确认你用的工具支持你的对讲机。操作风险由你自行承担。</p>
+</section>
+
+<section id="docs">
+  <h2>文档<a class="anchor" href="#docs" aria-label="链接到本节">#</a></h2>
+  <p class="lede">安装指南介绍刷写和 CHIRP；使用手册逐项说明每个菜单项和按键。</p>
+  <table><thead><tr><th>&nbsp;</th><th>俄语（原版）</th><th>英语</th></tr></thead>
+  <tbody>
+  <tr><td>安装指南与 CHIRP</td>
+      <td><a href="https://github.com/autumn1rain/karina-v3-k1/blob/main/karina-v3-k1-install.pdf">PDF</a></td>
+      <td><a href="https://github.com/autumn1rain/karina-v3-k1/blob/main/karina-v3-k1-install-en.pdf">PDF</a></td></tr>
+  <tr><td>固件使用手册</td>
+      <td><a href="https://github.com/autumn1rain/karina-v3-k1/blob/main/karina-v3-k1-manual.pdf">PDF</a></td>
+      <td><a href="https://github.com/autumn1rain/karina-v3-k1/blob/main/karina-v3-k1-manual-en.pdf">PDF</a></td></tr>
+  </tbody></table>
+</section>
+
+<section id="faq">
+  <h2>常见问题<a class="anchor" href="#faq" aria-label="链接到本节">#</a></h2>
+  <div class="qa"><div><h3>可以把它刷进 UV-K5 V1 吗？</h3><p>不可以。V1 使用不同的处理器和不同的 Bootloader（引导程序），刷错固件会把对讲机变成砖。V1 用户需要使用 karina-v1 版本。</p></div><div><h3>我真的必须备份校准数据吗？</h3><p>是的。校准数据保存着你这台对讲机自己的发射功率和电池参数。它不包含在任何发布包里，也没有人能替你恢复。</p></div><div><h3>可以保留我在其他固件上的设置吗？</h3><p>不可以。只有从早期 Karina 版本保存下来的配置才能写回。频道可以用 CHIRP 迁移。</p></div><div><h3>用 CHIRP 写入设置后，对讲机要求输入密码。</h3><p>这是因为某个侧键被留成了 NONE。写入前请把四个侧键功能全部填好（两个按键的短按和长按）。</p></div><div><h3>我可以去哪里求助？</h3><p>到 Telegram 聊天群的评论区提问。请说明你用的是哪款对讲机、哪个固件版本。</p></div></div>
+</section>
+
+<footer>
+  <p>Karina 基于 fagci 的 UV-K5 mod（v1.2.1），以及 Dual Tachyon、OneOfEleven、muzkr、armel 等人的开源固件成果。 <a href="https://github.com/fagci/uv-k5-firmware-fagci-mod">fagci/uv-k5-firmware-fagci-mod</a></p>
+  <p>采用 Apache License 2.0 授权。 © 2026 autumn1rain.</p>
+  <p class="langs">语言: <a href="https://autumn1rain.github.io/karina-v3-k1/">English</a><a href="https://autumn1rain.github.io/karina-v3-k1/ru/">Русский</a><a href="https://autumn1rain.github.io/karina-v3-k1/es/">Español</a><a href="https://autumn1rain.github.io/karina-v3-k1/de/">Deutsch</a></p>
+</footer>
+</div>
+</body>
+</html>

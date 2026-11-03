@@ -1,0 +1,143 @@
+{
+ "title": "Karina Firmware für Quansheng UV-K5 V3 und UV-K1",
+ "description": "Karina (autumn rain) Firmware für Quansheng UV-K5 V3, UV-K1 und UV-K1(8): Spektrumanalysator, FM-Radio, Suchlisten. Gratis-Download.",
+ "tagline": "Community-Firmware für Quansheng UV-K5 (V3), UV-K1 und UV-K1(8)",
+ "lede": "Karina ergänzt Ihr vorhandenes Funkgerät um einen Spektrumanalysator, FM-Rundfunkempfang, flexiblen Suchlauf und ein überarbeitetes Menü. Kostenlos, offene Lizenz, ohne Konten.",
+ "download": "Herunterladen",
+ "version_note": "Neueste Version auf GitHub",
+ "source": "Quellcode",
+ "chat": "Telegram-Chat",
+ "warning_h": "Bevor Sie etwas flashen",
+ "warning": "Firmware, die für eine Hardware-Version gebaut wurde, macht eine andere unbrauchbar. Prüfen Sie, welches Funkgerät Sie haben, und sichern Sie zuerst Ihre Kalibrierung — sie ist einmalig für Ihr Gerät und niemand kann sie Ihnen zurückgeben.",
+ "radios_h": "Welches Funkgerät habe ich?",
+ "radios_lede": "Schalten Sie das Funkgerät aus, halten Sie PTT gedrückt und schalten Sie es ein: Das Display zeigt die Bootloader-Version. Deren erste Ziffer nennt Ihnen die Hardware-Version.",
+ "radios_cols": [
+  "Bootloader beginnt mit",
+  "Funkgerät",
+  "Karina-Build"
+ ],
+ "radios_rows": [
+  [
+   "2, 3, 4, 5",
+   "UV-K5 V1",
+   "karina-v1 (eigenes Repository)"
+  ],
+  [
+   "1",
+   "UV-K5 V2",
+   "nicht unterstützt"
+  ],
+  [
+   "7",
+   "UV-K5 V3, UV-K1, UV-K1(8)",
+   "dieses Repository"
+  ]
+ ],
+ "radios_note": "V1-Geräte tragen keine Kennzeichnung; V2 und V3 haben meist eine auf dem Aufkleber unter dem Akku.",
+ "features_h": "Was Karina hinzufügt",
+ "features": [
+  [
+   "Spektrumanalysator",
+   "Bandvorgaben, freie Frequenzeingabe, Live-Mitschnitt der aktiven Frequenz, eine Sperrliste für verrauschte Kanäle sowie Einstellungen für Dämpfungsglied, AGC und Rauschsperre."
+  ],
+  [
+   "Suchlauf, der sich benimmt",
+   "Suchlisten, Prioritätskanäle, die während des Suchlaufs geprüft werden, und jeder Kanal lässt sich im laufenden Betrieb überspringen, indem Sie sein Dämpfungsglied einschalten."
+  ],
+  [
+   "Subton-Suchlauf",
+   "Suchen Sie CTCSS/DCS-Töne auf der aktuellen Frequenz und speichern Sie den gefundenen Ton als Sende-Subton."
+  ],
+  [
+   "FM-Rundfunkempfang",
+   "Sendersuche mit Speicherplätzen, die fünf Sekunden nach dem Verschwinden eines Signals auf dem Arbeitskanal automatisch fortgesetzt wird."
+  ],
+  [
+   "Dämpfungsglied in drei Stufen",
+   "ATT1, ATT2 und ATT3 je Frequenz oder Kanal — nützlich neben einem starken Sender und zum Überspringen von Kanälen während des Suchlaufs."
+  ],
+  [
+   "Sendeleistung, Akku und Extras",
+   "Sendeleistung HIGH / MID / LOW, ein überarbeiteter Akkusparmodus, dynamische Lautstärke, ein Frequenz- und Leistungs-Randomizer, NOAA sowie AM- und USB-Modulation."
+  ]
+ ],
+ "install_h": "Installation",
+ "install_lede": "Die Kurzfassung. Das vollständige Verfahren mit Screenshots steht in der Installationsanleitung weiter unten.",
+ "install": [
+  "Sichern Sie Ihre Kalibrierung und Ihre Konfiguration, solange auf dem Funkgerät noch die aktuelle Firmware läuft.",
+  "Schalten Sie das Funkgerät aus, halten Sie <b>PTT</b> gedrückt und schalten Sie es ein — das ist der Flash-Modus.",
+  "Flashen Sie die Datei für Ihr Funkgerät mit einem der unten genannten Werkzeuge.",
+  "Löschen Sie den Speicher: ausschalten, dann mit gedrückter Taste <b>PTT + EXIT</b> etwa zwei Sekunden lang einschalten.",
+  "Schreiben Sie Ihre Kalibrierung zurück und danach die Karina-Kalibrierung aus dem Release.",
+  "Setzen Sie das Funkgerät zurück: <b>MENU → RESET → VFO</b>."
+ ],
+ "tools_h": "Flash-Werkzeuge",
+ "tools_cols": [
+  "Werkzeug",
+  "Plattform",
+  "Datei"
+ ],
+ "tools_rows": [
+  [
+   "UV Studio",
+   "web (Chrome, Edge, Opera, Brave)",
+   "siehe Werkzeug"
+  ],
+  [
+   "Offizielles Quansheng-Update-Programm",
+   "Windows",
+   "*.packed.bin"
+  ],
+  [
+   "k5prog",
+   "Linux, macOS",
+   "*.bin"
+  ],
+  [
+   "uvtools",
+   "web (Chrome, Edge)",
+   "siehe Werkzeug"
+  ],
+  [
+   "K5K1 Prog",
+   "macOS",
+   "*.bin oder *.packed.bin"
+  ]
+ ],
+ "tools_note": "Prüfen Sie vor dem Start, ob Ihr Werkzeug Ihr Funkgerät unterstützt. Sie tun dies auf eigene Gefahr.",
+ "docs_h": "Dokumentation",
+ "docs_lede": "Die Installationsanleitung behandelt das Flashen und CHIRP; das Handbuch beschreibt jeden Menüpunkt und jede Taste.",
+ "docs_install": "Installationsanleitung und CHIRP",
+ "docs_manual": "Firmware-Handbuch",
+ "docs_ru": "Russisch (Original)",
+ "docs_en": "Englisch",
+ "faq_h": "Fragen",
+ "faq": [
+  [
+   "Kann ich das in ein UV-K5 V1 flashen?",
+   "Nein. Das V1 hat einen anderen Prozessor und einen anderen Bootloader; die falsche Firmware macht das Funkgerät unbrauchbar. Besitzer eines V1 brauchen den Build karina-v1."
+  ],
+  [
+   "Brauche ich die Sicherung der Kalibrierung wirklich?",
+   "Ja. Die Kalibrierung enthält die Sendeleistungs- und Akkudaten Ihres eigenen Funkgeräts. Sie liegt keinem Release bei und niemand kann sie für Sie wiederherstellen."
+  ],
+  [
+   "Kann ich meine Einstellungen aus einer anderen Firmware behalten?",
+   "Nein. Nur eine Konfiguration, die aus einer früheren Karina-Version gesichert wurde, lässt sich zurückschreiben. Kanäle können Sie mit CHIRP übernehmen."
+  ],
+  [
+   "Das Funkgerät fragt nach einem Code, nachdem ich Einstellungen aus CHIRP geschrieben habe.",
+   "Das passiert, wenn eine Seitentaste auf NONE steht. Belegen Sie vor dem Schreiben alle vier Seitentasten-Funktionen (kurzer und langer Druck für beide Tasten)."
+  ],
+  [
+   "Wo bekomme ich Hilfe?",
+   "Im Telegram-Chat, in den Kommentaren. Bitte nennen Sie dabei Ihr Funkgerät und Ihre Firmware-Version."
+  ]
+ ],
+ "footer_base": "Karina basiert auf dem UV-K5-Mod von fagci (v1.2.1) und der offenen Firmware-Arbeit von Dual Tachyon, OneOfEleven, muzkr, armel und anderen.",
+ "footer_license": "Lizenziert unter der Apache-Lizenz 2.0.",
+ "footer_lang": "Sprache",
+ "translation_note": "Aus dem Englischen übersetzt. Die englische Seite ist die maßgebliche Fassung.",
+ "anchor": "Link zu diesem Abschnitt",
+ "v1_note": "Sie haben noch ein UV-K5 V1? Dafür gibt es eine eigene Firmware in einem separaten Repository:"
+}
