@@ -19,7 +19,7 @@
 [Installationsanleitung](karina-v3-k1-install.pdf) ·
 [Handbuch](karina-v3-k1-manual.pdf) ·
 [Telegram-Chat](https://t.me/k5fwmod) ·
-[Website](https://autumn1rain.github.io/karina-v3-k1/)
+[Website](https://autumn1rain.github.io/karina-v3-k1/de/)
 
 </div>
 

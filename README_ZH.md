@@ -21,7 +21,7 @@
 [安装指南](karina-v3-k1-install.pdf) ·
 [使用手册](karina-v3-k1-manual.pdf) ·
 [Telegram 交流群](https://t.me/k5fwmod) ·
-[网站](https://autumn1rain.github.io/karina-v3-k1/)
+[网站](https://autumn1rain.github.io/karina-v3-k1/zh/)
 
 </div>
 

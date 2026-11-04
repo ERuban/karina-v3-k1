@@ -101,6 +101,11 @@ TEXTS = {
      'docs_manual': 'Firmware manual',
      'docs_ru': 'Russian (original)',
      'docs_en': 'English',
+     'docs_online': 'Online',
+     'docs_read': 'Read',
+     'toc_h': 'Contents',
+     'back_to_site': 'All of Karina',
+     'pdf_note': 'Also as a PDF',
      'faq_h': 'Questions',
      'faq': [('Can I flash this into a UV-K5 V1?',
               'No. V1 has a different processor and a different bootloader; the wrong firmware '
@@ -194,6 +199,11 @@ TEXTS = {
      'docs_manual': 'Руководство по прошивке',
      'docs_ru': 'Русский (оригинал)',
      'docs_en': 'Английский',
+     'docs_online': 'На сайте',
+     'docs_read': 'Читать',
+     'toc_h': 'Содержание',
+     'back_to_site': 'Всё о Karina',
+     'pdf_note': 'Тот же текст в PDF',
      'faq_h': 'Вопросы',
      'faq': [['Можно ли прошить это в UV-K5 V1?',
               'Нет. У V1 другой процессор и другой загрузчик; неподходящая прошивка превращает '
@@ -292,6 +302,11 @@ TEXTS = {
      'docs_manual': 'Manual del firmware',
      'docs_ru': 'Ruso (original)',
      'docs_en': 'Inglés',
+     'docs_online': 'En línea',
+     'docs_read': 'Leer',
+     'toc_h': 'Contenido',
+     'back_to_site': 'Todo sobre Karina',
+     'pdf_note': 'También en PDF',
      'faq_h': 'Preguntas',
      'faq': [['¿Puedo flashear esto en una UV-K5 V1?',
               'No. La V1 tiene un procesador y un bootloader distintos; el firmware equivocado '
@@ -393,6 +408,11 @@ TEXTS = {
      'docs_manual': 'Firmware-Handbuch',
      'docs_ru': 'Russisch (Original)',
      'docs_en': 'Englisch',
+     'docs_online': 'Online',
+     'docs_read': 'Lesen',
+     'toc_h': 'Inhalt',
+     'back_to_site': 'Alles zu Karina',
+     'pdf_note': 'Auch als PDF',
      'faq_h': 'Fragen',
      'faq': [['Kann ich das in ein UV-K5 V1 flashen?',
               'Nein. Das V1 hat einen anderen Prozessor und einen anderen Bootloader; die falsche '
@@ -469,6 +489,11 @@ TEXTS = {
      'docs_manual': '固件使用手册',
      'docs_ru': '俄语（原版）',
      'docs_en': '英语',
+     'docs_online': '在线',
+     'docs_read': '阅读',
+     'toc_h': '目录',
+     'back_to_site': 'Karina 全部内容',
+     'pdf_note': '也提供 PDF',
      'faq_h': '常见问题',
      'faq': [['可以把它刷进 UV-K5 V1 吗？',
               '不可以。V1 使用不同的处理器和不同的 Bootloader（引导程序），刷错固件会把对讲机变成砖。V1 用户需要使用 karina-v1 版本。'],
@@ -508,6 +533,15 @@ header.top { display:flex; justify-content:space-between; align-items:center; ga
 .brand span { color:var(--muted); font-weight:400; }
 nav a { margin-left:14px; color:var(--muted); text-decoration:none; font-size:15px; }
 nav a:hover { color:var(--text); }
+nav .langsel { margin-left:16px; padding-left:16px; border-left:1px solid var(--border);
+  font-size:14px; }
+nav .langsel a, nav .langsel b { margin-left:0; margin-right:7px; }
+nav .langsel b { color:var(--text); }
+header.top { flex-wrap:wrap; }
+@media (max-width:560px) {
+  nav .langsel { margin-left:0; padding-left:0; border-left:0; display:block;
+    margin-top:6px; }
+}
 .hero { display:flex; gap:36px; align-items:center; padding:54px 0 40px; }
 .hero-text { flex:1 1 auto; }
 .hero img { width:auto; height:auto; max-height:380px; flex:0 0 auto; }
@@ -547,6 +581,59 @@ footer { border-top:1px solid var(--border); padding:28px 0 46px; color:var(--mu
   font-size:14.5px; }
 footer p { margin:0 0 8px; }
 .langs a { margin-right:12px; }
+.doc-wrap { max-width:1360px; }
+.doc { display:grid; grid-template-columns:clamp(200px, 20vw, 280px) minmax(0, 1fr);
+  gap:clamp(24px, 4vw, 56px); padding:22px 0 10px; align-items:start; }
+.toc { position:sticky; top:0; max-height:100vh; overflow:auto; padding:18px 18px 28px 0;
+  border-right:1px solid var(--border); font-size:14px; line-height:1.4; }
+.toc b { display:block; margin:0 0 10px; font-size:12px; text-transform:uppercase;
+  letter-spacing:0.06em; color:var(--muted); }
+.toc a { display:block; padding:5px 0; color:var(--muted); text-decoration:none;
+  border-left:2px solid transparent; padding-left:10px; margin-left:-12px; }
+.toc a:hover { color:var(--accent); border-left-color:var(--accent); }
+.body { max-width:76ch; }
+.body h2 { font-size:25px; margin:34px 0 12px; padding-top:16px;
+  border-top:1px solid var(--border); scroll-margin-top:12px; }
+.body h2:first-child { border-top:0; padding-top:0; margin-top:0; }
+.body h3 { font-size:18px; margin:24px 0 6px; }
+.body h4 { font-size:16px; margin:16px 0 4px; }
+.body p { margin:0 0 11px; }
+.body li { margin:0 0 6px; }
+.body p.shot { margin:20px 0; }
+.body p.shot.row { display:flex; flex-wrap:wrap; gap:16px; align-items:flex-end; }
+/* product shots come on a white background: give them a card instead of a bare patch */
+.body p.shot img { background:#fff; padding:10px 18px; border-radius:12px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.22); }
+.body p.shot.row img { height:290px; max-height:290px; width:auto; object-fit:contain; }
+.body p.shot.hero { display:inline-flex; gap:clamp(8px, 2vw, 26px); align-items:flex-end;
+  background:#fff; border-radius:14px; padding:18px 26px 14px; max-width:100%;
+  box-shadow:0 2px 14px rgba(0,0,0,0.25); }
+.body p.shot.hero img { background:none; border:0; padding:0; border-radius:0;
+  box-shadow:none; height:clamp(180px, 25vw, 320px); max-height:none; width:auto;
+  object-fit:contain; }
+@media (max-width:620px) { .body p.shot.hero img { height:auto !important; max-height:200px; } }
+.body p.shot.row img.wide { height:auto; max-height:230px; max-width:100%; }
+.body img { max-width:100%; max-height:300px; width:auto; height:auto;
+  border:1px solid var(--border); border-radius:8px; background:var(--card); }
+.body table { font-size:15px; }
+.body td, .body th { border:1px solid var(--border); }
+.body mark { background:#ffe98a; color:#15171c; padding:0 3px; }
+.danger { color:var(--no); font-weight:700; font-size:18px; line-height:1.45;
+  border-left:4px solid var(--no); background:rgba(192,57,43,0.07);
+  padding:11px 15px; border-radius:0 8px 8px 0; margin:16px 0; }
+.danger code, .danger b { color:inherit; }
+li.danger { display:block; }
+.doc-top { display:flex; justify-content:space-between; align-items:baseline; gap:16px;
+  padding:22px 0 0; flex-wrap:wrap; }
+.doc-top h1 { font-size:30px; margin:0; }
+@media (max-width:860px) {
+  .doc { grid-template-columns:1fr; gap:16px; }
+  .toc { position:static; max-height:none; border-right:0;
+    border-bottom:1px solid var(--border); padding:0 0 14px; }
+  .toc a { padding:4px 0 4px 10px; }
+  .body { max-width:none; }
+  .danger { font-size:16.5px; }
+}
 .anchor { margin-left:0.35em; color:var(--muted); font-weight:400; text-decoration:none;
   opacity:0; transition:opacity .15s ease; }
 h2:hover .anchor { opacity:0.45; }
@@ -561,6 +648,158 @@ section[id] { scroll-margin-top:18px; }
   h1 { font-size:30px; }
 }
 """
+
+
+DOC_FILES = [("install", "docs_install"), ("manual", "docs_manual")]
+
+
+def img_size(line):
+    """Pixel size of the image referenced by a Markdown image line."""
+    m = re.search(r"\(([^)]+)\)", line)
+    if not m:
+        return None, None
+    src = m.group(1)
+    if "assets/docs/" not in src:          # paths are rewritten before rendering
+        return None, None
+    path = os.path.join(DOCS, "assets", "docs", src.split("assets/docs/")[-1])
+    return png_size(path) if os.path.exists(path) else (None, None)
+
+
+def img_tag(alt, src):
+    """Wide captures (program windows) are laid out differently from tall product photos."""
+    path = os.path.join(DOCS, "assets", "docs", src.split("assets/docs/")[-1]) \
+        if "assets/docs/" in src else None
+    cls = ""
+    if path and os.path.exists(path):
+        w, h = png_size(path)
+        if w and h and w > h:
+            cls = ' class="wide"'
+    return f'<img src="{src}" alt="{alt}"{cls}>'
+
+
+def png_size(path):
+    """Width and height straight from the PNG header - no image library needed."""
+    with open(path, "rb") as f:
+        head = f.read(26)
+    if head[:8] != b"\x89PNG\r\n\x1a\n":
+        return None, None
+    return int.from_bytes(head[16:20], "big"), int.from_bytes(head[20:24], "big")
+
+
+def inline(text):
+    """Inline Markdown -> HTML. Escapes first, so page text can never inject tags."""
+    out = html.escape(text, quote=False)
+    out = re.sub(r"!\[([^\]]*)\]\(([^)]+)\)", lambda m: img_tag(m.group(1), m.group(2)), out)
+    out = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r'<a href="\2">\1</a>', out)
+    out = re.sub(r"`([^`]+)`", r"<code>\1</code>", out)
+    out = re.sub(r"==(.+?)==", r"<mark>\1</mark>", out)
+    out = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", out)
+    out = re.sub(r"(?<![\w*])\*([^*\n]+?)\*(?![\w*])", r"<i>\1</i>", out)
+    return out
+
+
+CONTENTS_H = re.compile(r"^\s*(СОДЕРЖАНИЕ|CONTENTS|CONTENIDO|ÍNDICE|INHALT|目录)\s*:?\s*$", re.I)
+
+DANGER = re.compile(
+    r"!!!|！！！|¡¡¡|^\W*(\*+)?\s*(ВНИМАНИЕ|ВАЖНО|ОБЯЗАТЕЛЬНО|СОХРАНИТЕ|ATTENTION|WARNING|IMPORTANT|"
+    r"ACHTUNG|WICHTIG|ATENCIÓN|IMPORTANTE|注意|重要|警告|必须|切勿|千万)", re.I)
+
+
+def render_markdown(md, img_base):
+    """Render the subset of Markdown the manuals use. Returns (html, [(id, title)])."""
+    md = md.replace("](images/", f"]({img_base}")
+    lines = md.split("\n")
+    out, toc, i, n_sec = [], [], 0, 0
+    skip_section = False
+
+    def close(stack):
+        while stack:
+            out.append(f"</{stack.pop()}>")
+
+    stack = []
+    while i < len(lines):
+        line = lines[i].rstrip()
+        head = re.match(r"^(#{2,4})\s+(.*)$", line)
+        table = line.startswith("|") and i + 1 < len(lines) and set(lines[i + 1]) <= set("|-: ")
+        bullet = re.match(r"^[-*]\s+(.*)$", line)
+        number = re.match(r"^(\d+)\.\s+(.*)$", line)
+
+        if not line:
+            close(stack); i += 1; continue
+        if skip_section and not head:
+            i += 1; continue
+        if head:
+            close(stack)
+            level, title = len(head.group(1)), head.group(2).strip()
+            if level == 2:
+                n_sec += 1
+                sid = f"s{n_sec}"
+                plain = re.sub(r"[*`]", "", title)
+                if CONTENTS_H.match(plain):      # the sidebar already is the contents
+                    skip_section = True
+                    i += 1
+                    continue
+                skip_section = False
+                toc.append((sid, plain))
+                out.append(f'<h2 id="{sid}">{inline(title)}'
+                           f'<a class="anchor" href="#{sid}">#</a></h2>')
+            else:
+                out.append(f"<h{level}>{inline(title)}</h{level}>")
+            i += 1; continue
+        if table:
+            head_cells = [c.strip() for c in line.strip("|").split("|")]
+            rows, i = [], i + 2
+            while i < len(lines) and lines[i].startswith("|"):
+                rows.append([c.strip() for c in lines[i].strip("|").split("|")])
+                i += 1
+            close(stack)
+            th = "".join(f"<th>{inline(c)}</th>" for c in head_cells)
+            tb = "".join("<tr>" + "".join(f"<td>{inline(c)}</td>" for c in r) + "</tr>"
+                         for r in rows)
+            out.append(f"<table><thead><tr>{th}</tr></thead><tbody>{tb}</tbody></table>")
+            continue
+        if bullet or number:
+            want = "ul" if bullet else "ol"
+            if stack[-1:] != [want]:
+                close(stack); out.append(f"<{want}>"); stack.append(want)
+            item = (bullet or number).group(bullet and 1 or 2)
+            li_cls = ' class="danger"' if DANGER.search(item) else ""
+            out.append(f"<li{li_cls}>{inline(item)}</li>")
+            i += 1; continue
+        if line.startswith("!["):
+            close(stack)
+            shots = [line]
+            j = i + 1
+            while j < len(lines):                    # collect the whole run of images
+                nxt = lines[j].strip()
+                if not nxt:
+                    j += 1; continue
+                if not nxt.startswith("!["):
+                    break
+                shots.append(nxt); j += 1
+            sizes = [img_size(x) for x in shots]
+            tall = len(shots) > 1 and all(h and w and h > w * 1.4 for w, h in sizes)
+            if tall:
+                # product photos belong side by side, keeping their relative sizes
+                imgs = "".join(inline(x) for x in shots)
+                out.append(f'<p class="shot hero">{imgs}</p>')
+            else:
+                cls = "shot row" if len(shots) > 1 else "shot"
+                out.append(f'<p class="{cls}">' + "".join(inline(x) for x in shots) + "</p>")
+            i = j; continue
+        # plain paragraph: join following non-empty, non-special lines
+        para = [line]
+        i += 1
+        while i < len(lines) and lines[i].strip() and not re.match(
+                r"^(#{2,4}\s|[-*]\s|\d+\.\s|\||!\[)", lines[i]):
+            para.append(lines[i].strip()); i += 1
+        close(stack)
+        text = " ".join(para)
+        # safety notes (calibration backups, wrong-firmware warnings) must shout
+        cls = ' class="danger"' if DANGER.search(text) else ""
+        out.append(f"<p{cls}>{inline(text)}</p>")
+    close(stack)
+    return "\n".join(out), toc
 
 
 def e(s):
@@ -654,6 +893,7 @@ def page(lang, label, prefix, t):
     <a href="#install">{e(t["install_h"])}</a>
     <a href="#docs">{e(t["docs_h"])}</a>
     <a href="{REPO}">GitHub</a>
+    {lang_selector(lang)}
   </nav>
 </header>
 
@@ -703,12 +943,15 @@ def page(lang, label, prefix, t):
 <section id="docs">
   {h2("docs", t["docs_h"])}
   <p class="lede">{e(t["docs_lede"])}</p>
-  <table><thead><tr><th>&nbsp;</th><th>{e(t["docs_ru"])}</th><th>{e(t["docs_en"])}</th></tr></thead>
+  <table><thead><tr><th>&nbsp;</th><th>{e(t["docs_online"])}</th>
+  <th>{e(t["docs_ru"])}</th><th>{e(t["docs_en"])}</th></tr></thead>
   <tbody>
   <tr><td>{e(t["docs_install"])}</td>
+      <td><a href="install/">{e(t["docs_read"])}</a></td>
       <td><a href="{REPO}/blob/main/karina-v3-k1-install.pdf">PDF</a></td>
       <td><a href="{REPO}/blob/main/karina-v3-k1-install-en.pdf">PDF</a></td></tr>
   <tr><td>{e(t["docs_manual"])}</td>
+      <td><a href="manual/">{e(t["docs_read"])}</a></td>
       <td><a href="{REPO}/blob/main/karina-v3-k1-manual.pdf">PDF</a></td>
       <td><a href="{REPO}/blob/main/karina-v3-k1-manual-en.pdf">PDF</a></td></tr>
   </tbody></table>
@@ -723,6 +966,65 @@ def page(lang, label, prefix, t):
   <p>{e(t["footer_base"])} <a href="{FAGCI}">fagci/uv-k5-firmware-fagci-mod</a></p>
   <p>{e(t["footer_license"])} © 2026 autumn1rain.</p>
   <p class="langs">{e(t["footer_lang"])}: {others}</p>
+</footer>
+</div>
+</body>
+</html>
+"""
+
+
+SHORT = {"en": "EN", "ru": "RU", "es": "ES", "de": "DE", "zh": "中文"}
+
+
+def lang_selector(lang, suffix=""):
+    """Language codes for the page header; the current one is shown but not linked."""
+    out = []
+    for code, name, prefix in LANGS:
+        label = e(SHORT[code])
+        if code == lang:
+            out.append(f'<b>{label}</b>')
+        else:
+            out.append(f'<a href="{SITE}{prefix}{suffix}" hreflang="{code}" '
+                       f'title="{e(name)}">{label}</a>')
+    return '<span class="langsel">' + " ".join(out) + "</span>"
+
+
+def doc_page(lang, prefix, doc, t, body, toc):
+    """One long document (installation guide / manual) as a page with a sticky contents."""
+    base = "../../" if prefix else "../"
+    title = t["docs_install"] if doc == "install" else t["docs_manual"]
+    pdf = (f"{REPO}/blob/main/karina-v3-k1-{doc}.pdf" if lang == "ru"
+           else f"{REPO}/blob/main/karina-v3-k1-{doc}-en.pdf")
+    links = "".join(f'<a href="{SITE}{p}{doc}/">{e(n)}</a>' for c, n, p in LANGS if c != lang)
+    nav = "".join(f'<a href="#{sid}">{e(name)}</a>' for sid, name in toc)
+    return f"""<!doctype html>
+<html lang="{lang}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{e(title)} — Karina</title>
+<meta name="description" content="{e(title)} — Karina (autumn rain), Quansheng UV-K5 V3 / UV-K1.">
+<link rel="canonical" href="{SITE}{prefix}{doc}/">
+<link rel="stylesheet" href="{base}assets/style.css">
+</head>
+<body>
+<div class="wrap doc-wrap">
+<header class="top">
+  <div class="brand">Karina <span>— autumn rain</span></div>
+  <nav><a href="{base}{prefix}">{e(t["back_to_site"])}</a> <a href="{REPO}">GitHub</a>
+       {lang_selector(lang, doc + "/")}</nav>
+</header>
+<div class="doc-top">
+  <h1>{e(title)}</h1>
+  <p class="sub"><a href="{pdf}">{e(t["pdf_note"])}</a></p>
+</div>
+<div class="doc">
+  <aside class="toc"><b>{e(t["toc_h"])}</b>{nav}</aside>
+  <article class="body">{body}</article>
+</div>
+<footer>
+  <p>{e(t["footer_license"])} © 2026 autumn1rain.</p>
+  <p class="langs">{e(t["footer_lang"])}: {links}</p>
 </footer>
 </div>
 </body>
@@ -745,9 +1047,30 @@ def main():
         title_len = len(t["title"])
         desc_len = len(t["description"])
         print(f"{os.path.relpath(path, ROOT)}  title {title_len}  desc {desc_len}")
+    # long documents (installation guide, manual) as their own pages
+    src_root = os.path.join(ROOT, "site-docs")
+    doc_urls = []
+    for lang, _name, prefix in LANGS:
+        t = load(lang)
+        for doc, _key in DOC_FILES:
+            src = os.path.join(src_root, lang, f"{doc}.md")
+            if not os.path.exists(src):
+                continue
+            out_dir = os.path.join(DOCS, prefix.strip("/"), doc) if prefix \
+                else os.path.join(DOCS, doc)
+            os.makedirs(out_dir, exist_ok=True)
+            depth = "../../" if prefix else "../"
+            body, toc = render_markdown(open(src).read(), f"{depth}assets/docs/{doc}/")
+            open(os.path.join(out_dir, "index.html"), "w").write(
+                doc_page(lang, prefix, doc, t, body, toc))
+            doc_urls.append(f"{prefix}{doc}/")
+            print(f"  {prefix}{doc}/index.html  {len(toc)} sections, "
+                  f"{body.count('class=\"danger\"')} warnings")
+
     urls = "".join(
         f"<url><loc>{SITE}{p}</loc><xhtml:link rel='alternate' hreflang='{c}' "
         f"href='{SITE}{p}'/></url>" for c, _, p in LANGS)
+    urls += "".join(f"<url><loc>{SITE}{u}</loc></url>" for u in doc_urls)
     open(os.path.join(DOCS, "sitemap.xml"), "w").write(
         "<?xml version='1.0' encoding='UTF-8'?>"
         "<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9' "

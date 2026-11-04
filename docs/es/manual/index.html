@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manual del firmware — Karina</title>
+<meta name="description" content="Manual del firmware — Karina (autumn rain), Quansheng UV-K5 V3 / UV-K1.">
+<link rel="canonical" href="https://autumn1rain.github.io/karina-v3-k1/es/manual/">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<div class="wrap doc-wrap">
+<header class="top">
+  <div class="brand">Karina <span>— autumn rain</span></div>
+  <nav><a href="../../es/">Todo sobre Karina</a> <a href="https://github.com/autumn1rain/karina-v3-k1">GitHub</a>
+       <span class="langsel"><a href="https://autumn1rain.github.io/karina-v3-k1/manual/" hreflang="en" title="English">EN</a> <a href="https://autumn1rain.github.io/karina-v3-k1/ru/manual/" hreflang="ru" title="Русский">RU</a> <b>ES</b> <a href="https://autumn1rain.github.io/karina-v3-k1/de/manual/" hreflang="de" title="Deutsch">DE</a> <a href="https://autumn1rain.github.io/karina-v3-k1/zh/manual/" hreflang="zh" title="中文">中文</a></span></nav>
+</header>
+<div class="doc-top">
+  <h1>Manual del firmware</h1>
+  <p class="sub"><a href="https://github.com/autumn1rain/karina-v3-k1/blob/main/karina-v3-k1-manual-en.pdf">También en PDF</a></p>
+</div>
+<div class="doc">
+  <aside class="toc"><b>Contenido</b><a href="#s1">Firmware KARINA (autumn rain) — descripción</a><a href="#s3">1. PANTALLA PRINCIPAL.</a><a href="#s4">2. MENÚ.</a><a href="#s5">3. FUNCIONES DE LAS TECLAS.</a><a href="#s6">4. ANALIZADOR DE ESPECTRO</a><a href="#s7">5. PREGUNTAS FRECUENTES, POSIBLES PROBLEMAS Y CÓMO RESOLVERLOS.</a></aside>
+  <article class="body"><p><b>¿Y bien, lo has roto?</b> <b>Ya va siendo hora de abrir el manual.</b></p>
+<p><i>Karina (autumn rain) — QUANSHENG UV-K5 (V3), UV-K1, UV-K1(8)</i></p>
+<p class="shot hero"><img src="../../assets/docs/manual/p01_2.png" alt="screenshot"><img src="../../assets/docs/manual/p01_1.png" alt="screenshot"><img src="../../assets/docs/manual/p01_3.png" alt="screenshot"></p>
+<h2 id="s1">Firmware KARINA (autumn rain) — descripción<a class="anchor" href="#s1">#</a></h2>
+<p><b>Versión 21.08.2026</b></p>
+<p><b>(el número de versión = día.mes del lanzamiento)</b> <mark><b>Las adiciones, aclaraciones y novedades están marcadas con color</b></mark></p>
+<p class="danger"> <b>!!! GUARDE SUS CALIBRACIONES DE FÁBRICA !!!</b> <b>después de flashear hay que actualizar la calibración</b></p>
+<p><b>y a continuación hacer un reset: menu -&gt; reset -&gt; vfo</b></p>
+<h2 id="s3">1. PANTALLA PRINCIPAL.<a class="anchor" href="#s3">#</a></h2>
+<p class="shot row"><img src="../../assets/docs/manual/p03_1.png" alt="screenshot" class="wide"><img src="../../assets/docs/manual/p03_2.png" alt="screenshot" class="wide"></p>
+<p><b>1.</b> Línea de estado / pueden mostrarse los siguientes símbolos:</p>
+<p><b>S</b> – el ahorro de batería está activado – véase la sección 2, punto 14; <b>L</b> – el teclado está bloqueado (Lock) – véase la sección 3, punto F (F largo); <b>F</b> - paso al modo de opciones – véase la sección 3, punto F (F corto); <b>DW</b> – modo de doble escucha – véase la sección 2, punto 17; <b>A</b> - ajuste automático del subtono de la última recepción – véase la sección 3, punto 0 (F + 0 muy largo); <b>D</b> - volumen dinámico – véase la sección 3, punto 9 (9 largo); <b>r</b> - aleatorizador de frecuencia y de potencia de TX – véase la sección 3, punto 8 (F + 8 muy largo); <b>RXTX</b> – baliza automática – véase la sección 3, puntos 1, 2, 3; <b>x</b> - captura de frecuencia en segundo plano – véase la sección 3, punto 1 (1 largo); <i>Mientras se recibe una señal con subtono, la línea de estado muestra el</i> <i>tono analógico CTCSS (como número) o el código digital DCS (en la forma D125)</i></p>
+<p><b>2.</b> Selección del receptor / actividad / modo VFO/MR <b>3.</b> Indicador de la última recepción / desviación de frecuencia de la última recepción (x10 Hz) <b>4.</b> Parámetros del canal / pueden mostrarse los siguientes símbolos:</p>
+<p><b>ATT 1, ATT 2</b> - atenuador activado (activar / cambiar / desactivar rápido - <code>*</code> ) <b>DCS, CT</b> - tipo de subtono configurado – véase la sección 2, punto 4; <b>HIGH, MID, LOW</b> – potencia de TX actual (cambio rápido – 6 largo) <b>R</b> - modo reverse activado – (8 largo); <b>12,5k, 25k</b> - ancho de banda del canal – (cambio rápido F+7) <b>SCR</b> - scrambler analógico (2.3. Menú principal, punto 11) <b>5.</b> Escala del S-metro <b>6.</b> Selección del receptor / actividad / modo VFO/MR <b>7.</b> Recepción – RX / Transmisión - TX</p>
+<p><b>8.</b> Indicador de carga de la batería <b>9.</b> Nombre del canal de memoria / frecuencia <b>10.</b> Lista de escaneo asignada (- primera, - segunda) - el canal está en ambas listas de escaneo - el canal no está en ninguna lista de escaneo <b>11.</b> Nivel de señal del S-metro <b>12.</b> Tipo de modulación - AM/FM/SSB (se cambia con 7 largo)</p>
+<h2 id="s4">2. MENÚ.<a class="anchor" href="#s4">#</a></h2>
+<h3>2.1. Navegación por el menú.</h3>
+<p class="danger"><b>Utilice las teclas de flecha</b> ▲ <b>/</b> ▼ <b>, o introduzca el número del punto directamente en el teclado (01, o 22…)</b> <b><i>¡¡¡Atención!!!</b></i> <i>Los puntos de menú 2, 3, 4, 5, 6, 7, 8, 9, 10, 26 y 39 se configuran</i> <i>de forma individual para las bandas A y B y para cada banda de frecuencia (Banda).</i></p>
+<h3>2.2. Bandas de frecuencia de trabajo (Bandas):</h3>
+<p>1.00000 – 108.99990 MHz; 109.00000 – 139.99990 MHz; 140.00000 – 199.99990 MHz 200.00000 – 279.99990 MHz; 280.00000 – 399.99990 MHz; 400.00000 – 669.99990 MHz 700.00000 – 3200.99990 MHz. La precisión del valor de frecuencia depende del paso configurado en el punto 2 (Step).</p>
+<h3>2.3. Menú principal.</h3>
+<p><b>1.</b> <b>Sql</b> – nivel de sensibilidad del silenciador (squelch), configurado simultáneamente para la banda superior (<b>A</b>) y la inferior (<b>B</b>) (véase también la descripción del punto 35) <b>2.</b> <b>Step</b> – paso de frecuencia. (para CB = 5/10; Satcom, Avia = 5/25; todo lo demás = 6.25/12.5). <b>3.</b> <b>Power</b> – potencia de TX del transceptor. <b>High / Middle / Low</b>. <b><i>4.</b></i> <b>R_DCS</b> – subtono codificado digital para recepción (Digital-Coded Squelch), <i>si la función está activada, el silenciador se abrirá solo después de recibir este subtono. (se aplica solo a la modulación FM)</i> <b><i>5.</b></i> <b>R_CTCS</b> – subtono analógico para recepción (Continuous Tone-Coded Squelch System), <i>si la función está activada, el silenciador se abrirá solo después de recibir este subtono. (se aplica solo a la modulación FM)</i> <b><i>6.</b></i> <b>T_DCS</b> – subtono codificado digital para transmisión, <i>si la función está activada, el transceptor enviará este tono. (se aplica solo a la modulación FM)</i> <b><i>7.</b></i> <b>T_CTCS</b> – subtono analógico para transmisión, <i>si la función está activada, el transceptor enviará este tono. (se aplica solo a la modulación FM)</i> <b>8.</b> <b>Shift</b> – signo del desplazamiento de la frecuencia de transmisión (split RX/TX) <b>+</b>/<b>–</b>/<b>upc.</b> <i>(upconverter - cuando se utiliza un convertidor descendente)</i> <b>9.</b> <b>Offs</b> – valor del desplazamiento de la frecuencia de transmisión. <b>10. W/N</b> – el ancho de banda que utiliza el transceptor:</p>
+<ul>
+<li><b>25 kHz</b> - Wide</li>
+<li><b>12.5 kHz</b> - Narrow.</li>
+</ul>
+<p><b>11. Scrambl</b> – scrambler analógico <i>transforma la señal de voz original cambiando su amplitud, su frecuencia y sus parámetros temporales en distintas combinaciones (1-10 – enmascara la voz, 11-20 – cambia el tono de la voz).</i></p>
+<p><b>12. BusyCL</b> – la transmisión se bloquea en un canal ocupado: mientras el transceptor está recibiendo una señal, pulsar PTT no inicia la transmisión. <b>13. Mem_ch</b> – guardar la frecuencia y los ajustes en un canal de memoria <i>cualquier cambio de los ajustes del canal activo (en modo canal (MR)) se guarda solo si se confirma a través de este punto del menú; si no se hace, los ajustes del canal vuelven a los guardados anteriormente en cuanto se cambia a otro canal o se apaga/enciende la radio.</i> <b>14. Save</b> – ahorro de batería (relación entre el tiempo activo y el tiempo de reposo). <b>MAX</b> – ahorro máximo x10 <i>El máximo ahorro de energía se consigue con Save=Max junto con DW=OFF. El ajuste óptimo es 1:3. Cuando está activado, el símbolo</i> <b><i>S</b></i> <i>aparece de vez en cuando en la línea de estado</i> <mark><i>(véase también la descripción del punto 25 Roger (Roger=5)).</i></mark> <b><i>15.</b></i> <b>VOX</b> – TX activada por voz (1-10 sensibilidad del micrófono) <i>al entrar en el menú con «M», VOX se bloquea para evitar que se dispare al pulsar las teclas.</i> <b>16. Light</b> – retroiluminación de la pantalla. Se configura en 2 etapas: tiempo y brillo: <b>AJUSTE DEL TIEMPO DE RETROILUMINACIÓN:</b> <b>OFF</b> – oscuridad total (incluso los LED de RX/TX permanecen apagados); <b>KEY</b> – lo mismo que OFF, pero la retroiluminación se enciende durante 5 segundos al pulsar una tecla frontal<b>;</b> <b>2, 5, 10, 20 sec</b>, <b>2 min</b> – tiempo de retroiluminación. La retroiluminación permanece encendida el tiempo seleccionado, pero se apaga solo después de que haya terminado la recepción; <b>ON</b> – retroiluminación permanentemente encendida. <b>AJUSTE DEL BRILLO DE LA RETROILUMINACIÓN:</b> <b>bri 0-7 –</b> ajuste del brillo de la retroiluminación. Para configurarlo, ajuste primero el tiempo de retroiluminación, después entre de nuevo en el punto <b>Light</b> y ajuste el brillo. <b>17. DW</b> – modo de doble escucha para las frecuencias de las bandas A y B:</p>
+<ul>
+<li><b>Chan_A / Chan_B</b> – activar la función DW.</li>
+<li><b>SCAN</b> – la banda activa <b>A / B</b> sigue siendo la de trabajo, la otra escanea los canales de la lista de escaneo activa.</li>
+<li><b>OFF</b> – desactivar el modo de doble escucha.</li>
+</ul>
+<p class="danger"><mark><b>ATENCIÓN</b>: cuando la captura en segundo plano está activada (pulsación larga de la tecla 1), DW=ON se activa automáticamente <i>(la frecuencia capturada se muestra en VFO-B).</i></mark> <b>18. Beep</b> – señales acústicas al encender el transceptor, cuando la batería está baja y cuando se detecta una frecuencia en el modo de captura de frecuencia en segundo plano (las pulsaciones de teclas no van acompañadas de sonido). <b>19. TxTime</b> – límite de la duración de la transmisión continua y del funcionamiento de la baliza. <b>20. Scan</b> – el método de detención o reanudación del escaneo (este ajuste se aplica también al analizador de espectro):</p>
+<ul>
+<li><b>CO</b> – el escaneo se reanuda después de que desaparezca la portadora <mark>(óptimo);</mark></li>
+</ul>
+<ul>
+<li><b>TO</b> – reanudar el escaneo después de una pausa de 5 segundos <i>(en el espectro una señal fuerte puede desaparecer / atascarse periódicamente, el «efecto de congelación»);</i></li>
+<li><b>SE</b> – detener completamente el escaneo en cuanto se detecta una señal. Las teclas ▲<b>/</b>▼ reanudan el escaneo <i>(</i><mark><i>cuando se selecciona SE</i></mark> <i>en el espectro, las frecuencias que ya han sido recogidas en el «Loot» no se vuelven a «buscar»).</i></li>
+</ul>
+<p><b>21. Name</b> – seleccionar el estilo con el que se muestran los nombres de los canales (opciones disponibles: <b>NAME</b> - nombre, <b>CHAN</b> - canal, <b>FREQ</b> - frecuencia, <b>NAME+F</b> - nombre + frecuencia).</p>
+<p><b>22. STE</b> – elimina el siseo/ruido/«pfft» al final de la transmisión. <i>(Al soltar PTT se emite al aire un tono corto de 55 Hz que indica a los demás transceptores que la transmisión ha terminado y que deben silenciar el audio.)</i></p>
+<p><b>23. Mic</b> – sensibilidad del micrófono:</p>
+<ul>
+<li><b>0</b> – micrófono sensible sin umbral (óptimo con <b>tx_filt = 1-2)</b>;</li>
+<li><b>1</b> – Mínima – (óptimo con <b>tx_filt = 0-1)</b>;</li>
+<li><b>2</b> – Media (óptimo con <b>tx_filt = 1)</b>;</li>
+<li><b>3</b> – Reforzada <i>(mejor para contactos a larga distancia; a corta distancia aparece eco)</i> (óptimo con <b>tx_filt = 1)</b>;</li>
+<li><b>4</b> – Reforzada <b>recomendada</b> *(*para un entorno silencioso, óptimo con <b>tx_filt = 1)</b>;</li>
+<li><b>5</b> – MAX <i>(se oye el ruido de fondo ambiental)</i> (óptimo con <b>tx_filt = 1)</b><i>.</i></li>
+</ul>
+<p><b>24. SList</b> – seleccionar la lista de escaneo <b>1</b> / <b>2</b> / <b>3</b> (3 - escanea todos los canales de la memoria)</p>
+<p><i>Añadir / quitar el canal activo a las listas de escaneo o de ellas (solo se puede añadir / quitar en SList 1 y 2) se hace con la combinación F+1 desde la pantalla principal, lo que se confirma con la aparición / desaparición del icono del punto 9 de la p.2.</i></p>
+<p><i>¡Mientras SList 3 está activa, no se pueden añadir ni quitar canales!</i></p>
+<p><i>Además, con F+9 se pueden asignar 2 canales de escaneo prioritarios; para más detalles véase la sección «FUNCIONES DE LAS TECLAS» (9 CALL).</i></p>
+<p><b>25. Roger</b> – tono audible al final de la transmisión (2 opciones de trabajo a elegir)</p>
+<p><i>Los Roger adicionales 3-55 son funciones de prueba – no los recorra sin motivo:</i></p>
+<p><i>Roger 3 - autocaptura de frecuencia con mayor alcance (véase la sección «Funciones de las teclas»);</i></p>
+<p><i>Roger 4 – Desactiva el atenuador automático (OFF);</i></p>
+<p><i>Roger 5 - modo con ahorro de energía mejorado + aceleración de: la conmutación de dw, la medición de subtonos y la comprobación del sql en powersave. Un algoritmo de funcionamiento distinto.</i></p>
+<p><i>Roger 6 – Corrección inversa de la frecuencia de TX por AFC (para compensar el desplazamiento Doppler);</i></p>
+<p><i>Roger 7 – Corrección directa de la frecuencia de TX por AFC</i></p>
+<p><i>(Ajuste automático de la frecuencia de TX por afc. Tras recibir una señal, la radio memoriza la desviación de frecuencia y corrige la transmisión. La tecla EXIT restablece la corrección.)</i></p>
+<p><i>Roger 8 – AGC por software de AM_fix en FM.</i></p>
+<p><b>26. Modulat</b> – modo de modulación <b>FM / AM / SSB</b> <i>(FM por defecto, funciona solo en recepción).</i></p>
+<p><b>27. AM_fix</b> – activa el AGC de AM para mejorar la recepción de señales AM <i>(cuando esta función está activa, los registros no se ajustan en el modo «captura de frecuencia» del espectro si está configurada la modulación de amplitud).</i></p>
+<p><b>28. AMf_lvl</b> – ajusta el nivel del AGC de AM <i>(en algunas condiciones reduce el ruido).</i></p>
+<p><b>29. LNA_hi</b> – activa el amplificador de bajo ruido <i>(en entornos con interferencias fuertes es mejor desactivarlo).</i></p>
+<p><i>Cuando está desactivado, el espectro es «plano»; cuando está activado, el espectro «cobra vida».</i></p>
+<p><i>Véase la descripción adicional del valor MAN en la descripción de los registros del modo analizador de espectro.</i></p>
+<p><b>30. rx_filt</b> – cambia el tono de la señal recibida *(1 - realza los graves, 2 y 3 - cortan los graves y realzan los agudos (<b>**3 es el óptimo</b>**)*</p>
+<p><b>31. tx_filt</b> – cambia la modulación en transmisión (preajuste para el registro Tx3k) <i>0 – de fábrica, 1 – la reduce</i> <b>*(óptimo)</b>**, 2, 3 - aumentan la modulación; en el transceptor receptor puede aparecer un chillido o un recorte del silenciador.*</p>
+<p><i>Si surgen problemas, ponga los puntos de menú 30, 31 =</i> <b><i>1</b><b>, reinicie el transceptor y después póngalos =</i> </b>*0****)*</p>
+<p><b>32. Del_ch</b> – borrar un canal de memoria</p>
+<p><b>33. Reset</b> – restablecer la configuración del transceptor:</p>
+<p><mark>-</mark> <mark><b>VFO</b></mark> – restablecer los ajustes del transceptor y las bandas VFO</p>
+<p><mark>-</mark> <mark><b>ALL</b></mark> <mark>– restablecer todos los ajustes del transceptor, incluido el</mark> borrado de los canales</p>
+<p><mark><i>(las calibraciones no se ven afectadas por esto).</i></mark></p>
+<p><b>34. Re-name</b> – renombrar un canal (<code><i></code> - carácter siguiente) – para los canales recién guardados, si no se ha puesto nombre, durante el escaneo se muestra como «<b>,,,,,,,,,»</b>; al introducir un nombre, salte los caracteres vacíos con <code></i></code></p>
+<p><mark><b>35. Preset</b></mark> <mark>– Seleccionar el preset de trabajo</mark> <mark><b>que se carga por defecto</b></mark> <mark>(0, 1, 2)</mark> <mark>para el funcionamiento de la radio.</mark> <mark><b>¡Las calibraciones y la configuración son individuales para cada preset</b></mark><mark>!</mark></p>
+<p><mark><i>(para cada preset, en la primera carga hay que realizar un borrado completo de la memoria (encender manteniendo pulsadas PTT+EXIT), después cargar las calibraciones y la configuración (si hace falta) y ajustar todos los puntos que necesite).</i></mark></p>
+<p><mark>Para cambiar sobre la marcha al preset que necesite, encienda la radio manteniendo pulsada la tecla correspondiente 0 / 1 / 2.</mark></p>
+<p><b>36. Sql 2</b> – nivel de sensibilidad del silenciador para la banda <b>B</b>.</p>
+<p><i>Cuando se ajusta</i> <b><i>SQL</b></i> <i>(punto 1 del menú), el ajuste se aplica a la vez a las bandas</i> <b><i>A</b></i> <i>y</i> <b>*B</b>**.*</p>
+<p><i>Cuando se ajusta</i> <b><i>SQL2</b><b>, se aplica un ajuste independiente a la banda</i> </b>*B<b>**. (El ajuste de la banda* </b><i>B<b></i> <i>se restablece cada vez que se cambia</i> </b>*SQL*** <i>en el punto 1.)</i></p>
+<p><b>37. Loot</b> – el «menú Loot» recoge automáticamente las frecuencias en las que hubo recepción durante el escaneo en el espectro y en VFO (128 entradas – al desbordarse se sobrescriben las más antiguas. Ordenadas desde la encontrada más recientemente; se aplica un filtro de duplicados y se muestran los subtonos detectados)</p>
+<p><i>Si la frecuencia ya está guardada en la memoria, se muestra el nombre del canal. (Si la frecuencia está almacenada dos veces en la lista de canales, se muestra el nombre del primer canal de la lista.)</i></p>
+<p><i>También se muestra el tiempo transcurrido desde la última recepción.</i></p>
+<p><i>Cuando se selecciona una entrada con la tecla</i> <b>*M</b>**, la frecuencia actual se transfiere a la banda VFO activa.*</p>
+<p><i>Guardar en memoria desde VFO se hace mediante el punto 13. Mem_ch</i></p>
+<p><i>El «menú Loot» se borra después de reiniciar el transceptor.</i></p>
+<h3>2.4. Menú oculto.</h3>
+<p><mark><b><i>Sin experiencia y sin los instrumentos necesarios no se recomienda cambiar los parámetros de los puntos 41-53 del menú oculto: cambiar estos puntos afecta a la calibración de la radio.</b></i></mark></p>
+<p class="danger"><mark><b><i>¡¡¡Cualquier ajuste de estos puntos se realiza bajo su propia responsabilidad!!!</b></i></mark></p>
+<p><mark><b><i>¡Se recomienda encarecidamente hacer una COPIA DE SEGURIDAD (BACKUP) de los ajustes y de las calibraciones de la radio antes de cambiarlos!</b></i></mark></p>
+<p>El menú oculto aparece si enciende la radio manteniendo pulsadas al mismo tiempo <b>PTT</b> y la tecla lateral de función <b>FN1</b>, y después suelta todas las teclas <i>(suelte</i> <b><i>PTT + FN1</b></i> <i>cuando se apague la pantalla de inicio)</i>.</p>
+<p><b>38. F Lock</b> – seleccionar el plan de frecuencias que permite la transmisión <i>(la introducción de una frecuencia para recepción sigue estando abierta en todo el rango de 15.0 MHz – 1349.9999 MHz):</i></p>
+<ul>
+<li><b>FCC</b> (144-148, 420-450);</li>
+<li><b>CE</b> (144-146, 430-440);</li>
+<li><b>GB</b> (144-148, 430-440);</li>
+<li><b>LPD PMR</b> (433-435, 446-447) - esto bloquea además todas las teclas frontales excepto las flechas ▲<b>/</b>▼ (después de reiniciar el transceptor)</li>
+</ul>
+<p><i>Para una banda en modo de frecuencia</i> <b>*VFO</b>**, se puede introducir una frecuencia desplazándose con* ▲ <i>/</i> ▼ <i>(dentro de una banda VFO).</i></p>
+<p><i>Para una banda en modo canal</i> <b>*MR</b>**, solo se pueden seleccionar canales preprogramados desplazándose con* ▲ <i>/</i> ▼ <i>;</i></p>
+<ul>
+<li><b>OFF</b> (136-240, 280-500) – el rango de frecuencias de fábrica.</li>
+</ul>
+<p><b>39. Tx All</b> – seleccionar el modo de bloqueo de la transmisión:</p>
+<ul>
+<li><b>DEFAULT</b> – transmisión en las bandas seleccionadas en el punto de menú anterior <b>36;</b></li>
+<li><b>DISABLE</b> – prohibir la transmisión en todas las frecuencias;</li>
+<li><b>ENABLE</b> – permitir la transmisión en todas las frecuencias.</li>
+</ul>
+<p><b>40. Sat</b> – reajusta los filtros de recepción para la banda de frecuencias Satcom</p>
+<ul>
+<li><b>OFF –</b> si las bobinas se han modificado para la recepción Satcom;</li>
+<li><b>ON –</b> si no se ha realizado ninguna modificación.</li>
+</ul>
+<p><mark><b>41. F_Corr</b></mark> <mark>– corrección de la frecuencia del oscilador de referencia</mark></p>
+<p><mark><b>42. r.Open</b></mark> <mark>– ajuste manual del nivel de APERTURA del SQL por RSSI.</mark></p>
+<p><mark><b>43. r.Close</b></mark> <mark>– ajuste manual del nivel de CIERRE del SQL por RSSI.</mark></p>
+<p><mark><b>44. n.Open</b></mark> <mark>– ajuste manual del nivel de APERTURA del SQL por ruido.</mark></p>
+<p><mark><b>45. n.Close</b></mark> <mark>– ajuste manual del nivel de CIERRE del SQL por ruido.</mark></p>
+<p><mark><b>46. g.Open</b></mark> <mark>– ajuste manual del nivel de APERTURA del SQL por Glitch.</mark></p>
+<p><mark><b>47. g.Close</b></mark> <mark>– ajuste manual del nivel de CIERRE del SQL por Glitch.</mark></p>
+<p><mark><b>48. a</b></mark> <mark>– ajustes de servicio para las funciones de prueba del firmware</mark><mark><b>.</b></mark></p>
+<p><mark><b>49. b</b></mark> <mark>– ajustes de servicio para las funciones de prueba del firmware.</mark></p>
+<p><mark><b>50. c</b></mark> <mark>– ajustes de servicio para las funciones de prueba del firmware.</mark></p>
+<p><mark><b>51. d</b></mark> <mark>– ajustes de servicio para las funciones de prueba del firmware.</mark></p>
+<p><mark><b>52. e</b></mark> <mark>– ajustes de servicio para las funciones de prueba del firmware.</mark></p>
+<p><b>53. PWR</b> – potencia de TX, almacenada en las calibraciones <i>(al entrar muestra</i> <b><i>0</b><b>; desplácese con</i> ▲<i>/</i>▼ <i>o pulse</i> </b>*EXIT*** <i>- el valor se actualizará).</i></p>
+<p><i>Para guardar un valor, seleccione primero la frecuencia / banda y el nivel de potencia que quiere ajustar (HIGH / MID / LOW). Después abra el punto de menú PWR, cambie el valor y pulse</i> <b><i>M</b></i> <i>para guardar.</i></p>
+<p class="danger"><b><i>¡¡¡El valor de PWR será distinto para el principio, el medio y el final de cada banda de frecuencias, y para cada nivel de potencia!!!</b></i></p>
+<h2 id="s5">3. FUNCIONES DE LAS TECLAS.<a class="anchor" href="#s5">#</a></h2>
+<p><b>Pulsación corta</b> – pulsar y soltar (estándar).</p>
+<p><b>Pulsación larga</b> – al menos 1 segundo (para la mayoría de las teclas equivale a la combinación «<b>F + pulsación corta</b>»).</p>
+<p><b>F + pulsación muy larga</b> – 5 segundos (hasta que parpadee el LED rojo).</p>
+<h3><mark>3.1. Combinaciones de servicio.</mark></h3>
+<p><mark>Funciones disponibles al encender la radio manteniendo pulsadas determinadas teclas:</mark></p>
+<p><mark>-</mark> <mark><b>PTT+FN1</b></mark> <mark>– Entrar en el menú de ajustes oculto (véase la sección 2.4).</mark></p>
+<p><mark>-</mark> <mark><b>PTT+EXIT</b></mark> <mark>– Borrado completo de la memoria (calibraciones, configuración, todos los ajustes) –</mark> <mark><b>debe hacerse con el cable DESCONECTADO</b></mark><mark>; después del encendido mantenga las teclas pulsadas al menos 2 segundos.</mark></p>
+<p><mark>-</mark> <mark><b>0</b></mark> <mark>– selección rápida del preset 0 en el momento del encendido (véase el punto de menú 35).</mark></p>
+<p><mark>-</mark> <mark><b>1</b></mark> <mark>– selección rápida del preset 1 en el momento del encendido (véase el punto de menú 35).</mark></p>
+<p><mark>-</mark> <mark><b>2</b></mark> <mark>– selección rápida del preset 2 en el momento del encendido (véase el punto de menú 35).</mark></p>
+<h3>3.2. Teclas frontales.</h3>
+<p><b>M</b></p>
+<ul>
+<li>pulsación corta <b>M</b> – entrar en el Menú</li>
+<li>pulsación corta <b>M</b> – salir del punto de Menú actual, confirmando el ajuste</li>
+<li><mark>pulsación larga</mark> <mark><b>M</b></mark> <mark>– entrar en el modo módem (FUNCIÓN DE PRUEBA).</mark></li>
+</ul>
+<p>▲/▼</p>
+<ul>
+<li>pulsación corta ▲/▼ – cambiar de canal / frecuencia según el paso configurado</li>
+<li>F+ pulsación corta ▲/▼ – cambiar de canal / frecuencia en pasos de 1 MHz</li>
+</ul>
+<p><b>1 BAND</b></p>
+<ul>
+<li>pulsación larga <b>1</b> – captura de frecuencia en segundo plano (aparece una <b>x</b> en la pantalla)</li>
+</ul>
+<p><mark>Cuando la captura en segundo plano está activada, DW se activa automáticamente.</mark></p>
+<p><mark><i>(Cuando se detecta actividad, la frecuencia capturada se copia en la</i></mark> <mark><b><i>memoria temporal</b></i></mark> <mark><i>de VFO2 (de forma provisional). Cualquier manipulación de VFO2 hace que la frecuencia capturada desaparezca. La frecuencia capturada se puede ver en el menú Loot.)</i></mark></p>
+<p><i>(Si está configurado el punto</i> <b><i>Roger=3</b></i> *(****también se recomienda poner* <i>SQL=3, SAVE=1:3), la función trabaja como «captura de largo alcance»; el consumo de batería aumenta y la radio puede volverse lenta.)</i></p>
+<ul>
+<li><b>F+</b> pulsación corta <b>1</b> – Añadir / quitar el canal activo a las listas de escaneo o de ellas <i>(solo se puede añadir / quitar en las listas de escaneo 1 y 2</i> <b>*(</b>**al pulsar F+1 se añade/quita el canal actual y se salta automáticamente hacia arriba al siguiente canal más próximo en el que se pueda realizar la misma operación – si está quitando, salta al siguiente canal que se pueda quitar de la lista actual; si está añadiendo, salta al siguiente que se pueda añadir a la lista de escaneo actual)*, lo que se confirma con la aparición / desaparición del icono del punto 9 de la p.2.</li>
+</ul>
+<p>¡Mientras la lista de escaneo 3 está activa, no se pueden añadir ni quitar canales!</p>
+<ul>
+<li>F+ pulsación muy larga 1 – baliza automática FM (aparece el texto <b>RXTX</b>) (el transceptor responde a una llamada con un «bip») – durante la transmisión la baliza automática se puede desactivar pulsando cualquier tecla. Se recomienda <b>W/N=12.5</b>.</li>
+<li>Pulsar de nuevo F+ 1 muy largo – baliza automática con monitorización en segundo plano.</li>
+</ul>
+<p>El tiempo de funcionamiento depende del punto 19. TxTime, donde 1 min = 10 s de funcionamiento de la baliza / 2 min = 20 s de baliza / … / 9 min = 90 s de baliza / 10 min = 100 s de baliza. Ajustes óptimos: txfilt=1, mic=4, ste=on. Salga del modo baliza pulsando <b>EXIT.</b></p>
+<p><b>2 A/B</b></p>
+<ul>
+<li>pulsación larga 2 – cambiar entre la frecuencia superior (A) y la inferior (B)</li>
+<li>F+ pulsación muy larga 2 – baliza automática FM (aparece el texto <b>RXTX</b>) (el transceptor responde a una llamada con un sonido de «chasquido de Depredador») – durante la transmisión la baliza automática se puede desactivar pulsando cualquier tecla.</li>
+</ul>
+<p>Pulsar de nuevo F+ 2 muy largo – baliza automática que fija el subtono DCS según el nivel de la señal. Véase más abajo la tabla de DCS frente al nivel de señal.</p>
+<p><i>Práctica para probar y comparar distintas antenas. Muestra no solo el hecho de que la señal llegó a la baliza, sino también la intensidad de la señal recibida.</i></p>
+<p>Salga del modo baliza pulsando <b>EXIT.</b></p>
+<p><b>Tabla del subtono DCS de la baliza F+2 / F+2 frente al nivel de señal</b></p>
+<table><thead><tr><th><b>DCS</b></th><th><b>dBm</b></th><th><b>DCS</b></th><th><b>dBm</b></th><th><b>DCS</b></th><th><b>dBm</b></th><th><b>DCS</b></th><th><b>dBm</b></th><th><b>DCS</b></th><th><b>dBm</b></th></tr></thead><tbody><tr><td>023</td><td>-120</td><td>143</td><td>-096</td><td>266</td><td>-072</td><td>445</td><td>-050</td><td>662</td><td>-026</td></tr><tr><td>025</td><td>-119</td><td>145</td><td>-095</td><td>271</td><td>-071</td><td>446</td><td>-049</td><td>664</td><td>-025</td></tr><tr><td>026</td><td>-118</td><td>152</td><td>-094</td><td>274</td><td>-070</td><td>452</td><td>-048</td><td>703</td><td>-024</td></tr><tr><td>031</td><td>-117</td><td>155</td><td>-093</td><td>306</td><td>-069</td><td>454</td><td>-047</td><td>712</td><td>-023</td></tr><tr><td>032</td><td>-116</td><td>156</td><td>-092</td><td>311</td><td>-068</td><td>455</td><td>-046</td><td>723</td><td>-022</td></tr><tr><td>036</td><td>-115</td><td>162</td><td>-091</td><td>315</td><td>-067</td><td>462</td><td>-045</td><td>731</td><td>-021</td></tr><tr><td>043</td><td>-114</td><td>165</td><td>-090</td><td>325</td><td>-066</td><td>464</td><td>-044</td><td>732</td><td>-020</td></tr><tr><td>047</td><td>-113</td><td>172</td><td>-089</td><td>331</td><td>-065</td><td>465</td><td>-043</td><td>734</td><td>-019</td></tr><tr><td>051</td><td>-112</td><td>174</td><td>-088</td><td>332</td><td>-064</td><td>466</td><td>-042</td><td>743</td><td>-018</td></tr><tr><td>053</td><td>-111</td><td>205</td><td>-087</td><td>343</td><td>-063</td><td>503</td><td>-041</td><td>754</td><td>-017</td></tr><tr><td>054</td><td>-110</td><td>212</td><td>-086</td><td>346</td><td>-062</td><td>506</td><td>-040</td><td></td><td></td></tr><tr><td>065</td><td>-109</td><td>223</td><td>-085</td><td>351</td><td>-061</td><td>516</td><td>-039</td><td></td><td></td></tr><tr><td>071</td><td>-108</td><td>225</td><td>-084</td><td>356</td><td>-060</td><td>523</td><td>-038</td><td></td><td></td></tr><tr><td>072</td><td>-107</td><td>226</td><td>-083</td><td>364</td><td>-059</td><td>526</td><td>-037</td><td></td><td></td></tr><tr><td>073</td><td>-106</td><td>243</td><td>-082</td><td>365</td><td>-058</td><td>532</td><td>-036</td><td></td><td></td></tr><tr><td>074</td><td>-105</td><td>244</td><td>-081</td><td>371</td><td>-057</td><td>546</td><td>-035</td><td></td><td></td></tr><tr><td>114</td><td>-104</td><td>245</td><td>-080</td><td>411</td><td>-056</td><td>565</td><td>-034</td><td></td><td></td></tr><tr><td>115</td><td>-103</td><td>246</td><td>-079</td><td>412</td><td>-055</td><td>606</td><td>-033</td><td></td><td></td></tr><tr><td>116</td><td>-102</td><td>251</td><td>-078</td><td>413</td><td>-054</td><td>612</td><td>-032</td><td></td><td></td></tr><tr><td>122</td><td>-101</td><td>252</td><td>-077</td><td>423</td><td>-053</td><td>624</td><td>-031</td><td></td><td></td></tr></tbody></table>
+<table><thead><tr><th><b>DCS</b></th><th><b>dBm</b></th><th><b>DCS</b></th><th><b>dBm</b></th><th><b>DCS</b></th><th><b>dBm</b></th><th><b>DCS</b></th><th><b>dBm</b></th><th><b>DCS</b></th><th><b>dBm</b></th></tr></thead><tbody><tr><td>125</td><td>-100</td><td>255</td><td>-076</td><td>431</td><td>-052</td><td>627</td><td>-030</td><td></td><td></td></tr><tr><td>131</td><td>-099</td><td>261</td><td>-075</td><td>432</td><td>-051</td><td>631</td><td>-029</td><td></td><td></td></tr><tr><td>132</td><td>-098</td><td>263</td><td>-074</td><td></td><td></td><td>632</td><td>-028</td><td></td><td></td></tr><tr><td>134</td><td>-097</td><td>265</td><td>-073</td><td></td><td></td><td>654</td><td>-027</td><td></td><td></td></tr></tbody></table>
+<p class="danger">El Quansheng UV-K5 y sus variantes no son instrumentos de medida de laboratorio. El nivel de señal se lee en la escala del S-metro y puede diferir de los valores medidos por otros equipos !!!</p>
+<ul>
+<li>zona inestable (el AGC trabajando)</li>
+</ul>
+<p>Para realizar pruebas estables se recomienda ajustar una potencia de TX baja y mantener cierta distancia entre las radios.</p>
+<p><b>3 VFO/MR</b></p>
+<ul>
+<li>pulsación larga de 3 – alterna entre el modo de frecuencia (<b>VFO</b>) y el modo de canal (<b>MR</b>)</li>
+<li>F+ pulsación corta de 3 – (en modo <b>MR</b>) pasa al modo <b>VFO</b>, copiando automáticamente la frecuencia actual de <b>MR</b> a <b>VFO</b>. En modo <b>VFO</b>, F+ pulsación corta de 3 -&gt; pasa al modo <b>MR</b>.</li>
+<li>F+ pulsación muy larga de 3 – baliza automática en AM (aparece el texto <b>RXTX</b>) (el transceptor responde a una llamada con una señal en modulación de amplitud) – durante la transmisión la baliza automática se puede desactivar pulsando cualquier tecla. Se sale del modo baliza pulsando <b>EXIT.</b></li>
+</ul>
+<p><b>4 FC</b></p>
+<ul>
+<li>pulsación larga de <b>4</b> – la lista de frecuencias Loot. Funciones del menú Loot:</li>
+</ul>
+<p><b><i>4</b></i> <i>– añade/elimina una frecuencia a/de la lista negra (Lock) hasta el apagado.</i> <b><i>0</b></i> <i>(larga) – borra la lista negra Loot y la lista ATT.</i> <b><i>M</b></i> <i>– envía la frecuencia actual a la banda</i> <b><i>VFO</b></i> <i>activa (cuando</i> <b><i>MR</b></i> <i>está activo y existe un canal con esa frecuencia, la radio cambia a ese canal). El guardado en memoria desde VFO se hace mediante el punto 13. Mem_ch.</i> <i>Al apagar el transceptor, la lista Loot se borra.</i></p>
+<ul>
+<li>F+ pulsación larga de 4 – captura de frecuencia; guárdela con la tecla <b>M</b>.</li>
+</ul>
+<p>Por defecto los filtros UHF/VHF están desactivados, igual que en el firmware original, por lo que solo se detectan señales locales fuertes o radios situadas en las inmediaciones. Para mejorar el alcance y la estabilidad de la captura, seleccione el filtro que necesite pulsando 1 (VHF) o 2 (UHF).</p>
+<p><i>En el modo de captura, la frecuencia y el subtono de la pantalla «saltan» (se ve cómo se recorren los valores) hasta que se produce una captura. Una vez determinada la frecuencia capturada, el valor se detiene.</i></p>
+<ul>
+<li>F+ pulsación muy larga de 4 – entra en el modo PTT-Holder (mantiene la transmisión hasta que se vuelve a pulsar PTT). La transmisión se activa directamente pulsando</li>
+</ul>
+<p><b>PTT+FN1</b> a la vez. Para salir del modo PTT-Holder pulse <b>PTT</b> de nuevo.</p>
+<p><b>5 NOAA</b></p>
+<ul>
+<li>pulsación larga de 5 – activa el analizador de espectro con silenciador híbrido (squelch)</li>
+<li>F+ pulsación corta de 5 – inicia el analizador de espectro siguiendo la frecuencia del <b>VFO / MR</b> activo</li>
+</ul>
+<p><b>6 H/M/L</b></p>
+<ul>
+<li>pulsación larga de 6 – cambia la potencia de TX <b>HIGT / MID / LOW</b></li>
+</ul>
+<p><b>7 VOX</b></p>
+<ul>
+<li>pulsación larga de 7 – cambia la modulación <b>FM / AM / USB</b></li>
+<li>F+ pulsación corta de 7 – cambia el ancho de banda del canal <b>12.5 / 25 kHz</b></li>
+<li>F+ pulsación muy larga de 7 – generador de tonos AM. Teclas:</li>
+</ul>
+<p><b>1, 2, 3</b> – ciclo de trabajo; <b>4, 5, 6</b> – retardo; <b>7, 8, 9</b> – ancho de banda (~25-1000k); <b>0</b> – mezcla de un tono FM; ▲<b>/</b>▼ – ajuste fino del retardo.</p>
+<p><b>8 R</b></p>
+<ul>
+<li>pulsación larga de 8 – activa el modo inverso: se intercambian las frecuencias de recepción y transmisión (aparece el símbolo R junto al ancho de banda)</li>
+<li>F + muy larga 8 – aleatorizador de frecuencia y potencia (aparece el símbolo <b>r</b>) <i>(al pulsar PTT mientras F está activo y el aleatorizador está encendido – se transmite con el micrófono desconectado)</i></li>
+</ul>
+<p><b>9 Call</b></p>
+<ul>
+<li>pulsación larga de 9 – volumen dinámico (aparece el símbolo <b>D</b>)</li>
+</ul>
+<p>(a veces ayuda a suavizar el siseo/ruido/chasquido al final de una transmisión)</p>
+<ul>
+<li>F+ pulsación corta de 9 – añade el canal a la lista de prioridad que se utiliza durante el escaneo <i>(2 canales en ScList1 y 2 canales en ScList2, que se exploran cada 3 pasos de la lista de escaneo); al pulsar F+9 por tercera vez se desactivan los canales prioritarios. No se muestra nada en la pantalla. Si se añade dos veces el mismo canal a la lista de prioridad, el escaneo puede «atascarse».</i></li>
+</ul>
+<p><b>0 FM</b></p>
+<ul>
+<li>pulsación larga de 0 – activa/desactiva la radio FM (se puede salir con EXIT)</li>
+</ul>
+<p><i>La recepción de FM se detiene cuando aparece una señal y se reanuda 5 segundos después de que la señal desaparece. PTT también interrumpe temporalmente la recepción de FM.</i> <b><i>Controles en el modo de radio FM:</b></i> ▲<i>/</i>▼ <i>- cambiar de canal / frecuencia;</i> <b><i>F+1</b></i> <i>- cambiar VFO / MR;</i> <b><i>F+3</b></i> <i>– búsqueda de emisoras (cuando se encuentra una emisión la búsqueda se detiene sin guardar automáticamente.</i> ▲<i>/</i>▼ <i>- continuar la búsqueda);</i> <b><i>M</b></i> <i>- borrar canal (en MR), guardar canal (en VFO);</i> <b><i>F+6</b></i> <i>– activar/desactivar el AGC (control automático de ganancia)</i></p>
+<ul>
+<li>F+ pulsación muy larga de 0 – ajusta automáticamente el subtono de la última recepción (aparece el símbolo <b>A</b>)</li>
+</ul>
+<p><b><code>*</code> SCAN</b></p>
+<ul>
+<li>pulsación corta de <code>*</code> – activa el atenuador para la frecuencia / canal actual (aparece <b>ATT1</b>, en la siguiente pulsación – <b>ATT2</b>, luego <b>ATT3</b>, y la cuarta pulsación lo desactiva);</li>
+<li>pulsación larga de <code><i></code> – en modo de frecuencia inicia el escaneo de frecuencias, en modo de canal inicia el escaneo de canales </i>(según la lista de escaneo seleccionada en el punto 24.SList del menú. Si no se ha añadido ningún canal a la lista de escaneo seleccionada, la radio puede dejar de responder)*, (deténgalo con <b>EXIT</b>).</li>
+</ul>
+<p><i>Si necesita saltarse un canal / frecuencia durante el escaneo, puede activar para él ATT1, ATT2 o ATT3;</i></p>
+<ul>
+<li>F+ pulsación corta de <code>*</code> – explora los subtonos CTCSS en la frecuencia actual.</li>
+</ul>
+<p><mark>Cuando el escaneo ha terminado, la tecla</mark> <mark><b>M</b></mark> <mark>se puede usar para fijar el subtono encontrado como subtono de transmisión de la banda VFO activa.</mark></p>
+<p><b>F #</b></p>
+<ul>
+<li>pulsación corta de F – entra en el modo de opciones (aparece el símbolo <b>F</b>)</li>
+<li>pulsación larga de F – activa/desactiva el bloqueo de las teclas frontales (aparece <b>L</b>)</li>
+<li>Mientras el indicador <b>F</b> está encendido, y si la función de aleatorizador está activada (véase el apartado 3.1, punto 8 R), al pulsar PTT se transmite con el micrófono desconectado.</li>
+</ul>
+<h3>3.3. Teclas laterales.</h3>
+<p class="danger"><b>IMPORTANTE !!!</b> Si, al configurar la radio mediante CHIRP o PSCPS, FN1 y/o FN2 se ajustan a NONE (sin asignar), la radio puede quedar bloqueada y pedir un código al encenderse.</p>
+<p class="shot"><img src="../../assets/docs/manual/p16_1.png" alt="screenshot"></p>
+<p><b>Tecla lateral de «pulsar para hablar» [PTT]</b></p>
+<ul>
+<li>al pulsarla se empieza a transmitir</li>
+<li>al pulsarla junto con cualquier tecla frontal se envía un código <b>DTMF</b></li>
+</ul>
+<p><b>Tecla lateral de función [FN1]</b> <b>(valores por defecto)</b></p>
+<ul>
+<li>pulsación corta – abre/cierra el silenciador (squelch)</li>
+<li>pulsación larga – enciende/apaga la linterna</li>
+</ul>
+<p><b>Tecla lateral de función [FN2]</b> <b>(valores por defecto)</b></p>
+<ul>
+<li>pulsación corta – cambia la potencia de TX <b>HIGT / MID / LOW</b></li>
+<li>pulsación larga – inicia la baliza de emisión en la frecuencia seleccionada <i>(funciona cuando el punto 17 del menú -</i> <b><i>DW</b></i> <i>está desactivado; deténgala con</i> <b>*EXIT</b>**)*</li>
+<li>al pulsarla mientras se mantiene PTT se envía un tono de <b>1750 Hz</b></li>
+</ul>
+<p>Si el firmware se instala sobre el firmware original, o junto con su propio archivo de configuración, las asignaciones por defecto de las teclas [FN1] y [FN2] pueden ser distintas, ya que estas asignaciones se guardan en el archivo de configuración.</p>
+<p><b>Funciones de usuario de las teclas [FN1] y [FN2]</b></p>
+<p>Las funciones FN1 y FN2 solo se pueden cambiar mediante software (CHIRP, por ejemplo) y no se pueden ajustar ni reasignar desde el menú de la radio.</p>
+<p><b>Están disponibles las siguientes opciones:</b></p>
+<p><b>NONE</b> – nada seleccionado,</p>
+<p><b>FLASH LIGHT</b> – linterna, <b>POWER</b> – cambiar la potencia de TX, <b>MONITOR</b> – abrir el silenciador, <b>SCAN</b> – escaneo,</p>
+<p><b>VOX</b> – TX activada por voz, <b>FM RADIO</b> – radio FM,</p>
+<p><b>1750 Hz</b> – enviar un tono de 1750 Hz</p>
+<h3>3.4. Introducción de una frecuencia en la pantalla principal.</h3>
+<p>Para introducir manualmente una frecuencia en la pantalla principal hay que pasar primero al modo de frecuencia (se alterna entre el modo de frecuencia y el de canal con una pulsación larga de la tecla <b>3 VFO/MR</b>). Entonces aparece <b>VFO</b> en la parte izquierda de la pantalla, frente a la frecuencia. A continuación hay que introducir la frecuencia. Para introducir el punto decimal, utilice la tecla</p>
+<p><b>Ejemplos:</b> 140 <i>→</i> = 140.00000 o 433*875 <i>→</i> = 433.87500</p>
+<p>La introducción de la frecuencia se puede cancelar con la tecla</p>
+<h3>3.5. Escaneo en los modos VFO y MR.</h3>
+<p><b>Escaneo dentro de los límites de frecuencia establecidos en modo VFO</b></p>
+<ul>
+<li>poner VFO1 y VFO2 en modo de frecuencia</li>
+<li>establecer los límites inicial (VFO1) y final (VFO2) del escaneo</li>
+<li>hacer activo el VFO1 superior</li>
+<li>iniciar el escaneo con una pulsación larga de la tecla <b><code>*</code> Scan</b></li>
+<li>se ejecuta en bucle dentro de los límites (de VFO1 a VFO2)</li>
+<li>las teclas ▲<b>/</b>▼ cambian la dirección del escaneo</li>
+<li>el escaneo se detiene con <b>EXIT</b></li>
+</ul>
+<p>(la frecuencia vuelve entonces a su valor inicial – VFO1)</p>
+<p><i>Nota 1: Si inicia el escaneo con VFO2 activo, el escaneo se ejecuta fuera de los límites establecidos y, al detenerlo, la frecuencia no vuelve a su valor inicial.</i></p>
+<p><i>Nota 2: El paso de escaneo = el paso establecido para la banda A (punto 2 del menú de ajustes).</i></p>
+<p><b>Escaneo en modo de canal (MR)</b></p>
+<ul>
+<li>pasar al modo de canal</li>
+<li>si es necesario, seleccionar SList1, SList2 o SList3 en el punto 24 del menú</li>
+<li>iniciar el escaneo con una pulsación larga de la tecla <b><code>*</code> Scan</b></li>
+<li>se ejecuta en bucle según la SList seleccionada</li>
+<li>las teclas ▲<b>/</b>▼ cambian la dirección del escaneo</li>
+<li>si el escaneo se atasca en uno de los canales (por interferencias), puede activar el atenuador para ese canal (<b>ATT1</b> o <b>ATT2</b>) pulsando <b><code>*</code></b></li>
+<li>el escaneo se detiene con <b>EXIT</b></li>
+</ul>
+<ul>
+<li><mark>La función <b>CHANNEL = PRESET</b>:</mark></li>
+<li><mark>fije la frecuencia final en offset, ajuste shift – scn (la dirección del escaneo), añada el canal a la lista de escaneo que necesite.</mark></li>
+<li><mark>Una vez iniciado un escaneo en modo de canal, al llegar a este canal se realiza un escaneo adicional dentro de los límites de este ajuste.</mark></li>
+</ul>
+<h2 id="s6">4. ANALIZADOR DE ESPECTRO<a class="anchor" href="#s6">#</a></h2>
+<h3>4.1. Modo principal de espectro (silenciador híbrido) — cómo entrar:</h3>
+<ul>
+<li>pulsación larga de <b>5</b> – activa el analizador de espectro con silenciador híbrido (squelch)</li>
+<li><b>F</b> + pulsación corta de <b>5</b> – inicia el espectro con seguimiento de la frecuencia en VFO</li>
+<li class="danger"><b>¡IMPORTANTE!</b> <i>Si el analizador de espectro se inicia desde un canal o desde VFO con el desplazamiento RX/TX activado (puntos 8 y 9 del menú de ajustes), este desplazamiento también se aplicará al transmitir desde el modo de captura de frecuencia activa.</i></li>
+</ul>
+<p class="shot row"><img src="../../assets/docs/manual/p19_1.png" alt="screenshot" class="wide"><img src="../../assets/docs/manual/p19_2.png" alt="screenshot" class="wide"></p>
+<p><b>El analizador de espectro utiliza un silenciador híbrido:</b></p>
+<p>cuando se baja el umbral del silenciador, este solo se abre con señales que se parecen más a señales de canal, con un ancho de banda y una frecuencia normales.</p>
+<ol>
+<li>Preset (plan de frecuencias) – <b>3 / 9</b></li>
+<li>Número de pasos de escaneo – <b>2 / 8</b></li>
+<li>Tamaño del paso de escaneo – <b>1 / 7</b></li>
+<li>Frecuencia de recepción actual, o última detectada (aquella en la que se encontró una señal) – la frecuencia cambia cuando se detecta una señal con un nivel por encima del umbral del silenciador (10).</li>
+</ol>
+<ol>
+<li>Nombre del canal (se muestra siempre que la frecuencia ya esté guardada en la memoria del modo de canal (MR). Si la frecuencia está guardada dos veces en la lista de canales, se muestra el nombre del primer canal de la lista. Si el canal está guardado pero no se le ha dado ningún nombre, se muestra «<b>,,,,,,,,,</b>» — consulte la descripción del punto <b>34 Rename</b> del menú de ajustes para saber cómo dar nombre a un canal)</li>
+<li>Subtono de la señal recibida (se muestra si está presente)</li>
+<li>Ancho de banda del receptor – <b>6</b></li>
+<li>Tipo de modulación AM/FM/USB – <b>0</b></li>
+<li>Indicador de carga de la batería</li>
+<li>Nivel del silenciador (SQ) – <code>*</code> / <b>F</b></li>
+<li>Frecuencia inicial del rango de escaneo – puede desplazar todo el rango con ▲/▼, o introducir la frecuencia inicial desde el teclado: pulse <b>5</b> y, en el modo de «entrada libre», introduzca la nueva frecuencia inicial inmediatamente después de que aparezca -----; en el modo de preset use <b>F</b> para seleccionar <b>f start</b> e introduzca los MHz, el separador <code>*</code>, los kHz y los Hz, y después pulse <b>M</b> para aplicar.</li>
+<li>Paso de frecuencia del espectro – <b>4</b> (se utiliza para desplazar todo el rango escaneado con ▲/▼ según el paso establecido)</li>
+<li>Frecuencia final del rango de escaneo – puede desplazar todo el rango con ▲/▼, o introducir la frecuencia final desde el teclado: pulse <b>5</b>, use <b>F</b> para seleccionar <b>f end</b>, introduzca los MHz, el separador <code><i></code>, los kHz y los Hz, y después pulse <b>M</b> para aplicar </i>(en el modo de «entrada libre» la frecuencia final se corrige según el número y el tamaño de los pasos, en múltiplos de 16/32/64/128; en el modo de edición de presets se fija la frecuencia exacta).*</li>
+</ol>
+<p><b>pulsación larga de 4</b> – entrar en Loot. Funciones del menú Loot:</p>
+<p><b><i>4</b></i> <i>– añade la frecuencia a la lista negra (Lock) hasta el apagado.</i></p>
+<p><b><i>0</b></i> <i>– borra la lista negra Loot del espectro.</i></p>
+<p><i>La lista Loot se borra al apagar el transceptor.</i></p>
+<h3>4.2. Teclas de función adicionales en el modo de analizador de espectro:</h3>
+<p><b>FN1</b> – añade la frecuencia actual a la lista negra de escaneo (128 frecuencias – al desbordarse se sobrescriben las más antiguas) – pulse hasta que el LED rojo parpadee por primera vez (tras el segundo parpadeo del LED la lista negra se borra).</p>
+<ul>
+<li>La lista negra se reinicia después de apagar y encender (OFF/ON) la radio.</li>
+<li>Si necesita conservar permanentemente algunas frecuencias con interferencias constantes, puede incluirlas en la lista negra guardada. Para ello entre en el menú Presets (se entra con <b>M</b>, se desplaza con <b>M</b> y se selecciona <b>SAVE</b>), y después pulse arriba ▲ (esto guarda las últimas 16 frecuencias de la lista negra).</li>
+<li>La lista negra guardada se borra con una <b>pulsación larga de FN1</b> – hasta que el LED rojo parpadee por segunda vez (en el espectro), seguida del guardado en el menú Presets.</li>
+</ul>
+<p class="danger"><b><i>!!! Para que la lista negra guardada funcione correctamente</b></i>, <i>se recomienda borrar la lista negra con una pulsación larga de FN1 y guardarla la primera vez que se inicia el escáner después de instalar el firmware.</i></p>
+<p><b>FN2</b> – salto de frecuencia – púlsela mientras se está recibiendo una señal (la frecuencia se salta solo en la pasada de escaneo actual; en la siguiente pasada vuelve a participar en el escaneo)</p>
+<p>– apaga / enciende la retroiluminación de la pantalla en el modo de espectro (púlsela cuando no se esté recibiendo nada).</p>
+<h3>4.3. Ajustes del analizador de espectro.</h3>
+<p>En el analizador de espectro se puede trabajar tanto en el modo de «entrada libre» (rango) como con presets predefinidos. Los ajustes de «entrada libre» no se guardan y se borran al apagar/encender la radio. Los cambios en los presets se pueden guardar si es necesario.</p>
+<p>Por defecto están preconfigurados los siguientes presets para el escaneo en el modo de analizador de espectro:</p>
+<table><thead><tr><th>Preset</th><th>Rango, MHz</th><th>Paso</th><th>Modulación</th><th>Ancho</th></tr></thead><tbody><tr><td>—</td><td>28.89000 – 24.97000</td><td>5 kHz</td><td>SSB</td><td>6.25 kHz</td></tr><tr><td>CB</td><td>26.97500 – 27.99900</td><td>5 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>10m</td><td>28.00000 – 29.20000</td><td>5 kHz</td><td>SSB</td><td>6.25 kHz</td></tr><tr><td>7m</td><td>40.00000 – 43.00000</td><td>25 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>6m</td><td>50.00000 – 52.00000</td><td>12.5 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>Air</td><td>115.00000 – 140.00000</td><td>50 kHz</td><td>AM</td><td>25 kHz</td></tr><tr><td>2m</td><td>144.00000 – 146.00000</td><td>25 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>Rail</td><td>151.75000 – 154.95000</td><td>25 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>Sea</td><td>156.02500 – 159.22500</td><td>25 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>Sat</td><td>240.00000 – 243.80000</td><td>5 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>Riv1</td><td>300.01250 – 300.51250</td><td>12.5 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>Riv2</td><td>336.01250 – 336.81250</td><td>12.5 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>402</td><td>402.00000 – 403.60000</td><td>12.5 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>430</td><td>430.00000 – 433.00000</td><td>25 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>LPD</td><td>433.07500 – 434.99900</td><td>25 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>435</td><td>435.00000 – 445.99900</td><td>25 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>PMR</td><td>446.00000 – 446.99900</td><td>6.25 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>450</td><td>450.00000 – 461.99900</td><td>25 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>462</td><td>462.00000 – 471.00000</td><td>12.5 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>LoRa</td><td>864.02500 – 869.00000</td><td>50 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>GSMu</td><td>890.02500 – 915.00000</td><td>100 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>GSMd</td><td>935.02500 – 960.00000</td><td>100 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>23cm</td><td>1240.00000 – 1300.0000</td><td>100 kHz</td><td>FM</td><td>25 kHz</td></tr></tbody></table>
+<p class="danger"><b>IMPORTANTE:</b> Los presets se pueden editar según sus necesidades, pero tenga en cuenta que:</p>
+<ul>
+<li>Los nombres de los presets no se pueden editar.</li>
+<li>Los cambios en el ancho de banda y en la modulación no se guardan.</li>
+</ul>
+<h3>4.3.1. Trabajo en el modo «entrada libre»</h3>
+<p>La entrada libre no está ligada a una banda concreta y sus ajustes no se guardan.</p>
+<p>Para fijar la frecuencia inicial del rango de escaneo pulse <b>5</b> – se abre la ventana de introducción de la frecuencia inicial del escaneo (---------). Introduzca el número de MHz, el punto decimal con <code>*</code>, y después las cifras de kHz y Hz. Pulse <b>M</b> para confirmar el valor introducido.</p>
+<p>En el modo de «entrada libre» la frecuencia final se establece automáticamente a partir del paso – 1 / 7 – y del número de pasos – 2 / 8 (<i>si intenta cambiar la frecuencia final del escaneo mediante</i> <b><i>f end</b></i>, <i>la frecuencia final se ajusta al número de pasos en múltiplos de 16/32/64/128</i>).</p>
+<p>Cuando se cambia la frecuencia inicial del escaneo, todo el rango junto con todos sus ajustes — número de pasos, tamaño del paso, modulación, etc. — se desplaza a la nueva frecuencia inicial. <i>(por ejemplo: estaba escaneando el rango 400–401.6 MHz (1.6 MHz de ancho) / 128×1 pasos con un ancho de banda de 12.5 kHz. Si introduce: 5 -&gt; ------- -&gt; 510 -&gt; M, todo el rango se desplaza de 400–401.6 a 510–511.6 y se conservan todos los demás ajustes)</i></p>
+<p>Para cambiar la modulación, el paso, el ancho de banda, etc. – véase el apartado 4.1.</p>
+<p>Para fijar valores exactos del rango de escaneo hay que utilizar los ajustes del modo de presets.</p>
+<h3>4.3.2. Edición de presets:</h3>
+<p>Para editar el rango de frecuencias de un preset pulse <b>5</b> – se abre la ventana de introducción de la frecuencia inicial del escaneo (---------). Use <b>F</b> para seleccionar el parámetro que desea cambiar: la frecuencia inicial (<b>f start</b>) y / o final (<b>f end</b>) del preset. Introduzca el número de MHz, el punto decimal con <code>*</code>, el número de Hz y, a continuación, pulse <b>M</b> (los valores se pierden al reiniciar el transceptor salvo que los guarde mediante el menú adicional).</p>
+<ul>
+<li>Además de la frecuencia, los ajustes del preset también permiten cambiar el número de pasos de escaneo y el tamaño del paso.</li>
+<li>Si necesita cambiar el paso además de la frecuencia, cambie PRIMERO la frecuencia inicial, después el paso y después la frecuencia final; a continuación puede hacer <b>SAVE</b>.</li>
+</ul>
+<p class="danger"><b>ATENCIÓN:</b> al editar los presets es importante mantener su orden original <i>(no es aconsejable cambiar el rango 144–148 MHz por 27–50 MHz)</i>, y también evitar que los rangos se solapen <i>(unos presets fijados en 144–149 / 146–200 / 188–205 provocarán un conflicto).</i></p>
+<h3>4.3.3. Ajuste de los parámetros adicionales del analizador de espectro:</h3>
+<p>Pulse <b>M</b> – el primer parámetro del menú adicional aparece en la parte superior (<b>Mult: OFF</b>); cada pulsación posterior de <b>M</b> recorre los parámetros en bucle. Deténgase en el parámetro que necesite y seleccione el valor (estado) deseado de ese parámetro con ▲ (aceptar o activar) / ▼ (cancelar o desactivar).</p>
+<p><b>Descripción breve de los parámetros adicionales del analizador de espectro:</b></p>
+<p><b>Mult</b> – multipreset, escaneo de todos los presets seleccionados uno tras otro (teclas <b>3/9</b> – seleccionar un preset; tecla <b>4</b> – añadir un preset al escaneo o excluirlo de él (los presets añadidos se marcan con el sufijo fc); pulsación larga de <b>4</b> – excluir todos los presets del multiescaneo; tecla arriba ▲ – iniciar; para salir del modo multipreset pulse <b>M</b> + abajo ▼, o <b>EXIT</b>)</p>
+<p><b>ATT</b> – atenuador</p>
+<p><b>Turbo</b> – modo de escaneo turbo (activar – ▲ / desactivar – ▼) – escaneo en modo acelerado: la precisión y la sensibilidad son menores pero la velocidad es mayor, por lo que se pueden perder señales débiles. Se puede guardar con save:on</p>
+<p><b>SQ</b> – nivel de filtrado de interferencias para la parte híbrida del espectro</p>
+<p><b>Delay</b> – tiempo de exposición de la señal (los valores más altos aumentan la sensibilidad pero ralentizan el escaneo, y al revés)</p>
+<p><b>Lna</b> – activa el amplificador de bajo ruido (a diferencia de <b>LNA_hi</b> del punto 29 del menú principal, tiene un valor de ganancia mayor – aproximadamente un 10% más)</p>
+<p><b>EXP</b> – modo de «exposición del espectro» (puede mover el cursor con las teclas <code>*</code> y <b>F</b> en lugar de la barra del umbral del silenciador, para leer la frecuencia de los picos)</p>
+<p><b>SAVE</b> – guarda los ajustes, incluidos los presets, en la memoria permanente (arriba ▲ – escribir, abajo ▼ – volver)</p>
+<p><b>ECO</b> – modo de ahorro que funciona ralentizando el escaneo</p>
+<h3>4.4. Modo de captura de frecuencia activa — «vista detallada».</h3>
+<p><b>VFO-PRO (se entra desde el modo principal de espectro pulsando PTT)</b></p>
+<p class="shot"><img src="../../assets/docs/manual/p24_1.png" alt="screenshot" class="wide"></p>
+<p>En el modo de captura de frecuencia, al pulsar PTT para transmitir se aplican el desplazamiento y el subtono, siempre que esa frecuencia se haya guardado en memoria con estos ajustes.</p>
+<p class="shot row"><img src="../../assets/docs/manual/p24_2.png" alt="screenshot" class="wide"><img src="../../assets/docs/manual/p24_3.png" alt="screenshot" class="wide"></p>
+<ol>
+<li>Escala del S-metro</li>
+<li>Los canales encontrados en el «menú Loot» se pueden recorrer – <b>1 / 7;</b> añadir a la lista negra – <b>4</b></li>
+<li>Nivel del silenciador – <code>*</code> / <b>F</b></li>
+<li>Frecuencia de recepción actual (sintonía – ▲<b>/</b>▼)</li>
+<li>Subtono encontrado para la frecuencia actual (si está presente)</li>
+<li>Modo de ajuste de registros – <b>M / EXIT</b></li>
+</ol>
+<h3>4.5. Registros del modo de captura de frecuencia activa.</h3>
+<p>Mientras AM FIX está desactivado, los ajustes manuales de LNA y PGA no se restablecen hasta que se reinicia el transceptor.</p>
+<p>Los parámetros DEV y Tx3k se escriben en los datos de calibración al salir del analizador de espectro.</p>
+<p><b>xtal</b> – ajuste fino del ancho de banda de recepción (para señales no estándar). (stock = 2)</p>
+<p><b>LNAs</b> – ajuste grueso del amplificador de bajo ruido LNA (stock = 3)</p>
+<p><b>LNA</b> – ajuste fino del amplificador de bajo ruido LNA</p>
+<p>Cuando cambie los elementos <b>LNA</b> y <b>LNAs</b> en los registros del modo de captura de frecuencia activa y los guarde, el elemento de menú 29 <b>LNA_hi</b> pasa a control manual (<b>MAN</b>). Para volver al control automático, abra el menú de ajustes, pulse <b>M</b> dos veces en el elemento 29 <b>LNA_hi</b> (<b>LNA_hi</b> cambia a <b>ON</b>) y, a continuación, guarde los ajustes en el menú de presets seleccionando <b>SAVE: ON –</b> ▲.</p>
+<p><b>DEV</b> – ancho del canal de transmisión (stock = 1280) (se recomienda un valor entre 1200 y 1450, por defecto = 1400)</p>
+<p><b>SCR</b> - ajuste manual de la frecuencia de inversión del scrambler cuando el scrambler está activado. (por defecto = 5150)</p>
+<p><b>Tx3k</b> – ajuste de la modulación de transmisión (por defecto = 65531) (se mantiene en memoria hasta que se aplica el elemento de menú 33 - <b>tx_filt</b>) Tx3k tiene los siguientes valores comprobados:</p>
+<ul>
+<li>62731 – stock</li>
+<li>44831 – óptimo</li>
+<li>37431 – sobreexcitado (para SATCOM y PMR)</li>
+</ul>
+<p><b>03t</b> – ajuste fino del ancho del filtro de audio (300 Hz), para TX (por defecto = 36873; óptimo = 36600)</p>
+<p><b>AFC</b> - activa el control automático de frecuencia en recepción</p>
+<p><b>AFCR (AFC range)</b> – establece el rango del AFC (estable entre 1-5 / óptimo = 6)</p>
+<p><b>c0db</b> – ajuste del micrófono</p>
+<p><b>P (Peak (rssi))</b> – indicador alternativo de intensidad de señal para señales fuertes (funciona mejor en frecuencias superiores a 1 GHz)</p>
+<h3>4.6. Asignación de teclas en los modos del analizador de espectro</h3>
+<table><thead><tr><th><b>Tecla</b></th><th><b>Modo</b></th><th><b>Función</b></th></tr></thead><tbody><tr><td><b>M</b></td><td>Modo principal</td><td>Selecciona el parámetro adicional que se va a ajustar</td></tr><tr><td></td><td>Captura de frecuencia</td><td>Selecciona el registro que se va a editar</td></tr><tr><td>▲&lt;br&gt;▼</td><td>Modo principal</td><td>Sintoniza la frecuencia del espectro</td></tr><tr><td></td><td>Ajuste del parámetro adicional</td><td>Cambia el valor del parámetro</td></tr><tr><td></td><td>Captura de frecuencia</td><td>Sintoniza la frecuencia</td></tr><tr><td></td><td>Edición de registros</td><td>Cambia el valor del registro</td></tr><tr><td><b>EXIT</b></td><td>Todos los modos</td><td>Cancelar / Atrás</td></tr><tr><td><b>PTT</b></td><td>Modo principal</td><td>Entra en el modo de captura de frecuencia</td></tr><tr><td></td><td>Captura de frecuencia</td><td>Inicia la transmisión, "TX"</td></tr><tr><td><b>FN1</b></td><td>Modo principal</td><td>Añade la frecuencia actual a la lista negra&lt;br&gt;(<i>el LED RX/TX parpadea en rojo para confirmar la selección</i>)&lt;br&gt;<i>¡¡¡No se produce ninguna transmisión, esto es solo una indicación!!!</i></td></tr><tr><td></td><td>Captura de frecuencia</td><td>Desactiva / activa el silenciador (squelch)</td></tr><tr><td><b>FN2</b></td><td>Modo principal</td><td>Apaga / enciende la retroiluminación (cuando no se está recibiendo nada)&lt;br&gt;Omite la frecuencia en la pasada de escaneo actual (mientras se recibe una señal)</td></tr><tr><td></td><td>Captura de frecuencia</td><td>Apaga / enciende la retroiluminación</td></tr></tbody></table>
+<h2 id="s7">5. PREGUNTAS FRECUENTES, POSIBLES PROBLEMAS Y CÓMO RESOLVERLOS.<a class="anchor" href="#s7">#</a></h2>
+<table><thead><tr><th><b>N.º</b></th><th><b>Problemas</b>&lt;br&gt;<b>Preguntas</b></th><th><b>Cómo resolverlos</b>&lt;br&gt;<b>Comentarios, respuestas a las preguntas.</b></th></tr></thead><tbody><tr><td><mark>1</mark></td><td><mark>Al encender la radio aparece nieve en la pantalla.</mark></td><td><mark>Debe limpiar la radio (consulte la sección 3.1. Combinaciones de teclas de servicio) y después cargar los datos de calibración (primero su propia calibración de fábrica y después la calibración suministrada con el firmware).</mark></td></tr><tr><td><mark>2</mark></td><td><mark>Al intentar cambiar la frecuencia en modo VFO, la frecuencia no se establece</mark></td><td><mark>1. Compruebe si el paso establecido en el elemento 2.Step coincide con la frecuencia que necesita.</mark>&lt;br&gt;<mark>2. Probablemente el procedimiento de limpieza posterior a la instalación del firmware no se completó correctamente (no se desconectó el cable de servicio durante la limpieza). – repita la limpieza / cargue los datos de calibración / realice la configuración.</mark></td></tr><tr><td>3</td><td>¿En qué frecuencias puedo transmitir?</td><td>Existen frecuencias de radiocomunicación civil cuyo uso libre está permitido. Por regla general son:&lt;br&gt;CB (25.165 – 29.445 MHz) con una potencia de TX de 4,0-12,0 W&lt;br&gt;LPD (433.075 – 434.775 MHz) con una potencia de TX de 0,01 W&lt;br&gt;PMR (446.00625 – 446.19375) con una potencia de TX de 0,5 W&lt;br&gt;En algunos países también se utilizan las bandas FRS y GMRS.</td></tr><tr><td>4</td><td>¿En qué frecuencias no puedo transmitir?</td><td>Sin permisos especiales, transmitir fuera de las bandas civiles está prohibido por la ley. Todas las demás bandas de frecuencia las utilizan otros servicios, desde radioaficionados hasta servicios gubernamentales, incluidos satélites, redes de telefonía móvil, controladores aéreos y aeronaves, estaciones meteorológicas, comunicaciones fluviales y marítimas, el ámbito militar y otros. Si causa interferencias en el funcionamiento de cualquiera de estos servicios, puede incurrir en responsabilidad conforme a la legislación vigente en su país.</td></tr><tr><td>5</td><td>¿En qué frecuencias funcionan el receptor y el transmisor de la Quansheng UV-K5?</td><td>En el firmware Karina, la recepción y la transmisión están abiertas en todas las bandas (consulte la sección 2.2. Bandas de frecuencia de funcionamiento (Bands)).&lt;br&gt;En radios sin modificaciones de hardware solo puede transmitir sin riesgo de quemar la radio en las bandas de funcionamiento declaradas por el fabricante: 136-174 MHz / 400-470 MHz</td></tr><tr><td>6</td><td>¿Qué ocurre si transmito sin antena?</td><td>Transmitir sin antena, o con una antena sintonizada para otra banda de frecuencia, quema la etapa de salida de la radio.</td></tr><tr><td>7</td><td>¿Transmite la radio en la banda CB? ¿Puedo hablar con</td><td>En el firmware Karina, la banda de 27 MHz está abierta por defecto para recepción y transmisión.&lt;br&gt;Para recibir, debe montar una antena sintonizada para esta banda de frecuencia.&lt;br&gt;Sin embargo, transmitir en esta banda de frecuencia</td></tr></tbody></table>
+<table><thead><tr><th><b>N.º</b></th><th><b>Problemas</b>&lt;br&gt;<b>Preguntas</b></th><th><b>Cómo resolverlos</b>&lt;br&gt;<b>Comentarios, respuestas a las preguntas.</b></th></tr></thead><tbody><tr><td></td><td>camioneros?</td><td>desde radios sin modificación de hardware no proporciona una comunicación utilizable (porque la potencia de TX es muchísimo más baja de lo necesario); al mismo tiempo, debido a las características físicas de la radio, intentar transmitir en esta banda crea interferencias en la banda aérea y además quema la etapa de salida de la radio.</td></tr><tr><td>8</td><td>¿Por qué nadie me oye en CB?</td><td>En su estado de fábrica, la potencia de TX de la radio en la banda CB no supera los 0,01 W. Por lo tanto, sin modificaciones físicas, transmitir en esta banda de frecuencia no solo es inútil, sino también peligroso para la propia radio.</td></tr><tr><td>9</td><td>¿Por qué la comunicación es mala dentro de un coche?</td><td>La carrocería del coche apantalla las señales de radio. Para una comunicación estable se recomienda montar una antena exterior fuera de la carrocería.</td></tr><tr><td>10</td><td>¿Para qué flashear la radio?</td><td>Una radio de fábrica, "recién sacada de la caja", funciona de forma fiable y cumple sus funciones. El firmware modificado amplía la funcionalidad de la radio, ofreciendo ajustes adicionales y más flexibles (profesionales), un escaneo más rápido, el escaneo con representación gráfica (modo analizador de espectro), etc.</td></tr><tr><td>11</td><td>¿Cuál es el mejor firmware?</td><td>El que mejor se adapte a sus necesidades</td></tr><tr><td>12</td><td>¿Cómo hago una copia de seguridad del firmware de fábrica?</td><td>No tiene sentido guardar el firmware de fábrica, porque está disponible libremente en internet y en la web del fabricante. Es mucho más importante guardar los datos de calibración originales (que pueden ser únicos de su radio) y el archivo de configuración. Esto se hace con el programa k5prog.</td></tr><tr><td>13</td><td>El ordenador no detecta la radio conectada por el puerto Type-C integrado</td><td>El puerto Type-C integrado en la radio está destinado únicamente a cargar la batería.&lt;br&gt;El flasheo se realiza con un cable de programación especial con conector de tipo KENWOOD. (sirve un cable de radios Baofeng analógicas y similares)</td></tr><tr><td>14</td><td>¿Sirve un cable de una Baofeng para flashear y configurar?</td><td>Sí, sirve (uno de radios analógicas)</td></tr><tr><td>15</td><td>¿Cómo empiezo a flashear?</td><td>Cualquier flasheo debe comenzar con una comprobación de la carga de la batería. Si la batería está cargada por debajo del 50 % (~7,2 V), el proceso de flasheo puede ser errático o quedar incompleto.&lt;br&gt;Para flashear debe comprar o fabricar un cable de programación con conector de tipo KENWOOD e instalar el driver de ese cable en su PC. Prepare el programa de flasheo. Prepare el propio firmware. Conecte la radio encendida al PC con el cable que haya conseguido y use el programa para hacer una copia de seguridad de sus propios datos de calibración y del archivo de configuración. Conecte</td></tr></tbody></table>
+<p>la radio en modo de flasheo. Use el programa para ejecutar el archivo de firmware.</p>
+<p><b>16. ¿Dónde puedo encontrar instrucciones detalladas de flasheo?</b></p>
+<p>Consulte la sección GUÍA RÁPIDA PARA FLASHEAR LA QUANSHENG UV-K5 Y SUS MODIFICACIONES.</p>
+<p><b>17. El ordenador no detecta la radio</b></p>
+<ul>
+<li>El cable no está insertado hasta el fondo en la radio (la primera vez que se inserta, el cable entra muy duro, a menudo hasta que hace clic).</li>
+<li>Los drivers del cable no están instalados, o están instalados los drivers equivocados.</li>
+</ul>
+<p><b>18. ¿Con qué programa debo flashear?</b></p>
+<p>El firmware modificado debe flashearse de la siguiente manera:</p>
+<ul>
+<li>las versiones UV-K5, K5(8) y K5+ deben flashearse con k5prog-win — se recomienda la versión 1.26</li>
+<li>las versiones UV-K5+ (con puerto Type-C) deben flashearse con k5tools</li>
+</ul>
+<p><b>19. Flasheé la radio, pero al encenderla pide una contraseña.</b></p>
+<p>Pruebe todos los dígitos 000000, o 111111, o 123400, o mantenga pulsadas MENU+EXIT con la radio apagada y, sin soltarlas, enciéndala.</p>
+<p>Además, si durante la configuración mediante CHIRP o PSCPS las teclas laterales FN1 y/o FN2 se ajustan a NONE (sin asignar), la radio puede bloquearse y pedir un código al encenderse.</p>
+<p>Si eso no ayuda, borre la memoria de la radio con el firmware REBORN — consulte la sección 6 de este manual.</p>
+<p><b>20. ¿Qué programa debo usar para programar (configurar) la radio?</b></p>
+<p>CHIRP o PSCPS.</p>
+<p>Para usar CHIRP hay que cargar el módulo.</p>
+<p><b>21. ¿Qué es CHIRP y qué puede hacer?</b></p>
+<p>Es un programa para programar radios. Permite editar canales y activar o desactivar diversas funciones, incluidas algunas que no están disponibles desde el propio menú de la radio.</p>
+<p><b>22. Cargué mis frecuencias guardadas (de otro firmware) o un archivo de frecuencias de otra persona y la radio se comporta de forma incorrecta</b></p>
+<p>Los archivos de configuración de distintas versiones de firmware pueden hacer que la radio funcione de forma incorrecta, por lo que no se recomienda cargarlos. Tampoco se recomienda cargar archivos de configuración y ajustes de otras personas.</p>
+<p>Si necesita escribir frecuencias desde el archivo de otra persona (o desde un archivo propio pero creado con otro firmware), use CHIRP: abra el otro archivo, lea su radio — aparecerá una segunda pestaña; copie las frecuencias que necesite desde la pestaña del otro archivo y péguelas en la pestaña del archivo de su radio. Antes de leer archivos, no olvide cargar el módulo correspondiente.</p>
+<p><b>23. ¿Tiene la radio cifrado?</b></p>
+<p>La radio no dispone de cifrado de señal, pero sí tiene una función de scrambler (enmascaramiento de voz). Tenga en cuenta que, según la legislación</p>
+<p>de muchos países, el uso de cifrado, scramblers y otras funciones de enmascaramiento de la señal en la radiocomunicación civil está prohibido por la ley.</p>
+<p><b>24. ¿Por qué se enciende el LED verde en recepción mientras el altavoz permanece en silencio?</b></p>
+<ul>
+<li>compruebe si tiene configurados subtonos de recepción (R-DCS y R-CTCS);</li>
+<li>compruebe que ambas radios usan la misma modulación (en particular FM).</li>
+</ul>
+<p><b>25. ¿Qué es un subtono?</b></p>
+<p>Un subtono es una señal adicional, inaudible para el oído humano, que se transmite junto con la voz. Funciona como una especie de identificador "amigo o enemigo" (filtrando la señal entrante). Cuando hay un subtono configurado, su radio rechaza todas las señales de esa frecuencia y solo abre la recepción cuando detecta una señal que lleva el mismo subtono.</p>
+<p>Una radio sin subtono, en cambio, oirá en recepción a todas las demás radios, tanto a las que usan subtono como a las que no.</p>
+<p><b>26. ¿Qué es el subtono no estándar de 55 Hz que detecta el escáner?</b></p>
+<p>Consulte la descripción en el manual del firmware Karina, elemento 22, pág. 5.</p>
+<p><b>27. ¿Por qué oigo a un corresponsal pero no al otro?</b></p>
+<p>Significa que la señal de un operador es lo bastante fuerte como para que lo oiga, mientras que la del segundo es demasiado débil.</p>
+<p>Esto puede deberse a que su antena no sea muy eficiente, a que uno de los operadores esté más cerca de usted o, sencillamente, a que la señal del segundo operador sea demasiado débil.</p>
+<p>También es posible lo contrario: la señal de uno de los corresponsales es tan fuerte que satura su receptor, que entonces se "atraganta" con la señal excesivamente fuerte y enmudece.</p>
+<p><b>28. ¿Por qué pongo la radio a escanear frecuencias y no oigo a nadie?</b></p>
+<p>Para oír a alguien hay que decidir primero dónde escanear. Escanear "todo a la vez" no le llevará a ninguna parte.</p>
+<p>Por ejemplo: quiere escanear la banda de 100–200 MHz con un paso de 25 kHz (la velocidad de escaneo en modo frecuencia es de unas 15 frecuencias por segundo), lo que da 100/((0,025)*15) = 266 segundos (casi 5 minutos) para un ciclo de escaneo. Es mucho más efectivo acotar el rango de búsqueda, o iniciar el escaneo en modo analizador de espectro usando los presets configurados.</p>
+<p><b>29. ¿Se puede usar la radio para pedir ayuda?</b></p>
+<p>En casos excepcionales, y solo <b>cuando exista una amenaza directa para la vida y la salud de las personas y no haya forma de pedir ayuda por otros medios técnicos de comunicación</b>, puede emitir una señal de socorro SOS o MAYDAY.</p>
+<p><b>30. ¿Qué frecuencias son las mejores para pedir ayuda de modo que me oigan?</b></p>
+<p>No existen frecuencias de socorro universalmente aceptadas. Hay frecuencias marítimas, fluviales,</p>
+<p>de rescate de montaña, etc. Estas frecuencias también pueden variar según la región y el país. Cuando planifique un viaje a una región concreta, se recomienda al menos averiguar qué frecuencias de comunicación de emergencia se usan allí.</p>
+<p>No obstante, existen frecuencias de llamada generalmente aceptadas en las que tiene más posibilidades de ser oído:</p>
+<p>433.500 — frecuencia de llamada general de la banda de 70 cm 446.09375 — frecuencia de llamada general de la banda PMR 145.500 — frecuencia de llamada general para radioaficionados (para comunicación entre radioaficionados con licencias y permisos)</p>
+<p>Según la región, estas frecuencias también pueden variar.</p>
+<p>No se recomienda ocupar estas frecuencias con conversaciones largas. Siempre puede establecer el contacto en ellas y después pasar a otras frecuencias de común acuerdo.</p>
+<p><b>31. ¿Qué es el símbolo S que se enciende de vez en cuando en la esquina superior izquierda?</b></p>
+<p>Consulte la descripción en el manual del firmware Karina, elemento 14, pág. 5.</p>
+<p><b>32. ¿Por qué, cuando cambio la potencia de TX (o el ancho de banda, o la modulación, o el subtono, o el desplazamiento de frecuencia), los cambios no se guardan después de cambiar a otro canal y volver, o de apagar y encender la radio?</b></p>
+<p>Consulte la descripción en el manual del firmware Karina, elemento 13, pág. 5.</p>
+<p><b>33. Cuando pulso PTT aparece DISABLE — ¿qué debo hacer?</b></p>
+<p>Consulte la descripción en el manual del firmware Karina, elementos 36 y 37, pág. 7.</p>
+<p><b>34. Conecté un cable Type-C a la radio, pero no carga</b></p>
+<p>La carga por Type-C es una opción adicional. Comienza con una tensión de batería más baja y no carga la batería hasta su nivel nominal. Siempre que sea posible cargar mediante la base, use la base.</p>
+<p><b>35. La tensión de mi batería se muestra de forma incorrecta — ¿qué debo hacer?</b></p>
+<p>Si la tensión de batería mostrada en la pantalla de la radio es inverosímilmente baja (~0,25 V) o inverosímilmente alta (600 V), esta es la primera señal de que sus calibraciones están dañadas: debe cargar primero las calibraciones stock y solo después las de Karina. Si eso no ayuda, borre la memoria como se describe en el manual del firmware y, a continuación, instale de nuevo el firmware y las calibraciones.</p>
+<p>Si la tensión se muestra de forma más o menos correcta, con una desviación de unos 0,2–0,5 V respecto al valor medido con un multímetro, esta es la situación normal con las calibraciones de fábrica. Puede ajustarse con un editor HEX cambiando el valor de la celda 140/6 del archivo de calibración (en mi caso este valor es =B0, pero el suyo puede ser distinto).</p>
+<p><b>36. ¿Por qué muestra 6,0 V mientras la radio ya se está apagando?</b></p>
+<p>El rango de tensión de funcionamiento de la batería es ~6,0 V – 8,4 V</p>
+<p>~8,4 V = 100% ~7,2 V = 50% ~6,0 V = 0%</p>
+<p>Descargar la batería por debajo de 4 V provoca su degradación.</p></article>
+</div>
+<footer>
+  <p>Distribuido bajo la licencia Apache License 2.0. © 2026 autumn1rain.</p>
+  <p class="langs">Idioma: <a href="https://autumn1rain.github.io/karina-v3-k1/manual/">English</a><a href="https://autumn1rain.github.io/karina-v3-k1/ru/manual/">Русский</a><a href="https://autumn1rain.github.io/karina-v3-k1/de/manual/">Deutsch</a><a href="https://autumn1rain.github.io/karina-v3-k1/zh/manual/">中文</a></p>
+</footer>
+</div>
+</body>
+</html>

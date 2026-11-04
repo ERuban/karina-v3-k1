@@ -21,7 +21,7 @@
 [Руководство по установке](karina-v3-k1-install.pdf) ·
 [Руководство пользователя](karina-v3-k1-manual.pdf) ·
 [Чат в Telegram](https://t.me/k5fwmod) ·
-[Сайт](https://autumn1rain.github.io/karina-v3-k1/)
+[Сайт](https://autumn1rain.github.io/karina-v3-k1/ru/)
 
 </div>
 

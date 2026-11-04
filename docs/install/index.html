@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Installation guide and CHIRP — Karina</title>
+<meta name="description" content="Installation guide and CHIRP — Karina (autumn rain), Quansheng UV-K5 V3 / UV-K1.">
+<link rel="canonical" href="https://autumn1rain.github.io/karina-v3-k1/install/">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap doc-wrap">
+<header class="top">
+  <div class="brand">Karina <span>— autumn rain</span></div>
+  <nav><a href="../">All of Karina</a> <a href="https://github.com/autumn1rain/karina-v3-k1">GitHub</a>
+       <span class="langsel"><b>EN</b> <a href="https://autumn1rain.github.io/karina-v3-k1/ru/install/" hreflang="ru" title="Русский">RU</a> <a href="https://autumn1rain.github.io/karina-v3-k1/es/install/" hreflang="es" title="Español">ES</a> <a href="https://autumn1rain.github.io/karina-v3-k1/de/install/" hreflang="de" title="Deutsch">DE</a> <a href="https://autumn1rain.github.io/karina-v3-k1/zh/install/" hreflang="zh" title="中文">中文</a></span></nav>
+</header>
+<div class="doc-top">
+  <h1>Installation guide and CHIRP</h1>
+  <p class="sub"><a href="https://github.com/autumn1rain/karina-v3-k1/blob/main/karina-v3-k1-install-en.pdf">Also as a PDF</a></p>
+</div>
+<div class="doc">
+  <aside class="toc"><b>Contents</b><a href="#s1">FLASHING the Quansheng UV-K5V3 and K1 radios</a><a href="#s2">1. A BRIEF OVERVIEW OF INSTALLING THE KARINA (Autumn rain) FIRMWARE</a><a href="#s3">2. THE DETAILED FIRMWARE INSTALLATION PROCEDURE</a><a href="#s4">IF YOU NEED TO MOVE AWAY FROM THE KARINA FIRMWARE</a><a href="#s5">3. USING CHIRP</a><a href="#s6">4. FREQUENTLY ASKED QUESTIONS, POSSIBLE PROBLEMS AND SOLUTIONS</a></aside>
+  <article class="body"><h2 id="s1">FLASHING the Quansheng UV-K5V3 and K1 radios<a class="anchor" href="#s1">#</a></h2>
+<h3>and working with CHIRP</h3>
+<p><b>BEFORE YOU DO ANYTHING AT ALL:</b></p>
+<p class="danger"><b>1.</b> <b>Make sure you have a K1 or a K5V3 version!!!</b></p>
+<p><b>Version V1 carries no marking.</b> <b>Versions V2 and V3 usually carry the corresponding marking on the label</b> <b>under the battery.</b></p>
+<p class="shot row"><img src="../assets/docs/install/p01_3.png" alt="screenshot"><img src="../assets/docs/install/p01_1.png" alt="screenshot" class="wide"></p>
+<p><b>Firmware is NOT interchangeable between versions. If you try to flash a radio</b> <b>with firmware meant for another version, you end up with a bricked radio.</b></p>
+<p>V1 versions have a bootloader starting with 2, 3, 4 or 5 V2 versions have a bootloader starting with 1 V3 versions have a bootloader starting with 7</p>
+<p>You can check this in k5prog-win with the radio connected in flash mode:</p>
+<p class="shot"><img src="../assets/docs/install/p01_2.png" alt="screenshot" class="wide"></p>
+<p><b>Make a BACKUP of the stock calibrations</b></p>
+<p><b>CONTENTS:</b></p>
+<p><b>1. A BRIEF OVERVIEW OF INSTALLING THE KARINA (Autumn rain) FIRMWARE</b> <b>on the Quansheng UV-K5(V3) and UV-K1 radios.</b></p>
+<p><b>2. The detailed firmware installation procedure.</b></p>
+<p><b>3. USING CHIRP.</b> 3.1. Downloading the module 3.2. Using the module with CHIRP (Karina) 3.3. Copying frequencies from someone else's file.</p>
+<p><b>4. FREQUENTLY ASKED QUESTIONS, POSSIBLE PROBLEMS AND HOW TO SOLVE THEM.</b></p>
+<h2 id="s2">1. A BRIEF OVERVIEW OF INSTALLING THE KARINA (Autumn rain) FIRMWARE<a class="anchor" href="#s2">#</a></h2>
+<p><b>on the Quansheng UV-K5(V3) and UV-K1 radios:</b></p>
+<p><b>These instructions are for flashing the K5(V3) or the K1 only.</b> <b>Trying to load K5V3 (or K1) firmware into a K5V1 radio = a bricked radio.</b></p>
+<p><b>If you already have flashing experience, this short procedure is for you.</b> <b>If you do not, a more detailed procedure with explanations and pictures follows below.</b></p>
+<p><b>Before flashing, CHARGE THE BATTERY COMPLETELY.</b></p>
+<p><b>A BRIEF OVERVIEW OF THE BACKUP AND THE FLASHING</b></p>
+<p><b>1.</b> Switch the radio on and connect it over USB Type-C (or with a Kenwood cable).</p>
+<p><b>2.</b> Make a backup of the factory calibrations and of the configuration.</p>
+<p><b>3.</b> Switch the radio off, then switch it on while holding the PTT key.</p>
+<p><b>4.</b> Install the firmware with whichever flashing tool you prefer (the file with the <code>packed</code> index – for the factory flashing tool <b>qpscps</b> / the file WITHOUT the <code>packed</code> index – for any other flashing tool).</p>
+<p class="danger"><b>5.</b> <b>DISCONNECT THE CABLE FROM THE COMPUTER!!!</b> Switch the radio off, then switch it on while holding <b>PTT+EXIT</b> (hold for about 2 seconds) – the memory is erased.</p>
+<p><b>6.</b> Open the flashing tool again and write the factory calibrations back.</p>
+<p><b>7.</b> Write the calibrations that are supplied with the <b>Karina</b> firmware.</p>
+<p><b>8.</b> Write the configuration back (if required). Alternatively, set everything up by hand through the radio's menu or through CHIRP <i>(only configurations from previous versions will work; configuration files from other</i> <i>firmware</i> <i>will not).</i></p>
+<p class="danger"><b>ATTENTION!!!</b> <b>If you configure the 3 presets separately (see item 35 of the settings menu), you must</b> <b>carry out steps 5-8 separately for each of them, selecting the required preset in item 35</b> <b>beforehand. !!!</b></p>
+<p><b>A reminder:</b></p>
+<p><b>Calibrations and the configuration are read and written</b> with the radio switched on in normal mode.</p>
+<p><b>Flashing</b> is done with the radio switched on in flash mode (with the radio off, hold PTT and, without releasing it, switch the radio on). The screen will stay dark, and the flashlight LED will light up to indicate that the radio is in flash mode.</p>
+<h2 id="s3">2. THE DETAILED FIRMWARE INSTALLATION PROCEDURE<a class="anchor" href="#s3">#</a></h2>
+<p><b>Before flashing, CHARGE THE BATTERY COMPLETELY.</b></p>
+<p><b>1.</b> Switch the radio on and connect it over USB Type-C (or with a Kenwood cable).</p>
+<p class="danger"><b>!!! Quansheng UV-K1 radios made for the Chinese market</b> have problems with the USB Type-C connection; it is better to use a Kenwood cable with them.</p>
+<p class="shot"><img src="../assets/docs/install/p03_1.png" alt="screenshot" class="wide"></p>
+<p>Version for the European market</p>
+<p>Version for the Chinese market</p>
+<p><b>2.</b> <b>MAKE A BACKUP OF THE CALIBRATIONS AND OF THE CONFIGURATION</b></p>
+<p>To do this, open <b>k5prog-win</b> (version v0.1.26 is recommended) and make the backup:</p>
+<p>Calibrations: press <b>read calibration</b> and save the factory calibrations. Configuration: press <b>read configuration</b> and save the factory configuration.</p>
+<p class="shot"><img src="../assets/docs/install/p03_2.png" alt="screenshot" class="wide"></p>
+<p><b>3.</b> Switch the radio off, then switch it on while holding the PTT key.</p>
+<p><b>4.</b> Open the native program <b>qpscps</b> ( https://en.qsfj.com/support/downloads/8740 ), select the COM port and the flashing menu (alt+D, the third item).</p>
+<p class="shot"><img src="../assets/docs/install/p04_1.png" alt="screenshot" class="wide"></p>
+<p>Give the path to the <b>packed</b> file and flash the radio by pressing <b>Update</b>.</p>
+<p class="shot"><img src="../assets/docs/install/p04_2.png" alt="screenshot" class="wide"></p>
+<p><i>(If you are flashing online through the site https://armel.github.io/uvtools2/, then on the</i> <b><i>Flash</b></i> <b><i>Firmware</b></i> <i>tab press</i> <b><i>Choose file</b></i> <i>and select the firmware without the</i> <b><i>packed</b></i> <i>index,</i></p>
+<p class="shot row"><img src="../assets/docs/install/p04_4.png" alt="screenshot"><img src="../assets/docs/install/p04_3.png" alt="screenshot" class="wide"></p>
+<p><i>press</i> <b><i>Flash firmware</b><b>, select the</i> </b>*COM port*** <i>and flash the radio.)</i></p>
+<p class="danger"><b>5.</b> <b>DISCONNECT THE CABLE FROM THE COMPUTER!!!</b> Switch the radio off, then switch it on while holding <b>PTT+EXIT</b> for about 2 seconds – the memory is erased.</p>
+<p><b>6.</b> Open <b>k5prog-win</b> again and write the factory calibrations back with the <b>Write calibration</b> button.</p>
+<p class="shot"><img src="../assets/docs/install/p05_1.png" alt="screenshot" class="wide"></p>
+<p><i>(This can also be done through the site https://armel.github.io/uvtools2/ (if you saved the calibrations</i> <i>with</i> <b><i>k5prog-win</b><b>, you must change the file extension from</i> </b><i>bin<b></i> <i>to</i> </b>*dat<b>**). To do this, on the* </b><i>Restore Calib<b></i> <i>tab select the required file with the</i> </b><i>Choose file<b></i> <i>button, press</i> </b><i>Restore<b></i> </b>*Calibration Data<b>**, select the* </b>*COM port*** <i>and write the calibrations.)</i></p>
+<p class="shot row"><img src="../assets/docs/install/p05_3.png" alt="screenshot"><img src="../assets/docs/install/p05_2.png" alt="screenshot" class="wide"></p>
+<p><b>7.</b> Write the calibrations once more, this time selecting the Karina calibrations (at the time of writing these instructions this is <b>calib5</b>) – following the same procedure as in step 6.</p>
+<p><b>8.</b> Write the configuration back using <b>k5prog-win</b> and the <b>Write configuration</b> button. <i>(Only configurations from previous versions will work; configuration files from other firmware</i> <i>will not.)</i></p>
+<p class="shot"><img src="../assets/docs/install/p05_4.png" alt="screenshot" class="wide"></p>
+<h2 id="s4">IF YOU NEED TO MOVE AWAY FROM THE KARINA FIRMWARE<a class="anchor" href="#s4">#</a></h2>
+<p>(because its memory layout differs from that of other firmware) you must do the following:</p>
+<p><b>1. Erase the memory</b> (switch the radio off, then switch it on while holding the PTT+EXIT keys (hold for about 2 seconds))</p>
+<p><b>2. Install any other MOD FIRMWARE</b> (the stock firmware will not do, because it does not allow calibration data to be written)</p>
+<p><b>3. Write back your original stock calibration data.</b></p>
+<p><b>4. Use the radio</b>, or install anything else you like (including the stock firmware), as you prefer.</p>
+<h2 id="s5">3. USING CHIRP<a class="anchor" href="#s5">#</a></h2>
+<h3>3.1. Loading the module</h3>
+<p class="danger"><b>IMPORTANT!!!</b> At the moment there is no dedicated CHIRP module for the Karina firmware. There are modules written for other firmware that are more or less compatible with Karina. The module listed below was originally written for the F4 firmware and has been adapted to Karina in some places. Even so, you should not change everything in sight through CHIRP, because compatibility is not complete.</p>
+<p>When using CHIRP you have to load a module into it (<i>for Karina use the module from the archive</i>; <b>for other firmware you must choose the module that matches it</b>). To do this, start CHIRP, click "HELP" and enable developer mode. Then restart CHIRP, open the "File" menu, select "Load module" and choose the file from the archive.</p>
+<p class="shot row"><img src="../assets/docs/install/p07_1.png" alt="screenshot" class="wide"><img src="../assets/docs/install/p07_2.png" alt="screenshot" class="wide"></p>
+<p class="danger"><b>!!! IMPORTANT:</b> the module is unloaded when CHIRP is closed, so it has to be loaded again every time you start CHIRP.</p>
+<p><b>Next:</b> Radio -&gt; Download from radio -&gt; select the COM port -&gt; Vendor (Quansheng) -&gt; in the Model field, the module for your firmware.</p>
+<p class="shot row"><img src="../assets/docs/install/p07_4.png" alt="screenshot" class="wide"><img src="../assets/docs/install/p07_3.png" alt="screenshot" class="wide"></p>
+<h3>3.2. Using the module with CHIRP (Karina)</h3>
+<p>As stated above, it is not advisable to change every function in CHIRP, because the module is not fully compatible. Below is an example of what can safely be edited (<b>marked in green</b>) and what you are strongly advised not to touch (<b>marked in red</b>):</p>
+<p><b>On the first tab</b>, with the memory channels, everything can be edited safely.</p>
+<p><b>On the second tab, Basic Settings</b>, you can freely change the following functions (all of them except the greeting message can also be changed from the radio's menu):</p>
+<p class="shot"><img src="../assets/docs/install/p08_1.png" alt="screenshot"></p>
+<p><b>On the second tab, Programmable Keys</b>, you can change the settings of the FN1 and FN2 side keys. These settings can only be changed from the software; they cannot be changed from the radio's menu:</p>
+<p class="shot"><img src="../assets/docs/install/p08_2.png" alt="screenshot" class="wide"></p>
+<p>Make sure that values are assigned to the side keys for both a short press and a long press (if NONE is set, the radio locks up and asks for a code!).</p>
+<p><b>On the second tab, ScanList</b>, you can set the default scan list and choose the priority channels for scanning in scan lists 1 and 2 (these settings are available both from CHIRP and from the radio's menu):</p>
+<p class="shot"><img src="../assets/docs/install/p09_1.png" alt="screenshot" class="wide"></p>
+<p><b>On the second tab, Unlock Settings</b>, you can select the transmit lock for the frequency plan (these settings are available both from CHIRP and from the radio's hidden menu):</p>
+<p class="shot"><img src="../assets/docs/install/p09_2.png" alt="screenshot" class="wide"></p>
+<p><b>On the second tab, FM Broadcast Receiver</b>, you can assign the FM broadcast station frequencies stored in memory (these settings are available both from CHIRP and from the radio's hidden menu):</p>
+<p class="shot"><img src="../assets/docs/install/p09_3.png" alt="screenshot" class="wide"></p>
+<h3>3.3. Copying frequencies from someone else's file</h3>
+<p>It is not advisable to load someone else's frequency file, or a file from different firmware, into your radio. CHIRP and PSCPS essentially load a Configuration (the radio's settings), and its structure may differ between firmware versions (and even between different releases of the same developer's firmware).</p>
+<p>Loading such a foreign configuration file may make the radio unstable (no reception, poor reception, problems with transmission or modulation, and so on).</p>
+<p><b>If you need to copy frequencies from someone else's file into a radio running Karina, do the</b> <b>following:</b></p>
+<ul>
+<li>Open it in CHIRP (loading the required module first, if necessary — the modules may differ from one firmware to another)</li>
+<li>load the module for Karina</li>
+<li>connect the radio to the computer and choose Radio -&gt; Download From Radio; in the menu that opens, select the port, the radio manufacturer and the required module</li>
+</ul>
+<p class="shot row"><img src="../assets/docs/install/p10_1.png" alt="screenshot" class="wide"><img src="../assets/docs/install/p10_2.png" alt="screenshot" class="wide"></p>
+<p>You will then have two tabs open: the "donor" file and your own radio.</p>
+<ul>
+<li>on the "donor" tab, select the frequencies you need and choose Copy, then switch to the tab of your own radio, select the first row you want to start from and paste the frequencies. <i>(below is an example of copying data between two incompatible radios, a Baofeng and a Quansheng)</i> - <b>this kind of copying is safe, because it copies only the channels (their frequencies, names and settings) and does not affect the general settings of the radio</b></li>
+</ul>
+<p class="shot row"><img src="../assets/docs/install/p10_4.png" alt="screenshot" class="wide"><img src="../assets/docs/install/p10_3.png" alt="screenshot" class="wide"></p>
+<h2 id="s6">4. FREQUENTLY ASKED QUESTIONS, POSSIBLE PROBLEMS AND SOLUTIONS<a class="anchor" href="#s6">#</a></h2>
+<p><b>Problems and questions — possible solutions, comments and answers.</b></p>
+<h3>After installing and configuring the firmware, a frequency cannot be entered in VFO mode</h3>
+<p>When installing the firmware, the cable MUST be disconnected from the computer before you perform the memory wipe with PTT+EXIT. You have to run the wipe again, then write the calibration data and configure the radio.</p>
+<h3>1. On which frequencies am I allowed to transmit?</h3>
+<p>There are civil radio frequencies that are allowed for unlicensed use. As a rule these are:</p>
+<ul>
+<li>CB (25.165 – 29.445 MHz) with a TX power of 4.0-12.0 W</li>
+<li>LPD (433.075 – 434.775 MHz) with a TX power of 0.01 W</li>
+<li>PMR (446.00625 – 446.19375) with a TX power of 0.5 W</li>
+</ul>
+<p>In some countries the FRS and GMRS bands are used as well.</p>
+<h3>2. On which frequencies am I not allowed to transmit?</h3>
+<p>Without special permits, transmitting outside the civil bands is prohibited by law. All other frequency bands are used by other services, from radio amateurs to government services, including satellites, cellular networks, air traffic controllers and aircraft, weather stations, river and maritime communications, the military and others. If you interfere with the operation of any of these services, you may be held liable under the laws of your country.</p>
+<h3>3. On which frequencies does the Quansheng UV-K5 receive and transmit?</h3>
+<p>In the Karina firmware, reception and transmission are open on all bands (see section 2.2, Operating frequency bands).</p>
+<p>On radios without hardware modification, transmitting without the risk of burning out the radio is only allowed within the bands declared by the manufacturer: 136-174 MHz / 400-470 MHz.</p>
+<h3>4. What happens if I transmit without an antenna?</h3>
+<p>Transmitting without an antenna, and also with an antenna tuned for a different frequency band, burns out the output stage of the radio.</p>
+<h3>5. Does the radio transmit on the CB band? Can I talk to truck drivers?</h3>
+<p>In the Karina firmware the 27 MHz band is open for both reception and transmission by default.</p>
+<p>To receive, you need an antenna tuned to this band.</p>
+<p>However, transmitting in this band with a radio that has not been modified in hardware does not give usable communication (the output power is far too low). At the same time, because of the physical characteristics of the radio, an attempt to transmit in this band creates interference on the air band and also burns out the output stage of the radio.</p>
+<h3>6. Why can nobody hear me on CB?</h3>
+<p>In factory condition the TX power of the radio on the CB band does not exceed 0.01 W. Consequently, without physical modification, transmitting in this band is not only useless but also dangerous for the radio itself.</p>
+<h3>7. Why is communication poor inside a car?</h3>
+<p>The car body shields radio signals. For stable communication it is recommended to fit an external antenna outside the car body.</p>
+<h3>8. Why flash the radio at all?</h3>
+<p>A stock, out-of-the-box radio works reliably and performs its functions.</p>
+<p>Modified firmware extends the functionality of the radio, offering additional and more flexible (professional) settings, higher scanning speed, scanning with a graphical display (spectrum analyser mode) and so on.</p>
+<h3>9. Which firmware is the best?</h3>
+<p>The one that best suits your needs.</p>
+<h3>10. How do I save the factory firmware?</h3>
+<p>There is no point in saving the factory firmware, because it is freely available on the internet and on the manufacturer's website. It is far more important to save the original calibration data (which may be unique to your radio) and the configuration file. This is done with the k5prog program.</p>
+<h3>11. The computer does not see the radio when it is connected through the built-in Type-C port</h3>
+<p>The Type-C port built into the radio is intended for charging the battery only.</p>
+<p>Flashing is done with a special programming cable with a KENWOOD-type connector (a cable from analogue Baofeng radios and the like will do).</p>
+<h3>12. Will a Baofeng cable work for flashing and programming?</h3>
+<p>Yes, it will (one from analogue radios).</p>
+<h3>13. Where do I start flashing?</h3>
+<p>Any flashing should start with a check of the battery charge. If the battery is charged below 50% (~7.2 V), the flashing process may be faulty or incomplete.</p>
+<p>For flashing you need to buy or make a flashing cable with a Kenwood-type connector and install the driver for this cable on the PC.</p>
+<p>Prepare the flashing tool. Prepare the firmware file itself. Connect the switched-on radio to the PC with the cable you have bought and use the program to make a backup of your calibration data and of the configuration file. Then connect the radio in flash mode and use the program to write the firmware file.</p>
+<h3>14. Where can I find detailed flashing instructions?</h3>
+<p>See the section QUICK FLASHING GUIDE FOR THE QUANSHENG UV-K5 AND ITS VARIANTS.</p>
+<h3>15. The computer does not see the radio</h3>
+<ul>
+<li>The cable is not pushed all the way into the radio (the first time it goes in very tightly, often until it clicks audibly).</li>
+<li>The cable driver is not installed, or the wrong driver is installed.</li>
+</ul>
+<h3>16. Which program should I use for flashing?</h3>
+<p>Modified firmware should be flashed as follows:</p>
+<ul>
+<li>the UV-K5, K5(8) and K5+ versions should be flashed with k5prog-win — version 1.26 is recommended;</li>
+<li>the UV-K5+ version (with the Type-C port) should be flashed with k5tools.</li>
+</ul>
+<h3>17. I have flashed the radio, but at power-on it asks for some password</h3>
+<p>Try all digits the same — 000000 or 111111 — or 123400, or hold MENU+EXIT on the switched-off radio and turn it on without releasing them.</p>
+<p>Also, if when configuring through CHIRP or PSCPS you set the side keys FN1 and/or FN2 to NONE (not assigned), the radio may lock and ask for a code at power-on.</p>
+<p>If that does not help, wipe the radio's memory with the REBORN firmware — see section 6 of this guide.</p>
+<h3>18. Which program should I use to program (configure) the radio?</h3>
+<p>CHIRP or PSCPS. To use CHIRP you need to load the module.</p>
+<h3>19. What is CHIRP and what can it do?</h3>
+<p>It is a program for programming radios. It edits channels and switches various functions on and off, including those that are not available from the radio's own menu.</p>
+<h3>20. I wrote my saved frequencies (from different firmware) or someone else's frequency file, and the radio behaves strangely</h3>
+<p>Configuration files from different firmware versions can make the radio work incorrectly, which is why writing them is not recommended. Writing other people's configuration and settings files is not recommended either.</p>
+<p>If you need to write frequencies from someone else's file (or from your own file, but made with different firmware), use CHIRP: open the other file, read your radio — a second tab will appear — then copy the frequencies you need from the other file's tab and paste them into the tab of your radio. Do not forget to load the appropriate module before reading the files.</p>
+<h3>21. Does the radio have encryption?</h3>
+<p>The radio has no signal encryption, but it does have a scrambler (voice masking) function. Please note that in many countries the use of encryption, scramblers and other signal-masking functions in civil radio communication is prohibited by law.</p>
+<h3>22. Why does the green LED light up on reception while the speaker stays silent?</h3>
+<ul>
+<li>check whether you have receive subtones set (R-DCS and R-CTCS);</li>
+<li>check that both radios use the same modulation (FM in particular).</li>
+</ul>
+<h3>23. What is a subtone?</h3>
+<p>A subtone is an additional signal, inaudible to the human ear, that is transmitted together with the voice. It acts as a kind of "friend or foe" identifier (by filtering the incoming signal). If a subtone is set, your radio will reject all signals on that frequency and will open for reception only when it detects a signal with the same subtone.</p>
+<p>A radio without a subtone, on the other hand, will hear all other radios on reception, both those that use a subtone and those that do not.</p>
+<h3>24. What is the non-standard 55 Hz subtone that the scanner detects?</h3>
+<p>See the description in the Karina firmware manual, item 22, page 5.</p>
+<h3>25. Why can I hear one correspondent but not the other?</h3>
+<p>It means that the signal from one operator is strong enough for you to hear him, while the signal from the other is too weak.</p>
+<p>This may be due to your antenna not being very efficient, or to one of the operators being closer to you, or simply to the second operator's signal being too weak.</p>
+<p>The opposite case is also possible: the signal of one of the correspondents is so strong that it overloads your receiver, which then "chokes" on the excessively strong signal and stays silent.</p>
+<h3>26. I set the radio to scan frequencies, so why do I hear nobody?</h3>
+<p>To hear someone, you first have to decide where to scan. Scanning "everything at once" will not get you anywhere.</p>
+<p>For example, you want to scan the 100-200 MHz range with a 25 kHz step (the scanning speed in frequency (VFO) mode is about 15 frequencies per second), which gives:</p>
+<p>100/((0.025)*15)=266 seconds (or almost 5 minutes) for one scanning pass. It is far more efficient to narrow the search range or to start scanning in spectrum analyser mode using the configured presets.</p>
+<h3>27. Can I call for help with the radio?</h3>
+<p>In exceptional cases, and only <b>when there is a direct threat to the life and health of people and there is no way to call for help by other technical means of communication</b>, you may send an SOS or MAYDAY distress signal.</p>
+<h3>28. On which frequencies is it best to call for help so that I am heard?</h3>
+<p>There are no universally accepted distress frequencies. There are maritime frequencies, river frequencies, mountain emergency frequencies and so on. These frequencies may also differ from region to region and from country to country. When you plan a trip to a particular region, it is advisable at least to find out which emergency communication frequencies are used there.</p>
+<p>There are, however, commonly accepted calling frequencies on which you have a better chance of being heard:</p>
+<ul>
+<li>433.500 — the general calling frequency of the 70 cm band</li>
+<li>446.09375 — the general calling frequency of the PMR band</li>
+<li>145.500 — the general calling frequency of radio amateurs (for communication between radio amateurs holding licences and permits)</li>
+</ul>
+<p>These frequencies may also differ depending on the region. It is not recommended to occupy them for long conversations. You can always make contact and then move to other frequencies by agreement.</p>
+<h3>29. What is the S symbol that lights up from time to time in the top left corner?</h3>
+<p>See the description in the Karina firmware manual, item 14, page 5.</p>
+<h3>30. Why, when I change the TX power (or the bandwidth, or the modulation, or the subtone, or the frequency offset), are the changes not saved after switching to another channel and back, or after switching the radio off and on?</h3>
+<p>See the description in the Karina firmware manual, item 13, page 5.</p>
+<h3>31. When I press PTT the display shows DISABLE — what should I do?</h3>
+<p>See the description in the Karina firmware manual, items 36 and 37, page 7.</p>
+<h3>32. I have connected a Type-C cable to the radio, but it is not charging</h3>
+<p>Charging via Type-C is an additional option. It starts at a lower battery voltage and does not charge the battery up to its nominal value. If you can charge the radio in the cradle, use the cradle.</p>
+<h3>33. My radio shows the battery voltage incorrectly — what should I do?</h3>
+<p>If the battery voltage on the radio's display is implausibly low (~0.25 V) or implausibly high (600 V), that is the first sign that your calibration data is corrupted: you need to write the stock calibration first and only then the Karina calibration.</p>
+<p>If that does not help, perform the memory wipe as described in the firmware manual, then install the firmware and the calibration data again.</p>
+<p>If the voltage is displayed more or less correctly, with a deviation of about 0.2-0.5 V from the value measured with a multimeter, this is the normal situation with the factory calibration. It can be adjusted in a HEX editor by changing the value of cell 140/6 of the calibration file (in my case this value is B0, but yours may differ).</p>
+<h3>34. Why does the display show 6.0 V while the radio is already switching off?</h3>
+<p>The operating voltage range of the battery is ~6.0 V - 8.4 V:</p>
+<ul>
+<li>~8.4 V = 100%</li>
+<li>~7.2 V = 50%</li>
+<li>~6.0 V = 0%</li>
+</ul>
+<p>Discharging the battery below 4 V leads to its degradation.</p></article>
+</div>
+<footer>
+  <p>Licensed under the Apache License 2.0. © 2026 autumn1rain.</p>
+  <p class="langs">Language: <a href="https://autumn1rain.github.io/karina-v3-k1/ru/install/">Русский</a><a href="https://autumn1rain.github.io/karina-v3-k1/es/install/">Español</a><a href="https://autumn1rain.github.io/karina-v3-k1/de/install/">Deutsch</a><a href="https://autumn1rain.github.io/karina-v3-k1/zh/install/">中文</a></p>
+</footer>
+</div>
+</body>
+</html>

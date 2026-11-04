@@ -21,6 +21,15 @@ header.top { display:flex; justify-content:space-between; align-items:center; ga
 .brand span { color:var(--muted); font-weight:400; }
 nav a { margin-left:14px; color:var(--muted); text-decoration:none; font-size:15px; }
 nav a:hover { color:var(--text); }
+nav .langsel { margin-left:16px; padding-left:16px; border-left:1px solid var(--border);
+  font-size:14px; }
+nav .langsel a, nav .langsel b { margin-left:0; margin-right:7px; }
+nav .langsel b { color:var(--text); }
+header.top { flex-wrap:wrap; }
+@media (max-width:560px) {
+  nav .langsel { margin-left:0; padding-left:0; border-left:0; display:block;
+    margin-top:6px; }
+}
 .hero { display:flex; gap:36px; align-items:center; padding:54px 0 40px; }
 .hero-text { flex:1 1 auto; }
 .hero img { width:auto; height:auto; max-height:380px; flex:0 0 auto; }
@@ -60,6 +69,59 @@ footer { border-top:1px solid var(--border); padding:28px 0 46px; color:var(--mu
   font-size:14.5px; }
 footer p { margin:0 0 8px; }
 .langs a { margin-right:12px; }
+.doc-wrap { max-width:1360px; }
+.doc { display:grid; grid-template-columns:clamp(200px, 20vw, 280px) minmax(0, 1fr);
+  gap:clamp(24px, 4vw, 56px); padding:22px 0 10px; align-items:start; }
+.toc { position:sticky; top:0; max-height:100vh; overflow:auto; padding:18px 18px 28px 0;
+  border-right:1px solid var(--border); font-size:14px; line-height:1.4; }
+.toc b { display:block; margin:0 0 10px; font-size:12px; text-transform:uppercase;
+  letter-spacing:0.06em; color:var(--muted); }
+.toc a { display:block; padding:5px 0; color:var(--muted); text-decoration:none;
+  border-left:2px solid transparent; padding-left:10px; margin-left:-12px; }
+.toc a:hover { color:var(--accent); border-left-color:var(--accent); }
+.body { max-width:76ch; }
+.body h2 { font-size:25px; margin:34px 0 12px; padding-top:16px;
+  border-top:1px solid var(--border); scroll-margin-top:12px; }
+.body h2:first-child { border-top:0; padding-top:0; margin-top:0; }
+.body h3 { font-size:18px; margin:24px 0 6px; }
+.body h4 { font-size:16px; margin:16px 0 4px; }
+.body p { margin:0 0 11px; }
+.body li { margin:0 0 6px; }
+.body p.shot { margin:20px 0; }
+.body p.shot.row { display:flex; flex-wrap:wrap; gap:16px; align-items:flex-end; }
+/* product shots come on a white background: give them a card instead of a bare patch */
+.body p.shot img { background:#fff; padding:10px 18px; border-radius:12px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.22); }
+.body p.shot.row img { height:290px; max-height:290px; width:auto; object-fit:contain; }
+.body p.shot.hero { display:inline-flex; gap:clamp(8px, 2vw, 26px); align-items:flex-end;
+  background:#fff; border-radius:14px; padding:18px 26px 14px; max-width:100%;
+  box-shadow:0 2px 14px rgba(0,0,0,0.25); }
+.body p.shot.hero img { background:none; border:0; padding:0; border-radius:0;
+  box-shadow:none; height:clamp(180px, 25vw, 320px); max-height:none; width:auto;
+  object-fit:contain; }
+@media (max-width:620px) { .body p.shot.hero img { height:auto !important; max-height:200px; } }
+.body p.shot.row img.wide { height:auto; max-height:230px; max-width:100%; }
+.body img { max-width:100%; max-height:300px; width:auto; height:auto;
+  border:1px solid var(--border); border-radius:8px; background:var(--card); }
+.body table { font-size:15px; }
+.body td, .body th { border:1px solid var(--border); }
+.body mark { background:#ffe98a; color:#15171c; padding:0 3px; }
+.danger { color:var(--no); font-weight:700; font-size:18px; line-height:1.45;
+  border-left:4px solid var(--no); background:rgba(192,57,43,0.07);
+  padding:11px 15px; border-radius:0 8px 8px 0; margin:16px 0; }
+.danger code, .danger b { color:inherit; }
+li.danger { display:block; }
+.doc-top { display:flex; justify-content:space-between; align-items:baseline; gap:16px;
+  padding:22px 0 0; flex-wrap:wrap; }
+.doc-top h1 { font-size:30px; margin:0; }
+@media (max-width:860px) {
+  .doc { grid-template-columns:1fr; gap:16px; }
+  .toc { position:static; max-height:none; border-right:0;
+    border-bottom:1px solid var(--border); padding:0 0 14px; }
+  .toc a { padding:4px 0 4px 10px; }
+  .body { max-width:none; }
+  .danger { font-size:16.5px; }
+}
 .anchor { margin-left:0.35em; color:var(--muted); font-weight:400; text-decoration:none;
   opacity:0; transition:opacity .15s ease; }
 h2:hover .anchor { opacity:0.45; }

@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Firmware manual — Karina</title>
+<meta name="description" content="Firmware manual — Karina (autumn rain), Quansheng UV-K5 V3 / UV-K1.">
+<link rel="canonical" href="https://autumn1rain.github.io/karina-v3-k1/manual/">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap doc-wrap">
+<header class="top">
+  <div class="brand">Karina <span>— autumn rain</span></div>
+  <nav><a href="../">All of Karina</a> <a href="https://github.com/autumn1rain/karina-v3-k1">GitHub</a>
+       <span class="langsel"><b>EN</b> <a href="https://autumn1rain.github.io/karina-v3-k1/ru/manual/" hreflang="ru" title="Русский">RU</a> <a href="https://autumn1rain.github.io/karina-v3-k1/es/manual/" hreflang="es" title="Español">ES</a> <a href="https://autumn1rain.github.io/karina-v3-k1/de/manual/" hreflang="de" title="Deutsch">DE</a> <a href="https://autumn1rain.github.io/karina-v3-k1/zh/manual/" hreflang="zh" title="中文">中文</a></span></nav>
+</header>
+<div class="doc-top">
+  <h1>Firmware manual</h1>
+  <p class="sub"><a href="https://github.com/autumn1rain/karina-v3-k1/blob/main/karina-v3-k1-manual-en.pdf">Also as a PDF</a></p>
+</div>
+<div class="doc">
+  <aside class="toc"><b>Contents</b><a href="#s1">KARINA (autumn rain) firmware — description</a><a href="#s3">1. MAIN SCREEN.</a><a href="#s4">2. MENU.</a><a href="#s5">3. KEY FUNCTIONS.</a><a href="#s6">4. SPECTRUM ANALYZER</a><a href="#s7">5. FREQUENTLY ASKED QUESTIONS, POSSIBLE PROBLEMS, AND HOW TO SOLVE THEM.</a></aside>
+  <article class="body"><p><b>So, you broke it?</b> <b>High time to open the manual.</b></p>
+<p><i>Karina (autumn rain) — QUANSHENG UV-K5 (V3), UV-K1, UV-K1(8)</i></p>
+<p class="shot hero"><img src="../assets/docs/manual/p01_2.png" alt="screenshot"><img src="../assets/docs/manual/p01_1.png" alt="screenshot"><img src="../assets/docs/manual/p01_3.png" alt="screenshot"></p>
+<h2 id="s1">KARINA (autumn rain) firmware — description<a class="anchor" href="#s1">#</a></h2>
+<p><b>Version 21.08.2026</b></p>
+<p><b>(version number = release day.month)</b> <mark><b>Additions, clarifications and new features are marked with colour</b></mark></p>
+<p class="danger"> <b>!!! SAVE YOUR STOCK CALIBRATION DATA !!!</b> <b>after flashing, the calibration must be updated</b></p>
+<p><b>and then a reset must be performed: menu -&gt; reset -&gt; vfo</b></p>
+<h2 id="s3">1. MAIN SCREEN.<a class="anchor" href="#s3">#</a></h2>
+<p class="shot row"><img src="../assets/docs/manual/p03_1.png" alt="screenshot" class="wide"><img src="../assets/docs/manual/p03_2.png" alt="screenshot" class="wide"></p>
+<p><b>1.</b> Status line / the following symbols may be displayed:</p>
+<p><b>S</b> – battery saver is enabled – see section 2, item 14; <b>L</b> – keypad is locked (Lock) – see section 3, item F (long F); <b>F</b> - switch to the option mode – see section 3, item F (short F); <b>DW</b> – dual watch mode – see section 2, item 17; <b>A</b> - automatic setting of the subtone of the last reception – see section 3, item 0 (F + very long 0); <b>D</b> - dynamic volume – see section 3, item 9 (long 9); <b>r</b> - frequency and TX power randomiser – see section 3, item 8 (F + very long 8); <b>RXTX</b> – automatic beacon – see section 3, items 1, 2, 3; <b>x</b> - background frequency capture – see section 3, item 1 (long 1); <i>While a signal with a subtone is being received, the status line shows the</i> <i>analogue CTCSS tone (as a number) or the digital DCS code (in the form D125)</i></p>
+<p><b>2.</b> Receiver selection / activity / VFO/MR mode <b>3.</b> Indicator of the last reception / frequency offset of the last reception (x10 Hz) <b>4.</b> Channel parameters / the following symbols may be displayed:</p>
+<p><b>ATT 1, ATT 2</b> - attenuator enabled (quick on / change / off - <code>*</code> ) <b>DCS, CT</b> - type of the configured subtone – see section 2, item 4; <b>HIGH, MID, LOW</b> – current TX power (quick change – long 6) <b>R</b> - reverse mode enabled – (long 8); <b>12,5k, 25k</b> - channel bandwidth – (quick change F+7) <b>SCR</b> - analogue scrambler (2.3. Main menu, item 11) <b>5.</b> S-meter scale <b>6.</b> Receiver selection / activity / VFO/MR mode <b>7.</b> Reception – RX / Transmission - TX</p>
+<p><b>8.</b> Battery charge indicator <b>9.</b> Memory channel name / frequency <b>10.</b> Assigned scan list (- first, - second) - the channel is in both scan lists - the channel is not in any scan list <b>11.</b> S-meter signal level <b>12.</b> Modulation type - AM/FM/SSB (switched with a long 7)</p>
+<h2 id="s4">2. MENU.<a class="anchor" href="#s4">#</a></h2>
+<h3>2.1. Menu navigation.</h3>
+<p class="danger"><b>Use the</b> ▲ <b>/</b> ▼ <b>arrow keys, or type the item number directly on the keypad (01, or 22…)</b> <b><i>Attention!!!</b></i> <i>Menu items 2, 3, 4, 5, 6, 7, 8, 9, 10, 26 and 39 are set</i> <i>individually for the A and B bands and for each frequency band (Band).</i></p>
+<h3>2.2. Working frequency bands (Bands):</h3>
+<p>1.00000 – 108.99990 MHz; 109.00000 – 139.99990 MHz; 140.00000 – 199.99990 MHz 200.00000 – 279.99990 MHz; 280.00000 – 399.99990 MHz; 400.00000 – 669.99990 MHz 700.00000 – 3200.99990 MHz. The precision of the frequency value depends on the step set in item 2 (Step).</p>
+<h3>2.3. Main menu.</h3>
+<p><b>1.</b> <b>Sql</b> – squelch sensitivity level, set simultaneously for the upper (<b>A</b>) and lower (<b>B</b>) bands (see also the description of item 35) <b>2.</b> <b>Step</b> – frequency step. (for CB = 5/10; Satcom, Avia = 5/25; everything else = 6.25/12.5). <b>3.</b> <b>Power</b> – transceiver TX power. <b>High / Middle / Low</b>. <b><i>4.</b></i> <b>R_DCS</b> – digital coded subtone for reception (Digital-Coded Squelch), <i>if the function is enabled, the squelch will open only after this subtone has been received. (applies to FM modulation only)</i> <b><i>5.</b></i> <b>R_CTCS</b> – analogue subtone for reception (Continuous Tone-Coded Squelch System), <i>if the function is enabled, the squelch will open only after this subtone has been received. (applies to FM modulation only)</i> <b><i>6.</b></i> <b>T_DCS</b> – digital coded subtone for transmission, <i>if the function is enabled, the transceiver will send this tone. (applies to FM modulation only)</i> <b><i>7.</b></i> <b>T_CTCS</b> – analogue subtone for transmission, <i>if the function is enabled, the transceiver will send this tone. (applies to FM modulation only)</i> <b>8.</b> <b>Shift</b> – sign of the transmit frequency shift (RX/TX split) <b>+</b>/<b>–</b>/<b>upc.</b> <i>(upconverter - when a down-converter is used)</i> <b>9.</b> <b>Offs</b> – value of the transmit frequency shift. <b>10. W/N</b> – the bandwidth used by the transceiver:</p>
+<ul>
+<li><b>25 kHz</b> - Wide</li>
+<li><b>12.5 kHz</b> - Narrow.</li>
+</ul>
+<p><b>11. Scrambl</b> – analogue scrambler <i>transforms the original speech signal by changing its amplitude, frequency and timing parameters in various combinations (1-10 – masks the speech, 11-20 – changes the pitch of the speech).</i></p>
+<p><b>12. BusyCL</b> – transmission is blocked on a busy channel: while the transceiver is receiving a signal, pressing PTT does not start transmission. <b>13. Mem_ch</b> – save the frequency and the settings to a memory channel <i>any change of the settings of the active channel (in channel (MR) mode) is stored only if it is confirmed through this menu item; if this is not done, the channel settings revert to the previously saved ones as soon as you switch to another channel or turn the radio OFF/ON.</i> <b>14. Save</b> – battery saver (ratio between active time and sleep time). <b>MAX</b> – maximum power saving x10 <i>Maximum power saving is achieved with Save=Max together with DW=OFF. The optimum setting is 1:3. When it is on, the symbol</i> <b><i>S</b></i> <i>appears in the status line from time to time</i> <mark><i>(see also the description of item 25 Roger (Roger=5)).</i></mark> <b><i>15.</b></i> <b>VOX</b> – voice-activated TX (1-10 microphone sensitivity) <i>when you enter the menu with "M", VOX is blocked to prevent it from triggering on key presses.</i> <b>16. Light</b> – screen backlight. It is configured in 2 stages: time and brightness: <b>BACKLIGHT TIME SETTING:</b> <b>OFF</b> – full blackout (even the RX/TX LEDs stay dark); <b>KEY</b> – the same as OFF, but the backlight comes on for 5 seconds when a front key is pressed<b>;</b> <b>2, 5, 10, 20 sec</b>, <b>2 min</b> – backlight time. The backlight stays on for the selected time, but switches off only after reception has ended; <b>ON</b> – backlight permanently on. <b>BACKLIGHT BRIGHTNESS SETTING:</b> <b>bri 0-7 –</b> backlight brightness adjustment. To set it, first set the backlight time, then enter the <b>Light</b> item again and set the brightness. <b>17. DW</b> – dual watch mode for the frequencies on the A and B bands:</p>
+<ul>
+<li><b>Chan_A / Chan_B</b> – enable the DW function.</li>
+<li><b>SCAN</b> – the active band <b>A / B</b> stays the working one, the other one scans the channels of the active scan list.</li>
+<li><b>OFF</b> – disable dual watch mode.</li>
+</ul>
+<p class="danger"><mark><b>ATTENTION</b>: when background capture is switched on (long press of key 1), DW=ON is activated automatically <i>(the captured frequency is shown in VFO-B).</i></mark> <b>18. Beep</b> – audible signals when the transceiver is switched on, when the battery is low, and when a frequency is detected in background frequency capture mode (key presses are not accompanied by a sound). <b>19. TxTime</b> – limit on the duration of continuous transmission and of beacon operation. <b>20. Scan</b> – the method of stopping or resuming scanning (this setting also applies to the spectrum analyser):</p>
+<ul>
+<li><b>CO</b> – scanning resumes after the carrier disappears <mark>(optimum);</mark></li>
+</ul>
+<ul>
+<li><b>TO</b> – resume scanning after a 5-second pause <i>(in the spectrum a strong signal may periodically drop out / stall, the "freeze effect");</i></li>
+<li><b>SE</b> – stop scanning completely once a signal is detected. The ▲<b>/</b>▼ keys resume scanning <i>(</i><mark><i>when SE is selected</i></mark> <i>in the spectrum, frequencies that have already been picked up into the "Loot" are not "searched" again).</i></li>
+</ul>
+<p><b>21. Name</b> – select the style used to display channel names (available options: <b>NAME</b> - name, <b>CHAN</b> - channel, <b>FREQ</b> - frequency, <b>NAME+F</b> - name + frequency).</p>
+<p><b>22. STE</b> – removes the hiss/noise/"pfft" at the end of a transmission. <i>(When PTT is released, a short 55 Hz tone is sent on the air, telling other transceivers that the transmission has ended and that they should mute the audio.)</i></p>
+<p><b>23. Mic</b> – microphone sensitivity:</p>
+<ul>
+<li><b>0</b> – thresholdless sensitive microphone (best with <b>tx_filt = 1-2)</b>;</li>
+<li><b>1</b> – Minimum – (best with <b>tx_filt = 0-1)</b>;</li>
+<li><b>2</b> – Medium (best with <b>tx_filt = 1)</b>;</li>
+<li><b>3</b> – Boosted <i>(better for long-distance contacts; at short range an echo appears)</i> (best with <b>tx_filt = 1)</b>;</li>
+<li><b>4</b> – Boosted <b>recommended</b> *(*for a quiet environment, best with <b>tx_filt = 1)</b>;</li>
+<li><b>5</b> – MAX <i>(ambient background becomes audible)</i> (best with <b>tx_filt = 1)</b><i>.</i></li>
+</ul>
+<p><b>24. SList</b> – select scan list <b>1</b> / <b>2</b> / <b>3</b> (3 - scans all channels from memory)</p>
+<p><i>Adding / removing the active channel to or from the scan lists (you can only add / remove in SList 1 and 2) is done with the F+1 combination from the main screen, which is confirmed by the icon from item 9 on p.2 appearing / disappearing.</i></p>
+<p><i>While SList 3 is active, channels cannot be added or removed!</i></p>
+<p><i>In addition, F+9 lets you assign 2 priority scan channels; for details see the section "KEY FUNCTIONS" (9 CALL).</i></p>
+<p><b>25. Roger</b> – audible tone at the end of a transmission (2 working options to choose from)</p>
+<p><i>Additional Rogers 3-55 are test functions – do not scroll through them without a reason:</i></p>
+<p><i>Roger 3 - frequency auto-capture with greater range (see the section "Key functions");</i></p>
+<p><i>Roger 4 – Turns the auto-attenuator off (OFF);</i></p>
+<p><i>Roger 5 - mode with improved power saving + speed-up of: dw switching, subtone measurement, sql checking in powersave. A different operating algorithm.</i></p>
+<p><i>Roger 6 – Reverse TX frequency correction by AFC (to compensate for Doppler shift);</i></p>
+<p><i>Roger 7 – Direct TX frequency correction by AFC</i></p>
+<p><i>(Automatic TX frequency tuning by afc. After a signal is received, the radio remembers the frequency offset and corrects the transmission. The EXIT key resets the correction.)</i></p>
+<p><i>Roger 8 – Software AGC from AM_fix in FM.</i></p>
+<p><b>26. Modulat</b> – modulation mode <b>FM / AM / SSB</b> <i>(FM by default, works on receive only).</i></p>
+<p><b>27. AM_fix</b> – enables AM AGC to improve reception of AM signals <i>(when this function is active, the registers are not adjusted in "frequency capture" mode in the spectrum if amplitude modulation is set).</i></p>
+<p><b>28. AMf_lvl</b> – adjusts the AM AGC level <i>(under some conditions it reduces noise).</i></p>
+<p><b>29. LNA_hi</b> – enables the low-noise amplifier <i>(in environments with strong interference it is better to switch it off).</i></p>
+<p><i>When it is switched off the spectrum is "flat"; when it is switched on the spectrum "comes alive".</i></p>
+<p><i>See the additional description of the MAN value in the description of the spectrum analyser mode registers.</i></p>
+<p><b>30. rx_filt</b> – changes the tone of the received signal *(1 - boosts the lows, 2 and 3 - cut the lows and boost the highs (<b>**3 is optimal</b>**)*</p>
+<p><b>31. tx_filt</b> – changes the modulation on transmit (preset for the Tx3k register) <i>0 – stock, 1 – reduces it</i> <b>*(optimal)</b>**, 2, 3 - increase the modulation; a squeal or squelch chopping may occur on the receiving transceiver.*</p>
+<p><i>If you run into problems, set menu items 30, 31 =</i> <b><i>1</b><b>, restart the transceiver, then set them =</i> </b>*0****)*</p>
+<p><b>32. Del_ch</b> – delete a memory channel</p>
+<p><b>33. Reset</b> – reset the transceiver configuration:</p>
+<p><mark>-</mark> <mark><b>VFO</b></mark> – reset the transceiver settings and the VFO bands</p>
+<p><mark>-</mark> <mark><b>ALL</b></mark> <mark>– reset all transceiver settings, including</mark> deleting the channels</p>
+<p><mark><i>(the calibrations are not affected by this).</i></mark></p>
+<p><b>34. Re-name</b> – rename a channel (<code><i></code> - next character) – for newly saved channels, if no name is set, during scanning it is displayed as «<b>,,,,,,,,,»</b>; when entering a name, scroll past the empty characters with <code></i></code></p>
+<p><mark><b>35. Preset</b></mark> <mark>– Select the working preset</mark> <mark><b>that is loaded by default</b></mark> <mark>(0, 1, 2)</mark> <mark>for the operation of the radio.</mark> <mark><b>Calibrations and configuration are individual for each preset</b></mark><mark>!</mark></p>
+<p><mark><i>(for each preset, on first load you must perform a full memory wipe (power on with PTT+EXIT held), then load the calibrations and the configuration (if needed) and set up all the items you require).</i></mark></p>
+<p><mark>Switching to the preset you need on the fly is done by powering the radio on with the corresponding key 0 / 1 / 2 held down.</mark></p>
+<p><b>36. Sql 2</b> – squelch sensitivity level for the <b>B</b> band.</p>
+<p><i>When you adjust</i> <b><i>SQL</b></i> <i>(menu item 1), the setting is applied to both the</i> <b><i>A</b></i> <i>and</i> <b><i>B</b></i> <i>bands at the same time.</i></p>
+<p><i>When you adjust</i> <b><i>SQL2</b><b>, a separate setting is applied to the</i> </b><i>B<b></i> <i>band. (The</i> </b><i>B<b></i> <i>band setting is reset whenever</i> </b>*SQL*** <i>in item 1 is changed.)</i></p>
+<p><b>37. Loot</b> – the "Loot menu" automatically collects the frequencies on which reception occurred while scanning in the spectrum and in VFO (128 entries – on overflow the oldest ones are overwritten. Sorted from the most recently found; a duplicate filter is applied and detected subtones are displayed)</p>
+<p><i>If the frequency is already saved in memory, the channel name is displayed. (If the frequency is stored twice in the channel list, the name of the first channel in the list is displayed.)</i></p>
+<p><i>The time elapsed since the last reception is also displayed.</i></p>
+<p><i>When an entry is selected with the</i> <b><i>M</b></i> <i>key, the current frequency is transferred to the active VFO band.</i></p>
+<p><i>Saving to memory from VFO is done via item 13. Mem_ch</i></p>
+<p><i>The "Loot menu" is cleared after the transceiver is restarted.</i></p>
+<h3>2.4. Hidden menu.</h3>
+<p><mark><b><i>Without experience and the necessary instruments it is not recommended to change the parameters of items 41-53 of the hidden menu – changing these items affects the calibration of the radio.</b></i></mark></p>
+<p class="danger"><mark><b><i>Any adjustment of these items is done at your own risk !!!</b></i></mark></p>
+<p><mark><b><i>It is strongly recommended to make a BACKUP of the radio's settings and calibrations before changing them!</b></i></mark></p>
+<p>The hidden menu appears if you power the radio on with <b>PTT</b> and the side function key <b>FN1</b> held down at the same time, and then release all keys <i>(release</i> <b><i>PTT + FN1</b></i> <i>after the splash screen goes out)</i>.</p>
+<p><b>38. F Lock</b> – select the frequency plan that permits transmission <i>(entering a frequency for reception purposes remains open across the whole 15.0 MHz – 1349.9999 MHz range):</i></p>
+<ul>
+<li><b>FCC</b> (144-148, 420-450);</li>
+<li><b>CE</b> (144-146, 430-440);</li>
+<li><b>GB</b> (144-148, 430-440);</li>
+<li><b>LPD PMR</b> (433-435, 446-447) - this also locks all front keys except the ▲<b>/</b>▼ arrows (after the transceiver is restarted)</li>
+</ul>
+<p><i>For a band in</i> <b><i>VFO</b></i> <i>frequency mode, a frequency can be entered by scrolling with</i> ▲ <i>/</i> ▼ <i>(within one VFO band).</i></p>
+<p><i>For a band in</i> <b><i>MR</b></i> <i>channel mode, only pre-programmed channels can be selected by scrolling with</i> ▲ <i>/</i> ▼ <i>;</i></p>
+<ul>
+<li><b>OFF</b> (136-240, 280-500) – the stock frequency range.</li>
+</ul>
+<p><b>39. Tx All</b> – select the transmit lock mode:</p>
+<ul>
+<li><b>DEFAULT</b> – transmission in the bands selected in the previous menu item <b>36;</b></li>
+<li><b>DISABLE</b> – forbid transmission on all frequencies;</li>
+<li><b>ENABLE</b> – allow transmission on all frequencies.</li>
+</ul>
+<p><b>40. Sat</b> – retunes the receive filters for the Satcom frequency band</p>
+<ul>
+<li><b>OFF –</b> if the coils have been modified for Satcom reception;</li>
+<li><b>ON –</b> if no modifications have been made.</li>
+</ul>
+<p><mark><b>41. F_Corr</b></mark> <mark>– correction of the reference oscillator frequency</mark></p>
+<p><mark><b>42. r.Open</b></mark> <mark>– manual adjustment of the SQL OPENING level by RSSI.</mark></p>
+<p><mark><b>43. r.Close</b></mark> <mark>– manual adjustment of the SQL CLOSING level by RSSI.</mark></p>
+<p><mark><b>44. n.Open</b></mark> <mark>– manual adjustment of the SQL OPENING level by noise.</mark></p>
+<p><mark><b>45. n.Close</b></mark> <mark>– manual adjustment of the SQL CLOSING level by noise.</mark></p>
+<p><mark><b>46. g.Open</b></mark> <mark>– manual adjustment of the SQL OPENING level by Glitch.</mark></p>
+<p><mark><b>47. g.Close</b></mark> <mark>– manual adjustment of the SQL CLOSING level by Glitch.</mark></p>
+<p><mark><b>48. a</b></mark> <mark>– service settings for the firmware's test functions</mark><mark><b>.</b></mark></p>
+<p><mark><b>49. b</b></mark> <mark>– service settings for the firmware's test functions.</mark></p>
+<p><mark><b>50. c</b></mark> <mark>– service settings for the firmware's test functions.</mark></p>
+<p><mark><b>51. d</b></mark> <mark>– service settings for the firmware's test functions.</mark></p>
+<p><mark><b>52. e</b></mark> <mark>– service settings for the firmware's test functions.</mark></p>
+<p><b>53. PWR</b> – TX power, stored in the calibrations <i>(on entry it shows</i> <b><i>0</b><b>; scroll with</i> ▲<i>/</i>▼ <i>or press</i> </b>*EXIT*** <i>- the value will refresh).</i></p>
+<p><i>To save a value, first select the frequency / band and the power level you want to trim (HIGH / MID / LOW). Then open the PWR menu item, change the value and press</i> <b><i>M</b></i> <i>to save.</i></p>
+<p class="danger"><b><i>The PWR value will be different for the beginning, the middle and the end of each frequency band, and for each power level!!!</b></i></p>
+<h2 id="s5">3. KEY FUNCTIONS.<a class="anchor" href="#s5">#</a></h2>
+<p><b>Short press</b> – press and release (standard).</p>
+<p><b>Long press</b> – at least 1 second (for most keys this is equivalent to the combination "<b>F + short press</b>").</p>
+<p><b>F + very long press</b> – 5 seconds (until the red LED blinks).</p>
+<h3><mark>3.1. Service combinations.</mark></h3>
+<p><mark>Functions available when the radio is powered on with keys held down:</mark></p>
+<p><mark>-</mark> <mark><b>PTT+FN1</b></mark> <mark>– Enter the hidden settings menu (see section 2.4).</mark></p>
+<p><mark>-</mark> <mark><b>PTT+EXIT</b></mark> <mark>– Full memory wipe (calibrations, configuration, all settings) –</mark> <mark><b>must be done with the cable DISCONNECTED</b></mark><mark>; after power-on keep the keys held for at least 2 seconds.</mark></p>
+<p><mark>-</mark> <mark><b>0</b></mark> <mark>– quick selection of preset 0 at the moment of power-on (see menu item 35).</mark></p>
+<p><mark>-</mark> <mark><b>1</b></mark> <mark>– quick selection of preset 1 at the moment of power-on (see menu item 35).</mark></p>
+<p><mark>-</mark> <mark><b>2</b></mark> <mark>– quick selection of preset 2 at the moment of power-on (see menu item 35).</mark></p>
+<h3>3.2. Front keys.</h3>
+<p><b>M</b></p>
+<ul>
+<li>short press <b>M</b> – enter the Menu</li>
+<li>short press <b>M</b> – leave the current Menu item, confirming the setting</li>
+<li><mark>long press</mark> <mark><b>M</b></mark> <mark>– enter modem mode (TEST FUNCTION).</mark></li>
+</ul>
+<p>▲/▼</p>
+<ul>
+<li>short press ▲/▼ – change channel / frequency by the set step</li>
+<li>F+ short press ▲/▼ – change channel / frequency in 1 MHz steps</li>
+</ul>
+<p><b>1 BAND</b></p>
+<ul>
+<li>long press <b>1</b> – background frequency capture (an <b>x</b> appears on the screen)</li>
+</ul>
+<p><mark>When background capture is switched on, DW is activated automatically.</mark></p>
+<p><mark><i>(When activity is detected, the captured frequency is copied into the</i></mark> <mark><b><i>scratch memory</b></i></mark> <mark><i>of VFO2 (temporarily). Any manipulation of VFO2 makes the captured frequency disappear. The captured frequency can be viewed in the Loot menu.)</i></mark></p>
+<p><i>(If item</i> <b><i>Roger=3</b></i> *is set (****it is also recommended to set* <i>SQL=3, SAVE=1:3), the function runs as "long-range capture"; battery consumption increases and the radio may become sluggish.)</i></p>
+<ul>
+<li><b>F+</b> short press <b>1</b> – Add / remove the active channel to or from the scan lists <i>(you can only add / remove in scan lists 1 and 2</i> <b>*(</b>**pressing F+1 adds/removes the current channel and automatically jumps up to the next nearest channel on which the same operation can be performed – if you are removing, it jumps to the next channel that can be removed from the current list; if you are adding, it jumps to the next one that can be added to the current scan list)*, which is confirmed by the icon from item 9 on p.2 appearing / disappearing.</li>
+</ul>
+<p>While scan list 3 is active, channels cannot be added or removed!</p>
+<ul>
+<li>F+ very long press 1 – FM auto-beacon (the text <b>RXTX</b> appears) (the transceiver answers a call with a "beep") – during transmission the auto-beacon can be switched off by pressing any key. <b>W/N=12.5</b> is recommended.</li>
+<li>Pressing F+ very long 1 again – auto-beacon with background monitoring.</li>
+</ul>
+<p>The run time depends on item 19. TxTime, where 1 min = 10 s of beacon operation / 2 min = 20 s of beacon / … / 9 min = 90 s of beacon / 10 min = 100 s of beacon. Optimal settings: txfilt=1, mic=4, ste=on. Leave beacon mode by pressing <b>EXIT.</b></p>
+<p><b>2 A/B</b></p>
+<ul>
+<li>long press 2 – switch between the upper (A) and lower (B) frequency</li>
+<li>F+ very long press 2 – FM auto-beacon (the text <b>RXTX</b> appears) (the transceiver answers a call with a "Predator chittering" sound) – during transmission the auto-beacon can be switched off by pressing any key.</li>
+</ul>
+<p>Pressing F+ very long 2 again – auto-beacon that sets the DCS subtone according to the signal level. See the DCS-to-signal-level table below.</p>
+<p><i>Handy for testing and comparing different antennas. It shows not only the fact that the signal reached the beacon, but also the strength of the received signal.</i></p>
+<p>Leave beacon mode by pressing <b>EXIT.</b></p>
+<p><b>Table of the F+2 / F+2 beacon DCS subtone against signal level</b></p>
+<table><thead><tr><th><b>DCS</b></th><th><b>dBm</b></th><th><b>DCS</b></th><th><b>dBm</b></th><th><b>DCS</b></th><th><b>dBm</b></th><th><b>DCS</b></th><th><b>dBm</b></th><th><b>DCS</b></th><th><b>dBm</b></th></tr></thead><tbody><tr><td>023</td><td>-120</td><td>143</td><td>-096</td><td>266</td><td>-072</td><td>445</td><td>-050</td><td>662</td><td>-026</td></tr><tr><td>025</td><td>-119</td><td>145</td><td>-095</td><td>271</td><td>-071</td><td>446</td><td>-049</td><td>664</td><td>-025</td></tr><tr><td>026</td><td>-118</td><td>152</td><td>-094</td><td>274</td><td>-070</td><td>452</td><td>-048</td><td>703</td><td>-024</td></tr><tr><td>031</td><td>-117</td><td>155</td><td>-093</td><td>306</td><td>-069</td><td>454</td><td>-047</td><td>712</td><td>-023</td></tr><tr><td>032</td><td>-116</td><td>156</td><td>-092</td><td>311</td><td>-068</td><td>455</td><td>-046</td><td>723</td><td>-022</td></tr><tr><td>036</td><td>-115</td><td>162</td><td>-091</td><td>315</td><td>-067</td><td>462</td><td>-045</td><td>731</td><td>-021</td></tr><tr><td>043</td><td>-114</td><td>165</td><td>-090</td><td>325</td><td>-066</td><td>464</td><td>-044</td><td>732</td><td>-020</td></tr><tr><td>047</td><td>-113</td><td>172</td><td>-089</td><td>331</td><td>-065</td><td>465</td><td>-043</td><td>734</td><td>-019</td></tr><tr><td>051</td><td>-112</td><td>174</td><td>-088</td><td>332</td><td>-064</td><td>466</td><td>-042</td><td>743</td><td>-018</td></tr><tr><td>053</td><td>-111</td><td>205</td><td>-087</td><td>343</td><td>-063</td><td>503</td><td>-041</td><td>754</td><td>-017</td></tr><tr><td>054</td><td>-110</td><td>212</td><td>-086</td><td>346</td><td>-062</td><td>506</td><td>-040</td><td></td><td></td></tr><tr><td>065</td><td>-109</td><td>223</td><td>-085</td><td>351</td><td>-061</td><td>516</td><td>-039</td><td></td><td></td></tr><tr><td>071</td><td>-108</td><td>225</td><td>-084</td><td>356</td><td>-060</td><td>523</td><td>-038</td><td></td><td></td></tr><tr><td>072</td><td>-107</td><td>226</td><td>-083</td><td>364</td><td>-059</td><td>526</td><td>-037</td><td></td><td></td></tr><tr><td>073</td><td>-106</td><td>243</td><td>-082</td><td>365</td><td>-058</td><td>532</td><td>-036</td><td></td><td></td></tr><tr><td>074</td><td>-105</td><td>244</td><td>-081</td><td>371</td><td>-057</td><td>546</td><td>-035</td><td></td><td></td></tr><tr><td>114</td><td>-104</td><td>245</td><td>-080</td><td>411</td><td>-056</td><td>565</td><td>-034</td><td></td><td></td></tr><tr><td>115</td><td>-103</td><td>246</td><td>-079</td><td>412</td><td>-055</td><td>606</td><td>-033</td><td></td><td></td></tr><tr><td>116</td><td>-102</td><td>251</td><td>-078</td><td>413</td><td>-054</td><td>612</td><td>-032</td><td></td><td></td></tr><tr><td>122</td><td>-101</td><td>252</td><td>-077</td><td>423</td><td>-053</td><td>624</td><td>-031</td><td></td><td></td></tr></tbody></table>
+<table><thead><tr><th><b>DCS</b></th><th><b>dBm</b></th><th><b>DCS</b></th><th><b>dBm</b></th><th><b>DCS</b></th><th><b>dBm</b></th><th><b>DCS</b></th><th><b>dBm</b></th><th><b>DCS</b></th><th><b>dBm</b></th></tr></thead><tbody><tr><td>125</td><td>-100</td><td>255</td><td>-076</td><td>431</td><td>-052</td><td>627</td><td>-030</td><td></td><td></td></tr><tr><td>131</td><td>-099</td><td>261</td><td>-075</td><td>432</td><td>-051</td><td>631</td><td>-029</td><td></td><td></td></tr><tr><td>132</td><td>-098</td><td>263</td><td>-074</td><td></td><td></td><td>632</td><td>-028</td><td></td><td></td></tr><tr><td>134</td><td>-097</td><td>265</td><td>-073</td><td></td><td></td><td>654</td><td>-027</td><td></td><td></td></tr></tbody></table>
+<p class="danger">The Quansheng UV-K5 and its variants are not laboratory measuring instruments. The signal level is read from the S-meter scale and may differ from values measured by other devices !!!</p>
+<ul>
+<li>unstable zone (AGC at work)</li>
+</ul>
+<p>For stable testing it is recommended to set low TX power and to keep some distance between the radios.</p>
+<p><b>3 VFO/MR</b></p>
+<ul>
+<li>long press 3 – switches between frequency (<b>VFO</b>) and channel (<b>MR</b>) mode</li>
+<li>F+ short press 3 – (in <b>MR</b> mode) switches to <b>VFO</b> mode, automatically copying the current frequency from <b>MR</b> into <b>VFO</b>. In <b>VFO</b> mode, F+ short press 3 -&gt; switches to <b>MR</b> mode.</li>
+<li>F+ very long press 3 – AM auto-beacon (the text <b>RXTX</b> appears) (the transceiver answers a call with a signal in amplitude modulation) – during transmission the auto-beacon can be switched off by pressing any key. Leave beacon mode by pressing <b>EXIT.</b></li>
+</ul>
+<p><b>4 FC</b></p>
+<ul>
+<li>long press <b>4</b> – the Loot frequency list. Functions in the Loot menu:</li>
+</ul>
+<p><b><i>4</b></i> <i>– adds/removes a frequency to/from the blacklist (Lock) until power-off.</i> <b><i>0</b></i> <i>(long) – clears the Loot blacklist and the ATT list.</i> <b><i>M</b></i> <i>– sends the current frequency to the active</i> <b><i>VFO</b></i> <i>band (when</i> <b><i>MR</b></i> <i>is active and a channel with that frequency exists, the radio switches to that channel). Saving to memory from VFO is done via item 13. Mem_ch.</i> <i>When the transceiver is switched off, the Loot list is cleared.</i></p>
+<ul>
+<li>F+ long press 4 – frequency capture; save it with the <b>M</b> key.</li>
+</ul>
+<p>By default the UHF/VHF filters are disabled, as in the stock firmware, so only strong local signals or radios in the immediate vicinity are detected. To improve capture range and stability, select the filter you need by pressing 1 (VHF) or 2 (UHF).</p>
+<p><i>In capture mode the frequency and the subtone on the display "jump" (you see values being cycled through) until a capture happens. Once the captured frequency has been determined, the value stops.</i></p>
+<ul>
+<li>F+ very long press 4 – enters PTT-Holder mode (holds the transmission until PTT is pressed again). Transmission is switched on directly by pressing</li>
+</ul>
+<p><b>PTT+FN1</b> at the same time. Leave PTT-Holder mode by pressing <b>PTT</b> again.</p>
+<p><b>5 NOAA</b></p>
+<ul>
+<li>long press 5 – switches on the spectrum analyser with hybrid squelch</li>
+<li>F+ short press 5 – starts the spectrum analyser tracking the frequency of the active <b>VFO / MR</b></li>
+</ul>
+<p><b>6 H/M/L</b></p>
+<ul>
+<li>long press 6 – switches TX power <b>HIGT / MID / LOW</b></li>
+</ul>
+<p><b>7 VOX</b></p>
+<ul>
+<li>long press 7 – changes the modulation <b>FM / AM / USB</b></li>
+<li>F+ short press 7 – changes the channel bandwidth <b>12.5 / 25 kHz</b></li>
+<li>F+ very long press 7 – AM tone generator. Keys:</li>
+</ul>
+<p><b>1, 2, 3</b> – duty cycle; <b>4, 5, 6</b> – delay; <b>7, 8, 9</b> – bandwidth (~25-1000k); <b>0</b> – mixing in an FM tone; ▲<b>/</b>▼ – fine adjustment of the delay.</p>
+<p><b>8 R</b></p>
+<ul>
+<li>long press 8 – switches on reverse mode: the receive and transmit frequencies are swapped (the symbol R appears next to the bandwidth)</li>
+<li>F + very long 8 – frequency and power randomizer (the symbol <b>r</b> appears) <i>(pressing PTT while F is active and the randomizer is on – transmits with the microphone switched off)</i></li>
+</ul>
+<p><b>9 Call</b></p>
+<ul>
+<li>long press 9 – dynamic volume (the symbol <b>D</b> appears)</li>
+</ul>
+<p>(sometimes helps to smooth out the hiss/noise/pop at the end of a transmission)</p>
+<ul>
+<li>F+ short press 9 – adds the channel to the priority list used while scanning <i>(2 channels in ScList1 and 2 channels in ScList2, which are scanned every 3 steps of the scan list); pressing F+9 a third time switches the priority channels off. Nothing is shown on the display. If the same channel is added twice to the priority list, scanning may "stick".</i></li>
+</ul>
+<p><b>0 FM</b></p>
+<ul>
+<li>long press 0 – switches the FM radio on/off (you can leave it with EXIT)</li>
+</ul>
+<p><i>FM reception stops when a signal appears and resumes 5 seconds after the signal disappears. PTT also interrupts FM reception temporarily.</i> <b><i>Controls in FM radio mode:</b></i> ▲<i>/</i>▼ <i>- change channel / frequency;</i> <b><i>F+1</b></i> <i>- switch VFO / MR;</i> <b><i>F+3</b></i> <i>– station search (once a broadcast is found the search pauses without saving automatically.</i> ▲<i>/</i>▼ <i>- continue the search);</i> <b><i>M</b></i> <i>- delete channel (in MR), save channel (in VFO);</i> <b><i>F+6</b></i> <i>– switch AGC (automatic gain control) on/off</i></p>
+<ul>
+<li>F+ very long press 0 – automatically sets the subtone of the last reception (the symbol <b>A</b> appears)</li>
+</ul>
+<p><b><code>*</code> SCAN</b></p>
+<ul>
+<li>short press <code>*</code> – switches on the attenuator for the current frequency / channel (<b>ATT1</b> appears, on the next press – <b>ATT2</b>, then <b>ATT3</b>, and the fourth press switches it off);</li>
+<li>long press <code><i></code> – in frequency mode starts frequency scanning, in channel mode starts channel scanning </i>(according to the scan list selected in menu item 24.SList. If no channels have been added to the selected scan list, the radio may stop responding)*, (stop it with <b>EXIT</b>).</li>
+</ul>
+<p><i>If you need to skip a channel / frequency while scanning, you can switch ATT1, ATT2 or ATT3 on for it;</i></p>
+<ul>
+<li>F+ short press <code>*</code> – scans CTCSS subtones on the current frequency.</li>
+</ul>
+<p><mark>When the scan has finished, the</mark> <mark><b>M</b></mark> <mark>key can be used to set the subtone that was found as the transmit subtone for the active VFO band.</mark></p>
+<p><b>F #</b></p>
+<ul>
+<li>short press F – enters option mode (the symbol <b>F</b> appears)</li>
+<li>long press F – switches the lock of the front keys on/off (<b>L</b> appears)</li>
+<li>While the <b>F</b> index is lit, and if the randomizer function is on (see section 3.1, item 8 R), pressing PTT transmits with the microphone switched off.</li>
+</ul>
+<h3>3.3. Side keys.</h3>
+<p class="danger"><b>IMPORTANT !!!</b> If, when configuring the radio through CHIRP or PSCPS, FN1 and/or FN2 are set to NONE (not assigned), the radio may become locked and ask for a code at power-on.</p>
+<p class="shot"><img src="../assets/docs/manual/p16_1.png" alt="screenshot"></p>
+<p><b>Side "push-to-talk" key [PTT]</b></p>
+<ul>
+<li>pressing it starts transmitting on the air</li>
+<li>pressing it together with any front key sends a <b>DTMF</b> code</li>
+</ul>
+<p><b>Side function key [FN1]</b> <b>(default values)</b></p>
+<ul>
+<li>short press – opens/closes the squelch</li>
+<li>long press – switches the flashlight on/off</li>
+</ul>
+<p><b>Side function key [FN2]</b> <b>(default values)</b></p>
+<ul>
+<li>short press – switches TX power <b>HIGT / MID / LOW</b></li>
+<li>long press – starts the broadcasting beacon on the selected frequency <i>(works when menu item 17 -</i> <b><i>DW</b></i> <i>is off; stop it with</i> <b>*EXIT</b>**)*</li>
+<li>pressing it while PTT is held sends a <b>1750 Hz</b> tone</li>
+</ul>
+<p>If the firmware is installed over stock firmware, or together with your own configuration file, the default assignments of the [FN1] and [FN2] keys may be different, because these assignments are stored in the configuration file.</p>
+<p><b>User functions of the [FN1] and [FN2] keys</b></p>
+<p>The FN1 and FN2 functions can only be changed through software (CHIRP, for example) and cannot be set or reassigned from the radio's menu.</p>
+<p><b>The following choices are available:</b></p>
+<p><b>NONE</b> – nothing selected,</p>
+<p><b>FLASH LIGHT</b> – flashlight, <b>POWER</b> – switch TX power, <b>MONITOR</b> – open the squelch, <b>SCAN</b> – scanning,</p>
+<p><b>VOX</b> – voice-activated TX, <b>FM RADIO</b> – FM radio,</p>
+<p><b>1750 Hz</b> – send a 1750 Hz tone</p>
+<h3>3.4. Entering a frequency on the main screen.</h3>
+<p>To enter a frequency manually on the main screen you first have to switch to frequency mode (you switch between frequency and channel mode with a long press of the <b>3 VFO/MR</b> key). <b>VFO</b> then appears on the left-hand side of the screen, opposite the frequency. Next, enter the frequency. To enter the decimal point, use the key</p>
+<p><b>Examples:</b> 140 <i>→</i> = 140.00000 or 433*875 <i>→</i> = 433.87500</p>
+<p>Frequency entry can be cancelled with the key</p>
+<h3>3.5. Scanning in VFO and MR modes.</h3>
+<p><b>Scanning within set frequency limits in VFO mode</b></p>
+<ul>
+<li>switch VFO1 and VFO2 to frequency mode</li>
+<li>set the start (VFO1) and end (VFO2) limits of the scan</li>
+<li>make the upper VFO1 the active one</li>
+<li>start the scan with a long press of the <b><code>*</code> Scan</b> key</li>
+<li>it runs in a loop within the limits (from VFO1 to VFO2)</li>
+<li>the ▲<b>/</b>▼ keys change the scanning direction</li>
+<li>the scan is stopped with <b>EXIT</b></li>
+</ul>
+<p>(the frequency then returns to its initial value – VFO1)</p>
+<p><i>Note 1: If you start the scan while VFO2 is active, the scan runs outside the set limits, and when it is stopped the frequency does not return to its initial value.</i></p>
+<p><i>Note 2: The scan step = the step set for band A (item 2 of the settings menu).</i></p>
+<p><b>Scanning in channel (MR) mode</b></p>
+<ul>
+<li>switch to channel mode</li>
+<li>if necessary, select SList1, SList2 or SList3 in menu item 24</li>
+<li>start the scan with a long press of the <b><code>*</code> Scan</b> key</li>
+<li>it runs in a loop according to the selected SList</li>
+<li>the ▲<b>/</b>▼ keys change the scanning direction</li>
+<li>if the scan sticks on one of the channels (because of interference), you can switch the attenuator on for that channel (<b>ATT1</b> or <b>ATT2</b>) by pressing <b><code>*</code></b></li>
+<li>the scan is stopped with <b>EXIT</b></li>
+</ul>
+<ul>
+<li><mark>The <b>CHANNEL = PRESET</b> function:</mark></li>
+<li><mark>set the end frequency in offset, set shift – scn (the scanning direction), add the channel to the scan list you need.</mark></li>
+<li><mark>After a scan is started in channel mode, an additional scan is performed within the limits of this setting when this channel is reached.</mark></li>
+</ul>
+<h2 id="s6">4. SPECTRUM ANALYZER<a class="anchor" href="#s6">#</a></h2>
+<h3>4.1. Main spectrum mode (hybrid squelch) — how to enter:</h3>
+<ul>
+<li>long press <b>5</b> – switches the spectrum analyzer on with hybrid squelch</li>
+<li><b>F</b> + short press <b>5</b> – starts the spectrum with frequency tracking in VFO</li>
+<li class="danger"><b>IMPORTANT!</b> <i>If the spectrum analyzer is started from a channel or from VFO with the RX/TX offset enabled (items 8 and 9 of the settings menu), this offset will also be applied when transmitting from the active frequency capture mode.</i></li>
+</ul>
+<p class="shot row"><img src="../assets/docs/manual/p19_1.png" alt="screenshot" class="wide"><img src="../assets/docs/manual/p19_2.png" alt="screenshot" class="wide"></p>
+<p><b>The spectrum analyzer uses a hybrid squelch:</b></p>
+<p>when the squelch threshold is lowered, it opens only on signals that look more like channel signals, with a normal bandwidth and frequency.</p>
+<ol>
+<li>Preset (frequency plan) – <b>3 / 9</b></li>
+<li>Number of scan steps – <b>2 / 8</b></li>
+<li>Scan step size – <b>1 / 7</b></li>
+<li>Current, or last detected, receive frequency (the one on which a signal was found) – the frequency changes when a signal is detected with a level above the squelch threshold (10).</li>
+</ol>
+<ol>
+<li>Channel name (shown provided that the frequency is already stored in channel (MR) mode memory. If the frequency is stored twice in the channel list, the name of the first channel in the list is shown. If the channel is saved but no name has been given to it, «<b>,,,,,,,,,</b>» is displayed — see the description of item <b>34 Rename</b> of the settings menu for how to give a channel a name)</li>
+<li>Subtone of the received signal (shown if present)</li>
+<li>Receiver bandwidth – <b>6</b></li>
+<li>Modulation type AM/FM/USB – <b>0</b></li>
+<li>Battery charge indicator</li>
+<li>Squelch (SQ) level – <code>*</code> / <b>F</b></li>
+<li>Start frequency of the scan range – you can shift the whole range with ▲/▼, or enter the start frequency from the keypad: press <b>5</b>, then in "free entry" mode enter the new start frequency immediately after ----- appears; in preset mode use <b>F</b> to select <b>f start</b> and enter MHz, the <code>*</code> separator, kHz and Hz, then press <b>M</b> to apply.</li>
+<li>Spectrum frequency step – <b>4</b> (used to shift the whole scanned range with ▲/▼ by the set step)</li>
+<li>End frequency of the scan range – you can shift the whole range with ▲/▼, or enter the end frequency from the keypad: press <b>5</b>, use <b>F</b> to select <b>f end</b>, enter MHz, the <code><i></code> separator, kHz and Hz, then press <b>M</b> to apply </i>(in "free entry" mode the end frequency is corrected according to the number and size of the steps, in multiples of 16/32/64/128; in preset editing mode the exact frequency is set).*</li>
+</ol>
+<p><b>long press 4</b> – enter Loot. Functions in the Loot menu:</p>
+<p><b><i>4</b></i> <i>– adds the frequency to the blacklist (Lock) until power-off.</i></p>
+<p><b><i>0</b></i> <i>– clears the spectrum Loot blacklist.</i></p>
+<p><i>The Loot list is cleared when the transceiver is switched off.</i></p>
+<h3>4.2. Additional function keys in spectrum analyzer mode:</h3>
+<p><b>FN1</b> – adds the current frequency to the scan blacklist (128 frequencies – on overflow the earliest ones are overwritten) – press until the red LED blinks for the first time (after the second blink of the LED the blacklist is cleared).</p>
+<ul>
+<li>The blacklist is reset after the radio is switched OFF/ON.</li>
+<li>If you need to keep some frequencies with constant interference permanently, you can put them into the stored blacklist. To do this go to the Presets menu (enter with <b>M</b>, scroll with <b>M</b> and select <b>SAVE</b>), then press up ▲ (this stores the last 16 frequencies of the blacklist).</li>
+<li>The stored blacklist is cleared by a <b>long press of FN1</b> – until the red LED blinks for the second time (in the spectrum), followed by saving in the Presets menu.</li>
+</ul>
+<p class="danger"><b><i>!!! For the stored blacklist to work correctly</b></i>, <i>it is recommended to clear the blacklist with a long press of FN1 and save it the first time you start the scanner after installing the firmware.</i></p>
+<p><b>FN2</b> – frequency skip – press while a signal is being received (the frequency is skipped only on the current scan pass; on the next pass it takes part in scanning again)</p>
+<p>– switches the display backlight off / on in spectrum mode (press when nothing is being received).</p>
+<h3>4.3. Spectrum analyzer settings.</h3>
+<p>You can work in the spectrum analyzer either in "free entry" (range) mode or with predefined presets. The "free entry" settings are not saved and are cleared when the radio is switched off/on. Changes to the presets can be saved if required.</p>
+<p>By default the following presets are preconfigured for scanning in spectrum analyzer mode:</p>
+<table><thead><tr><th>Preset</th><th>Range, MHz</th><th>Step</th><th>Modulation</th><th>Bandwidth</th></tr></thead><tbody><tr><td>—</td><td>28.89000 – 24.97000</td><td>5 kHz</td><td>SSB</td><td>6.25 kHz</td></tr><tr><td>CB</td><td>26.97500 – 27.99900</td><td>5 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>10m</td><td>28.00000 – 29.20000</td><td>5 kHz</td><td>SSB</td><td>6.25 kHz</td></tr><tr><td>7m</td><td>40.00000 – 43.00000</td><td>25 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>6m</td><td>50.00000 – 52.00000</td><td>12.5 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>Air</td><td>115.00000 – 140.00000</td><td>50 kHz</td><td>AM</td><td>25 kHz</td></tr><tr><td>2m</td><td>144.00000 – 146.00000</td><td>25 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>Rail</td><td>151.75000 – 154.95000</td><td>25 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>Sea</td><td>156.02500 – 159.22500</td><td>25 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>Sat</td><td>240.00000 – 243.80000</td><td>5 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>Riv1</td><td>300.01250 – 300.51250</td><td>12.5 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>Riv2</td><td>336.01250 – 336.81250</td><td>12.5 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>402</td><td>402.00000 – 403.60000</td><td>12.5 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>430</td><td>430.00000 – 433.00000</td><td>25 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>LPD</td><td>433.07500 – 434.99900</td><td>25 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>435</td><td>435.00000 – 445.99900</td><td>25 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>PMR</td><td>446.00000 – 446.99900</td><td>6.25 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>450</td><td>450.00000 – 461.99900</td><td>25 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>462</td><td>462.00000 – 471.00000</td><td>12.5 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>LoRa</td><td>864.02500 – 869.00000</td><td>50 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>GSMu</td><td>890.02500 – 915.00000</td><td>100 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>GSMd</td><td>935.02500 – 960.00000</td><td>100 kHz</td><td>FM</td><td>25 kHz</td></tr><tr><td>23cm</td><td>1240.00000 – 1300.0000</td><td>100 kHz</td><td>FM</td><td>25 kHz</td></tr></tbody></table>
+<p class="danger"><b>IMPORTANT:</b> The presets can be edited to suit your needs, but note:</p>
+<ul>
+<li>Preset names cannot be edited.</li>
+<li>Changes to the bandwidth and the modulation are not saved.</li>
+</ul>
+<h3>4.3.1. Working in "free entry" mode</h3>
+<p>Free entry is not tied to a particular band and its settings are not saved.</p>
+<p>To set the start frequency of the scan range press <b>5</b> – the scan start frequency entry window opens (---------). Enter the number of MHz, the decimal point with <code>*</code>, then the kHz and Hz figures. Press <b>M</b> to confirm the value entered.</p>
+<p>In "free entry" mode the end frequency is set automatically from the step – 1 / 7 – and the number of steps – 2 / 8 (<i>if you try to change the end scan frequency via</i> <b><i>f end</b></i>, <i>the end frequency is adjusted to the number of steps in multiples of 16/32/64/128</i>).</p>
+<p>When the start scan frequency is changed, the whole range together with all its settings — number of steps, step size, modulation and so on — moves to the new start frequency. <i>(for example: you were scanning the 400–401.6 MHz range (1.6 MHz wide) / 128×1 steps with a 12.5 kHz bandwidth. If you enter: 5 -&gt; ------- -&gt; 510 -&gt; M, the whole range shifts from 400–401.6 to 510–511.6 and all the other settings are kept)</i></p>
+<p>To change the modulation, the step, the bandwidth and so on – see section 4.1.</p>
+<p>To set exact values for the scan range you have to use the settings of preset mode.</p>
+<h3>4.3.2. Editing presets:</h3>
+<p>To edit the frequency range of a preset press <b>5</b> – the scan start frequency entry window opens (---------). Use <b>F</b> to select the parameter to be changed: the start (<b>f start</b>) and / or the end (<b>f end</b>) frequency of the preset. Enter the number of MHz, the decimal point with <code>*</code>, the number of Hz, then press <b>M</b> (the values are reset when the transceiver is restarted unless you save them through the additional menu).</p>
+<ul>
+<li>Besides the frequency, the preset settings also let you change the number of scan steps and the step size.</li>
+<li>If you need to change the step as well as the frequency, change the start frequency FIRST, then the step, then the end frequency, after which you can do <b>SAVE</b>.</li>
+</ul>
+<p class="danger"><b>ATTENTION:</b> when editing presets it is important to keep their original order <i>(it is not advisable to change the 144–148 MHz range to 27–50 MHz)</i>, and also to avoid overlapping ranges <i>(presets set to 144–149 / 146–200 / 188–205 will cause a conflict).</i></p>
+<h3>4.3.3. Setting the additional spectrum analyzer parameters:</h3>
+<p>Press <b>M</b> – the first parameter of the additional menu appears at the top (<b>Mult: OFF</b>); each further press of <b>M</b> scrolls through the parameters in a loop. Stop at the parameter you need and select the required value (state) of that parameter with ▲ (accept or on) / ▼ (cancel or off).</p>
+<p><b>Short description of the additional spectrum analyzer parameters:</b></p>
+<p><b>Mult</b> – multi-preset, scanning all the selected presets one after another (keys <b>3/9</b> – select a preset; key <b>4</b> – add a preset to / exclude it from scanning (added presets are marked with the suffix fc); long press <b>4</b> – exclude all presets from the multi-scan; up key ▲ – start; to leave multi-preset mode press <b>M</b> + down ▼, or <b>EXIT</b>)</p>
+<p><b>ATT</b> – attenuator</p>
+<p><b>Turbo</b> – turbo scanning mode (on – ▲ / off – ▼) – scanning in accelerated mode: accuracy and sensitivity are lower but the speed is higher, so weak signals may be missed. Can be stored with save:on</p>
+<p><b>SQ</b> – interference filtering level for the hybrid part of the spectrum</p>
+<p><b>Delay</b> – signal exposure time (higher values increase the sensitivity but slow the scan down, and the other way round)</p>
+<p><b>Lna</b> – switches on the low-noise amplifier (unlike <b>LNA_hi</b> from item 29 of the main menu it has a higher gain value – about 10% stronger)</p>
+<p><b>EXP</b> – "spectrum exposure" mode (you can move the cursor with the <code>*</code> and <b>F</b> keys instead of the squelch threshold bar, to read the frequency of the peaks)</p>
+<p><b>SAVE</b> – saves the settings, including the presets, to permanent memory (up ▲ – write, down ▼ – back)</p>
+<p><b>ECO</b> – economy mode that works by slowing the scan down</p>
+<h3>4.4. Active frequency capture mode — "detailed view".</h3>
+<p><b>VFO-PRO (entered from the main spectrum mode by pressing PTT)</b></p>
+<p class="shot"><img src="../assets/docs/manual/p24_1.png" alt="screenshot" class="wide"></p>
+<p>In frequency capture mode, pressing PTT to transmit applies the offset and the subtone, provided that this frequency was saved in memory with these settings.</p>
+<p class="shot row"><img src="../assets/docs/manual/p24_2.png" alt="screenshot" class="wide"><img src="../assets/docs/manual/p24_3.png" alt="screenshot" class="wide"></p>
+<ol>
+<li>S-meter scale</li>
+<li>Channels found from the "Loot menu" can be scrolled – <b>1 / 7;</b> added to the blacklist – <b>4</b></li>
+<li>Squelch level – <code>*</code> / <b>F</b></li>
+<li>Current receive frequency (tuning – ▲<b>/</b>▼)</li>
+<li>Subtone found for the current frequency (if present)</li>
+<li>Register setting mode – <b>M / EXIT</b></li>
+</ol>
+<h3>4.5. Registers of the active frequency capture mode.</h3>
+<p>While AM FIX is switched off, the manual LNA and PGA settings are not reset until the transceiver is restarted.</p>
+<p>The DEV and Tx3k parameters are written to the calibration data when you leave the spectrum analyser.</p>
+<p><b>xtal</b> – fine adjustment of the receive bandwidth (for non-standard signals). (stock = 2)</p>
+<p><b>LNAs</b> – coarse adjustment of the LNA low-noise amplifier (stock = 3)</p>
+<p><b>LNA</b> – fine adjustment of the LNA low-noise amplifier</p>
+<p>When you change the <b>LNA</b> and <b>LNAs</b> items in the registers of the active frequency capture mode and then save them, menu item 29 <b>LNA_hi</b> switches to manual control (<b>MAN</b>). To return to automatic control, open the settings menu, press <b>M</b> twice on item 29 <b>LNA_hi</b> (<b>LNA_hi</b> switches to <b>ON</b>), and then save the settings in the presets menu by selecting <b>SAVE: ON –</b> ▲.</p>
+<p><b>DEV</b> – transmit channel width (stock = 1280) (a value between 1200 and 1450 is recommended, default = 1400)</p>
+<p><b>SCR</b> - manual adjustment of the scrambler inversion frequency when the scrambler is on. (default = 5150)</p>
+<p><b>Tx3k</b> – transmit modulation adjustment (default = 65531) (kept in memory until menu item 33 - <b>tx_filt</b> is applied) Tx3k has the following proven values:</p>
+<ul>
+<li>62731 – stock</li>
+<li>44831 – optimum</li>
+<li>37431 – overdriven (for SATCOM and PMR)</li>
+</ul>
+<p><b>03t</b> – fine adjustment of the audio filter width (300 Hz), for TX (default = 36873; optimum = 36600)</p>
+<p><b>AFC</b> - switches on automatic receive frequency control</p>
+<p><b>AFCR (AFC range)</b> – sets the AFC range (stable at 1-5 / optimum = 6)</p>
+<p><b>c0db</b> – microphone adjustment</p>
+<p><b>P (Peak (rssi))</b> – an alternative signal strength indicator for strong signals (works best at frequencies above 1 GHz)</p>
+<h3>4.6. Key assignments in the spectrum analyser modes</h3>
+<table><thead><tr><th><b>Key</b></th><th><b>Mode</b></th><th><b>Function</b></th></tr></thead><tbody><tr><td><b>M</b></td><td>Main mode</td><td>Selects the additional parameter to be adjusted</td></tr><tr><td></td><td>Frequency capture</td><td>Selects the register to be edited</td></tr><tr><td>▲&lt;br&gt;▼</td><td>Main mode</td><td>Tunes the spectrum frequency</td></tr><tr><td></td><td>Additional parameter setup</td><td>Changes the parameter value</td></tr><tr><td></td><td>Frequency capture</td><td>Tunes the frequency</td></tr><tr><td></td><td>Register editing</td><td>Changes the register value</td></tr><tr><td><b>EXIT</b></td><td>All modes</td><td>Cancel / Back</td></tr><tr><td><b>PTT</b></td><td>Main mode</td><td>Enters frequency capture mode</td></tr><tr><td></td><td>Frequency capture</td><td>Starts transmitting, "TX"</td></tr><tr><td><b>FN1</b></td><td>Main mode</td><td>Adds the current frequency to the blacklist&lt;br&gt;(<i>the RX/TX LED blinks red to confirm the selection</i>)&lt;br&gt;<i>No transmission takes place, this is only an indication!!!</i></td></tr><tr><td></td><td>Frequency capture</td><td>Switches the squelch off / on</td></tr><tr><td><b>FN2</b></td><td>Main mode</td><td>Switches the backlight off / on (when nothing is being received)&lt;br&gt;Skips the frequency on the current scan pass (while a signal is being received)</td></tr><tr><td></td><td>Frequency capture</td><td>Switches the backlight off / on</td></tr></tbody></table>
+<h2 id="s7">5. FREQUENTLY ASKED QUESTIONS, POSSIBLE PROBLEMS, AND HOW TO SOLVE THEM.<a class="anchor" href="#s7">#</a></h2>
+<table><thead><tr><th><b>No.</b></th><th><b>Problems</b>&lt;br&gt;<b>Questions</b></th><th><b>How to solve them</b>&lt;br&gt;<b>Comments, answers to questions.</b></th></tr></thead><tbody><tr><td><mark>1</mark></td><td><mark>There is snow on the screen when the radio is switched on.</mark></td><td><mark>You must clean the radio (see section 3.1. Service key combinations) and then load the calibration data (first your own factory calibration, then the calibration supplied with the firmware).</mark></td></tr><tr><td><mark>2</mark></td><td><mark>When you try to change the frequency in VFO mode, the frequency is not set</mark></td><td><mark>1. Check whether the step set in item 2.Step matches the frequency you need.</mark>&lt;br&gt;<mark>2. The cleaning procedure after installing the firmware was probably not completed correctly (the service cable was not disconnected while cleaning). – run the cleaning again / load the calibration data / carry out the setup.</mark></td></tr><tr><td>3</td><td>On which frequencies may I transmit?</td><td>There are civil radio communication frequencies that are allowed for free use. As a rule these are:&lt;br&gt;CB (25.165 – 29.445 MHz) with a TX power of 4.0-12.0 W&lt;br&gt;LPD (433.075 – 434.775 MHz) with a TX power of 0.01 W&lt;br&gt;PMR (446.00625 – 446.19375) with a TX power of 0.5 W&lt;br&gt;In some countries the FRS and GMRS bands are also used.</td></tr><tr><td>4</td><td>On which frequencies may I not transmit?</td><td>Without special permits, transmitting outside the civil bands is prohibited by law. All the other frequency bands are used by other services, from radio amateurs to government services, including satellites, cellular networks, air traffic controllers and aircraft, weather stations, river and maritime communications, the military and others. If you cause interference to the operation of any of these services, you may be held liable under the law in force in your country.</td></tr><tr><td>5</td><td>On which frequencies do the Quansheng UV-K5 receiver and transmitter work</td><td>In the Karina firmware, reception and transmission are open on all bands (see section 2.2. Operating frequency bands (Bands)).&lt;br&gt;On radios without hardware modifications you may transmit without the risk of burning the radio only in the operating bands declared by the manufacturer: 136-174 MHz / 400-470 MHz</td></tr><tr><td>6</td><td>What happens if I transmit without an antenna?</td><td>Transmitting without an antenna, or with an antenna tuned for a different frequency band, burns out the radio's output stage.</td></tr><tr><td>7</td><td>Does the radio transmit on the CB band? Can I talk to</td><td>In the Karina firmware the 27 MHz frequency band is open for reception and transmission by default.&lt;br&gt;To receive, you must fit an antenna tuned to this frequency band.&lt;br&gt;However, transmitting in this frequency</td></tr></tbody></table>
+<table><thead><tr><th><b>No.</b></th><th><b>Problems</b>&lt;br&gt;<b>Questions</b></th><th><b>How to solve them</b>&lt;br&gt;<b>Comments, answers to questions.</b></th></tr></thead><tbody><tr><td></td><td>truckers?</td><td>band from radios without hardware modification does not give usable communication (because the TX power is far too low); at the same time, because of the physical characteristics of the radio, trying to transmit in this band creates interference on the air band and also burns out the radio's output stage.</td></tr><tr><td>8</td><td>Why can't anyone hear me on CB?</td><td>In its factory state the radio's TX power in the CB band does not exceed 0.01 W. Therefore, without physical modifications, transmitting in this frequency band is not only useless but also dangerous for the radio itself.</td></tr><tr><td>9</td><td>Why is communication poor in a car?</td><td>The car body shields radio signals. For stable communication it is recommended to fit an external antenna outside the car body.</td></tr><tr><td>10</td><td>Why flash the radio at all</td><td>A stock radio "out of the box" works reliably and performs its functions. Modified firmware extends the functionality of the radio, offering additional and more flexible (professional) settings, faster scanning, scanning with a graphical display (spectrum analyser mode), and so on.</td></tr><tr><td>11</td><td>Which firmware is the best?</td><td>The one that best suits your needs</td></tr><tr><td>12</td><td>How do I back up the factory firmware?</td><td>There is no point in saving the factory firmware, because it is freely available on the internet and on the manufacturer's website. It is far more important to save the original calibration data (which may be unique to your radio) and the configuration file. This is done with the k5prog program.</td></tr><tr><td>13</td><td>The computer does not see the radio connected through the built-in Type-C port</td><td>The Type-C port built into the radio is intended for charging the battery only.&lt;br&gt;Flashing is done with a special programming cable with a KENWOOD type connector. (a cable from analogue Baofeng radios and similar will do)</td></tr><tr><td>14</td><td>Will a cable from a Baofeng work for flashing and configuring?</td><td>Yes, it will (one from analogue radios)</td></tr><tr><td>15</td><td>How do I start flashing</td><td>Any flashing should start with a check of the battery charge. If the battery is charged below 50% (~7.2 V), the flashing process may be erratic or incomplete.&lt;br&gt;For flashing you should buy or make a programming cable with a KENWOOD type connector, and install the driver for this cable on your PC. Prepare the flashing program. Prepare the firmware itself. Connect the switched-on radio to the PC with the cable you obtained and use the program to back up your own calibration data and the configuration file. Connect</td></tr></tbody></table>
+<p>the radio in flashing mode. Use the program to run the firmware file.</p>
+<p><b>16. Where can I get detailed flashing instructions?</b></p>
+<p>See the section QUICK GUIDE TO FLASHING THE QUANSHENG UV-K5 AND ITS MODIFICATIONS.</p>
+<p><b>17. The computer does not see the radio</b></p>
+<ul>
+<li>The cable is not pushed all the way into the radio (the first time it is inserted the cable goes in very tightly, often until it clicks).</li>
+<li>The cable drivers are not installed, or the wrong drivers are installed.</li>
+</ul>
+<p><b>18. Which program should I flash with?</b></p>
+<p>Modified firmware should be flashed as follows:</p>
+<ul>
+<li>the UV-K5, K5(8) and K5+ versions should be flashed with k5prog-win — version 1.26 is recommended</li>
+<li>the UV-K5+ versions (with a Type-C port) should be flashed with k5tools</li>
+</ul>
+<p><b>19. I flashed the radio, but on power-up it asks for some password.</b></p>
+<p>Try all digits 000000, or 111111, or 123400, or hold MENU+EXIT on the switched-off radio and, while still holding them, switch it on.</p>
+<p>Also, if during configuration through CHIRP or PSCPS the side keys FN1 and/or FN2 are set to NONE (not assigned), the radio may lock up and ask for a code at power-up.</p>
+<p>If that does not help, clear the radio's memory using the REBORN firmware — see section 6 of this manual.</p>
+<p><b>20. Which program should I use to program (configure) the radio?</b></p>
+<p>CHIRP or PSCPS.</p>
+<p>To use CHIRP you have to load the module.</p>
+<p><b>21. What is CHIRP and what can it do?</b></p>
+<p>It is a program for programming radios. It edits channels and turns various functions on and off, including those that are not available from the radio's own menu.</p>
+<p><b>22. I loaded my saved frequencies (from another firmware) or somebody else's frequency file, and the radio behaves incorrectly</b></p>
+<p>Configuration files from different firmware versions can make the radio work incorrectly, so loading them is not recommended. Loading other people's configuration and settings files is not recommended either.</p>
+<p>If you need to write frequencies from somebody else's file (or from your own file but made with another firmware), use CHIRP: open the other file, read your radio — a second tab will appear; copy the frequencies you need from the other file's tab and paste them into the tab of your radio's file. Before reading files, do not forget to load the corresponding module.</p>
+<p><b>23. Does the radio have encryption?</b></p>
+<p>The radio has no signal encryption, but it does have a scrambler (voice masking) function. Please note that under the legislation</p>
+<p>of many countries the use of encryption, scramblers and other signal-masking functions in civil radio communication is prohibited by law.</p>
+<p><b>24. Why does the green LED light up on reception while the speaker stays silent?</b></p>
+<ul>
+<li>check whether you have receive subtones set (R-DCS and R-CTCS);</li>
+<li>check that both radios use the same modulation (FM in particular).</li>
+</ul>
+<p><b>25. What is a subtone?</b></p>
+<p>A subtone is an additional signal, inaudible to the human ear, that is transmitted together with the voice. It works as a kind of "friend or foe" identifier (by filtering the incoming signal). When a subtone is configured, your radio rejects every signal on that frequency and opens for reception only when it detects a signal carrying the same subtone.</p>
+<p>A radio without a subtone, on the other hand, will hear all other radios on reception, both those that use a subtone and those that do not.</p>
+<p><b>26. What is the non-standard 55 Hz subtone that the scanner detects?</b></p>
+<p>See the description in the Karina firmware manual, item 22, p. 5.</p>
+<p><b>27. Why do I hear one correspondent but not the other?</b></p>
+<p>It means that the signal from one operator is strong enough for you to hear him, while the signal from the second one is too weak.</p>
+<p>This may be caused by your antenna not being very efficient, or by one of the operators being closer to you, or by the second operator's signal simply being too weak.</p>
+<p>The opposite is also possible: the signal from one of the correspondents is so strong that it overloads your receiver, which then "chokes" on the excessively strong signal and goes silent.</p>
+<p><b>28. Why do I set the radio to scan frequencies and hear nobody?</b></p>
+<p>To hear somebody you first have to decide where to scan. Scanning "everything at once" will not get you anywhere.</p>
+<p>For example: you want to scan the 100–200 MHz band with a 25 kHz step (the scan speed in frequency mode is about 15 frequencies per second), which gives 100/((0.025)*15) = 266 seconds (almost 5 minutes) for one scan cycle. It is far more effective to narrow the search range, or to start scanning in spectrum analyser mode using the configured presets.</p>
+<p><b>29. Can the radio be used to call for help?</b></p>
+<p>In exceptional cases, and only <b>when there is a direct threat to the life and health of people and there is no way to call for help by other technical means of communication</b>, you may send an SOS or MAYDAY distress signal.</p>
+<p><b>30. Which frequencies are best for calling for help so that I am heard?</b></p>
+<p>There are no universally accepted distress frequencies. There are maritime, river,</p>
+<p>mountain-emergency frequencies and so on. These frequencies may also differ depending on the region and the country. When planning a trip to a particular region, it is recommended at least to find out which emergency communication frequencies are in use there.</p>
+<p>There are, however, generally accepted calling frequencies on which you have a better chance of being heard:</p>
+<p>433.500 — the general calling frequency of the 70 cm band 446.09375 — the general calling frequency of the PMR band 145.500 — the general calling frequency for radio amateurs (for communication between radio amateurs who hold licences and permits)</p>
+<p>Depending on the region, these frequencies may differ as well.</p>
+<p>It is not recommended to occupy these frequencies for long conversations. You can always make contact on them and then move to other frequencies by agreement.</p>
+<p><b>31. What is the S symbol that lights up from time to time in the top left corner?</b></p>
+<p>See the description in the Karina firmware manual, item 14, p. 5.</p>
+<p><b>32. Why, when I change the TX power (or the bandwidth, or the modulation, or the subtone, or the frequency offset), are the changes not saved after I switch to another channel and back, or switch the radio off and on?</b></p>
+<p>See the description in the Karina firmware manual, item 13, p. 5.</p>
+<p><b>33. When I press PTT it shows DISABLE — what should I do?</b></p>
+<p>See the description in the Karina firmware manual, items 36 and 37, p. 7.</p>
+<p><b>34. I connected a Type-C cable to the radio, but it is not charging</b></p>
+<p>Charging over Type-C is an additional option. It starts at a lower battery voltage and does not charge the battery up to its nominal level. Whenever charging through the cradle is possible, use the cradle.</p>
+<p><b>35. My battery voltage is displayed incorrectly — what should I do?</b></p>
+<p>If the battery voltage shown on the radio's display is implausibly low (~0.25 V) or implausibly high (600 V), this is the first sign that your calibrations are corrupted: you have to load the stock calibrations first and only then the Karina ones. If that does not help, clear the memory as described in the firmware manual and then install the firmware and the calibrations again.</p>
+<p>If the voltage is displayed more or less correctly, with a deviation of about 0.2–0.5 V from the value measured with a multimeter, this is the normal situation with the factory calibrations. It can be adjusted with a HEX editor by changing the value of cell 140/6 of the calibration file (for me this value is =B0, but yours may differ).</p>
+<p><b>36. Why does it show 6.0 V while the radio is already switching off?</b></p>
+<p>The battery's operating voltage range is ~6.0 V – 8.4 V</p>
+<p>~8.4 V = 100% ~7.2 V = 50% ~6.0 V = 0%</p>
+<p>Discharging the battery below 4 V leads to its degradation.</p></article>
+</div>
+<footer>
+  <p>Licensed under the Apache License 2.0. © 2026 autumn1rain.</p>
+  <p class="langs">Language: <a href="https://autumn1rain.github.io/karina-v3-k1/ru/manual/">Русский</a><a href="https://autumn1rain.github.io/karina-v3-k1/es/manual/">Español</a><a href="https://autumn1rain.github.io/karina-v3-k1/de/manual/">Deutsch</a><a href="https://autumn1rain.github.io/karina-v3-k1/zh/manual/">中文</a></p>
+</footer>
+</div>
+</body>
+</html>
