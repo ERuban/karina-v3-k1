@@ -4,6 +4,8 @@
 
 **Firmware alternativo para los Quansheng UV-K5 (V3), UV-K1 y UV-K1(8)**
 
+<p align="center"><a href="https://autumn1rain.github.io/karina-v3-k1/es/">autumn1rain.github.io/karina-v3-k1/es</a></p>
+
 <p align="center">
 <a href="README.md">English</a> |
 <a href="README_RU.md">Русский</a> |
@@ -20,8 +22,7 @@
 [**Descargar**](https://github.com/autumn1rain/karina-v3-k1/releases/latest) ·
 [Guía de instalación](karina-v3-k1-install.pdf) ·
 [Manual](karina-v3-k1-manual.pdf) ·
-[Chat de Telegram](https://t.me/k5fwmod) ·
-[Sitio web](https://autumn1rain.github.io/karina-v3-k1/es/)
+[Chat de Telegram](https://t.me/k5fwmod)
 
 </div>
 

@@ -4,6 +4,8 @@
 
 **Альтернативная прошивка для Quansheng UV-K5 (V3), UV-K1 и UV-K1(8)**
 
+<p align="center"><a href="https://autumn1rain.github.io/karina-v3-k1/ru/">autumn1rain.github.io/karina-v3-k1/ru</a></p>
+
 <p align="center">
 <a href="README.md">English</a> |
 <a href="README_ES.md">Español</a> |
@@ -20,8 +22,7 @@
 [**Скачать**](https://github.com/autumn1rain/karina-v3-k1/releases/latest) ·
 [Руководство по установке](karina-v3-k1-install.pdf) ·
 [Руководство пользователя](karina-v3-k1-manual.pdf) ·
-[Чат в Telegram](https://t.me/k5fwmod) ·
-[Сайт](https://autumn1rain.github.io/karina-v3-k1/ru/)
+[Чат в Telegram](https://t.me/k5fwmod)
 
 </div>
 

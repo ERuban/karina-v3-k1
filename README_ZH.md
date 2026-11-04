@@ -4,6 +4,8 @@
 
 **适用于泉盛 Quansheng UV-K5 (V3)、UV-K1 和 UV-K1(8) 的第三方固件**
 
+<p align="center"><a href="https://autumn1rain.github.io/karina-v3-k1/zh/">autumn1rain.github.io/karina-v3-k1/zh</a></p>
+
 <p align="center">
 <a href="README.md">English</a> |
 <a href="README_RU.md">Русский</a> |
@@ -20,8 +22,7 @@
 [**下载**](https://github.com/autumn1rain/karina-v3-k1/releases/latest) ·
 [安装指南](karina-v3-k1-install.pdf) ·
 [使用手册](karina-v3-k1-manual.pdf) ·
-[Telegram 交流群](https://t.me/k5fwmod) ·
-[网站](https://autumn1rain.github.io/karina-v3-k1/zh/)
+[Telegram 交流群](https://t.me/k5fwmod)
 
 </div>
 
